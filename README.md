@@ -1,1 +1,1131 @@
-# username.github.io
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>大漢命運輪盤</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700;900&family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}:root{--gold:#D4A017;--gold2:#AA8000;--gold-bg:#FFF9E6;--gold-glow:rgba(212,160,23,.18);--zhu:#DC2626;--zhu2:#B91C1C;--zhu-bg:#FEF2F2;--qing:#0E7490;--qing2:#155E75;--qing-bg:#E0F7FA;--yu:#15803D;--yu2:#166534;--yu-bg:#ECFDF5;--zi:#7C3AED;--zi2:#6D28D9;--zi-bg:#F3E8FF;--tao:#EA580C;--tao2:#C2410C;--tao-bg:#FFF7ED;--bg:#FDF6EC;--paper:#F3E8D2;--card:#FFFDF5;--text:#1C1612;--text2:#78716C;--radius:10px;--shadow:0 3px 15px rgba(28,22,18,.08);--ft:'Noto Serif TC',serif;--fb:'Noto Sans TC',sans-serif}html{font-size:15px}body{font-family:var(--fb);color:var(--text);min-height:100vh;line-height:1.85;transition:background .6s}body.bg-noble{background:#F3E8FF}body.bg-commoner{background:#FFFBEB}body.bg-farmer{background:#ECFDF5}body.bg-student{background:#EFF6FF}body.bg-official{background:#FEF2F2}body.bg-default{background:var(--bg)}.screen{display:none;flex-direction:column;align-items:center;min-height:100vh;padding:.6rem .8rem .3rem;width:100%;max-width:700px;margin:0 auto}.screen.active{display:flex}#screen-title{justify-content:center;text-align:center;gap:.5rem}#screen-game{justify-content:flex-start}.t-main{font-size:1.8rem;font-weight:900;font-family:var(--ft);letter-spacing:.15em;background:linear-gradient(135deg,var(--zhu),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent}.t-sub{color:var(--text2);font-size:.88rem}.badge{display:inline-block;padding:.15rem .55rem;border-radius:20px;font-size:.72rem;font-weight:700;margin:.1rem;border:1.5px solid}.badge-a{background:var(--tao-bg);color:var(--tao2);border-color:var(--tao)}.badge-b{background:var(--qing-bg);color:var(--qing2);border-color:var(--qing)}.badge-n{background:var(--zi-bg);color:var(--zi2);border-color:var(--zi)}.badge-c{background:var(--yu-bg);color:var(--yu2);border-color:var(--yu)}
+.btn{display:block;width:100%;max-width:500px;padding:.55rem .9rem;margin:.2rem auto;border:2px solid var(--paper);border-radius:var(--radius);background:var(--card);color:var(--text);font-family:var(--fb);font-size:.9rem;cursor:pointer;transition:all .2s;text-align:left;line-height:1.6;box-shadow:var(--shadow);min-height:40px;position:relative;overflow:hidden}.btn::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:var(--gold);border-radius:2px 0 0 2px;transition:width .2s}.btn:hover{border-color:var(--gold);transform:translateY(-1px);box-shadow:0 4px 18px var(--gold-glow)}.btn:hover::before{width:6px}.btn:active{transform:translateY(0)}.btn:disabled{opacity:.3;cursor:not-allowed;transform:none!important;box-shadow:none!important}.btn-p{background:linear-gradient(135deg,var(--zhu),#E84040);color:#fff;font-weight:700;text-align:center;border-color:var(--zhu2);max-width:220px;text-shadow:0 1px 2px rgba(0,0,0,.2)}.btn-p::before{display:none}.btn-p:hover{background:linear-gradient(135deg,var(--zhu2),var(--zhu))}.btn-sm{max-width:180px;text-align:center;padding:.4rem .7rem;font-size:.82rem}.btn-s{background:var(--paper);border-color:var(--gold);max-width:180px;text-align:center;padding:.4rem .7rem;font-size:.82rem;color:var(--gold2)}.btn-s::before{display:none}.dis-tip{font-size:.74rem;color:var(--zhu);margin-top:.1rem}.skip-btn{max-width:100px;text-align:center;font-size:.78rem;padding:.25rem .5rem;border-color:var(--text2);color:var(--text2);background:transparent}.skip-btn::before{display:none}
+#sbar{position:sticky;top:0;z-index:50;width:100%;max-width:700px;margin:0 auto;background:linear-gradient(180deg,#1C1612,#2A2318);border-bottom:3px solid var(--gold);padding:.35rem .7rem .2rem;display:none;box-shadow:0 3px 12px rgba(0,0,0,.2)}#sbar-era{display:flex;justify-content:space-between;align-items:center;margin-bottom:.1rem;font-family:var(--ft);letter-spacing:.1em}#sbar-era .era-left,#sbar-era .era-right{font-size:1.2rem;font-weight:700;color:var(--gold)}#sbar-era .era-left{text-align:left}#sbar-era .era-right{text-align:right}.sg{display:flex;flex-wrap:wrap;gap:.05rem .4rem;justify-content:center}.si{display:flex;align-items:center;gap:.15rem;font-size:.72rem;min-width:3.5rem;position:relative;color:#ccc}.sb-bg{width:2rem;height:.32rem;background:#3a3530;border-radius:3px;overflow:hidden;border:1px solid #555}.sb{height:100%;border-radius:2px;transition:width .5s}.sv{font-weight:700;min-width:.7rem;text-align:right;font-size:.7rem;color:#fff}.sc{position:absolute;font-weight:700;font-size:.76rem;animation:pop 1.1s forwards;pointer-events:none;left:50%;top:-.5rem;z-index:5}@keyframes pop{0%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(-16px)}}
+#tbar{background:#2A2318;color:#bbb;font-size:.62rem;padding:.1rem .5rem;text-align:center;display:none;border-bottom:1px solid #555}.tch{display:inline-block;padding:.04rem .25rem;margin:.04rem;border-radius:8px;font-size:.6rem;border:1px solid #555;white-space:nowrap}.tch.pos{border-color:var(--yu);color:#8f8}.tch.neg{border-color:var(--zhu);color:#f88}
+#prog{position:fixed;bottom:0;left:0;right:0;z-index:40;padding:.15rem .7rem .25rem;background:#1C1612;display:none;border-top:2px solid var(--gold)}#screen-game,#screen-ending,#screen-summary{padding-bottom:120px}.pb-wrap{width:100%;max-width:700px;margin:0 auto}.pb-track{width:100%;height:6px;background:#3a3530;border-radius:3px;position:relative;margin-top:16px}.pb-fill{height:100%;border-radius:3px;transition:width .6s;background:linear-gradient(90deg,var(--gold),var(--zhu))}.pb-mark{position:absolute;top:-14px;left:45%;transform:translateX(-50%);font-size:.58rem;color:var(--gold);font-weight:700;font-family:var(--ft);white-space:nowrap}.pb-mark::after{content:'';display:block;width:1.5px;height:8px;background:var(--gold);margin:1px auto 0;opacity:.6}.pb-labels{display:flex;justify-content:space-between;font-size:.52rem;color:#888;margin-top:2px;padding:0 .2rem}
+#narea{width:100%;max-width:640px;padding:.3rem .2rem}.nbox{background:var(--card);border:2px solid var(--gold);border-radius:var(--radius);padding:.7rem .8rem;margin-bottom:.4rem;min-height:40px;box-shadow:0 2px 12px var(--gold-glow);position:relative;border-image:linear-gradient(135deg,var(--gold),var(--zhu),var(--gold)) 1;border-image-slice:1}.nbox::before{position:absolute;font-size:.65rem;color:var(--gold);font-family:var(--ft);content:'❖';top:-.3rem;left:.5rem;background:var(--card);padding:0 .15rem}.nlabel{font-size:.7rem;color:var(--zhu);font-weight:700;margin-bottom:.15rem;font-family:var(--ft);letter-spacing:.08em}.ntext{font-size:.88rem;line-height:1.85}#carea{width:100%;max-width:640px;padding:0 .2rem .5rem}.clabel{font-size:.75rem;color:var(--gold2);margin-bottom:.2rem;text-align:center}
+.icard{background:linear-gradient(135deg,var(--gold-bg),#FFF);border:2px solid var(--gold);border-radius:var(--radius);padding:.6rem;margin:.3rem 0;box-shadow:var(--shadow)}.icard-title{font-weight:700;color:var(--zhu);margin-bottom:.2rem;font-size:.9rem;font-family:var(--ft)}.ibullet{padding:.08rem 0;font-size:.84rem;display:flex;gap:.25rem;align-items:flex-start}.ibullet::before{content:'◆';color:var(--gold);font-weight:700;flex-shrink:0;font-size:.6rem;margin-top:.3rem}.rbox{background:linear-gradient(135deg,#FFF8E1,#FFF);border:2px solid var(--gold);border-left:5px solid var(--gold);border-radius:var(--radius);padding:.5rem .7rem;margin:.3rem 0;animation:fadeUp .3s ease}.rbox .delta{font-weight:700;margin-top:.2rem;font-size:.8rem;color:var(--zhu)}@keyframes fadeUp{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}.pban{text-align:center;padding:.35rem;margin:.3rem 0;border-radius:var(--radius);background:linear-gradient(135deg,var(--zhu),#E84040);color:#fff;font-weight:700;font-size:.88rem;font-family:var(--ft);letter-spacing:.1em;box-shadow:0 3px 12px rgba(220,38,38,.2);text-shadow:0 1px 3px rgba(0,0,0,.2)}
+.anno{background:var(--qing-bg);border:2px solid var(--qing);border-left:5px solid var(--qing);border-radius:6px;padding:.35rem .5rem;margin:.25rem 0;font-size:.78rem;color:var(--qing2);line-height:1.6}.anno::before{content:'📖 教科書知識點';display:block;color:var(--qing);font-weight:700;font-size:.68rem;margin-bottom:.08rem}.anno-ex{background:var(--zi-bg);border:2px solid var(--zi);border-left:5px solid var(--zi);border-radius:6px;padding:.35rem .5rem;margin:.25rem 0;font-size:.78rem;color:var(--zi2);line-height:1.6}.anno-ex::before{content:'🔖 課外知識';display:block;color:var(--zi);font-weight:700;font-size:.68rem;margin-bottom:.08rem}
+.quiz-fb{padding:.4rem .5rem;border-radius:6px;margin:.25rem 0;font-size:.82rem;font-weight:700;line-height:1.6;border-left:5px solid}.quiz-ok{background:var(--yu-bg);border-color:var(--yu);color:var(--yu2)}.quiz-ng{background:var(--zhu-bg);border-color:var(--zhu);color:var(--zhu)}
+.ov{display:none;position:fixed;top:0;left:0;width:100%;height:100%;z-index:100;align-items:center;justify-content:center;padding:.8rem}.ov.active{display:flex}.ov-dark{background:rgba(28,22,18,.55);backdrop-filter:blur(3px)}.ov-event{background:rgba(88,28,135,.25);backdrop-filter:blur(3px)}.ov-friend{background:rgba(21,128,61,.18);backdrop-filter:blur(3px)}.modal{background:var(--card);border:3px solid var(--gold);border-radius:12px;padding:.9rem;max-width:500px;width:100%;max-height:85vh;overflow-y:auto;box-shadow:0 8px 40px rgba(0,0,0,.2);position:relative}.mt{color:var(--zhu);font-size:.95rem;font-weight:900;margin-bottom:.5rem;text-align:center;font-family:var(--ft);letter-spacing:.08em}.mq{background:var(--gold-bg);border-left:4px solid var(--zhu);padding:.35rem .5rem;margin:.3rem 0;font-weight:700;color:var(--text);line-height:1.6;font-size:.85rem}.fmodal{border-color:var(--yu)!important;background:linear-gradient(135deg,var(--yu-bg),#FFF)}.fmodal .mt{color:var(--yu2)}.emodal{border-color:var(--zi)!important;background:linear-gradient(135deg,var(--zi-bg),#FFF)}.emodal .mt{color:var(--zi2)}
+.tip{border-bottom:2.5px solid var(--qing);cursor:help;color:var(--qing);font-weight:700}.tip-ex{border-bottom:2.5px dashed var(--zi);cursor:help;color:var(--zi);font-weight:600}#tip-sheet{position:fixed;bottom:0;left:0;right:0;max-height:35vh;background:linear-gradient(180deg,#1C1612,#0F0D0A);color:#F5E6C8;padding:.8rem 1rem 1.2rem;border-radius:14px 14px 0 0;transform:translateY(100%);transition:transform .3s;z-index:200;box-shadow:0 -6px 30px rgba(0,0,0,.3);overflow-y:auto;border-top:3px solid var(--gold)}#tip-sheet.show{transform:translateY(0)}#tip-sheet h4{color:var(--gold);font-size:.9rem;margin-bottom:.2rem;font-family:var(--ft)}#tip-sheet .tip-tag{display:inline-block;padding:.06rem .35rem;border-radius:10px;font-size:.58rem;font-weight:700;margin-left:.3rem}.tip-tag-core{background:var(--qing);color:#fff}.tip-tag-ex{background:var(--zi);color:#fff}#tip-sheet p{font-size:.82rem;line-height:1.7;color:#d4c8b0}
+.coin-area{display:flex;flex-direction:column;align-items:center;gap:.6rem;margin:1rem 0}.coin{width:100px;height:100px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.88rem;font-weight:900;font-family:var(--ft);cursor:pointer;border:4px solid var(--gold);box-shadow:0 6px 24px var(--gold-glow);transition:transform .1s;user-select:none;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.3)}.coin-a{background:linear-gradient(145deg,#D4764E,#B85A36)}.coin-b{background:linear-gradient(145deg,var(--qing),var(--qing2))}.coin.flipping{animation:coinFlip .6s ease-in-out}@keyframes coinFlip{0%{transform:rotateY(0)}50%{transform:rotateY(900deg) scale(.8)}100%{transform:rotateY(1800deg) scale(1)}}.coin-sm{width:70px;height:70px;font-size:.72rem}.dice{width:80px;height:80px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:2rem;font-weight:900;font-family:var(--ft);cursor:pointer;background:linear-gradient(145deg,#FFF,var(--paper));border:4px solid var(--gold);box-shadow:0 6px 24px var(--gold-glow);transition:transform .1s;user-select:none;color:var(--zhu)}.dice.rolling{animation:diceRoll .12s ease-in-out 3}@keyframes diceRoll{0%{transform:rotate(0) scale(1)}50%{transform:rotate(180deg) scale(.85)}100%{transform:rotate(360deg) scale(1)}}
+.wheel-wrap{position:relative;width:180px;height:180px;margin:.5rem auto}.wheel-svg{width:100%;height:100%;transition:transform .1s}.wheel-svg.spinning{transition:transform .8s cubic-bezier(.17,.67,.12,.99)}.wheel-arrow{position:absolute;top:-8px;left:50%;transform:translateX(-50%);font-size:1.2rem;z-index:2;filter:drop-shadow(0 1px 3px rgba(0,0,0,.3))}.wheel-label{font-size:.6rem;font-weight:700;fill:#fff;text-anchor:middle;pointer-events:none}
+.cmp{display:flex;gap:.4rem;margin:.4rem 0;flex-wrap:wrap}.cmp>div{flex:1;min-width:120px;padding:.5rem;border-radius:var(--radius);font-size:.78rem;line-height:1.6}.cmp-a{background:var(--tao-bg);border:2px solid var(--tao)}.cmp-b{background:var(--qing-bg);border:2px solid var(--qing)}.cmp h4{font-size:.82rem;margin-bottom:.15rem;font-family:var(--ft)}.fname{color:var(--yu);font-weight:700}.etitle{font-size:1.2rem;color:var(--zhu);text-align:center;margin:.8rem 0 .4rem;font-weight:900;font-family:var(--ft)}.etext{font-size:.9rem;line-height:1.9;max-width:580px;margin:0 auto}.eref{background:var(--card);border:2px solid var(--yu);border-radius:var(--radius);padding:.6rem;margin:.5rem auto;max-width:580px;font-style:italic;line-height:1.8;color:var(--text2);font-size:.85rem}.eref b{color:var(--yu);font-style:normal}.ebox{background:var(--qing-bg);border:2px solid var(--qing);border-radius:var(--radius);padding:.5rem;margin:.4rem auto;max-width:580px;font-size:.82rem;line-height:1.7}.ebox::before{content:'📖 教科書知識點';display:block;color:var(--qing);font-weight:700;margin-bottom:.15rem;font-size:.75rem}.ss{background:var(--card);border:2px solid var(--gold);border-radius:var(--radius);padding:.6rem;margin:.4rem 0;width:100%;max-width:600px;box-shadow:var(--shadow)}.ss h3{color:var(--zhu);margin-bottom:.15rem;font-family:var(--ft);font-size:.9rem}.ss p{line-height:1.8;margin-bottom:.15rem;font-size:.85rem}
+.col-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:.35rem;margin:.4rem 0}.col-item{padding:.4rem;border-radius:8px;border:2px solid var(--paper);text-align:center;font-size:.75rem;line-height:1.4;background:var(--card);transition:all .15s}.col-item.unlocked{border-color:var(--gold);background:var(--gold-bg);cursor:pointer;box-shadow:0 2px 8px var(--gold-glow)}.col-item.unlocked:hover{transform:scale(1.03)}.col-item .ci-icon{font-size:1.2rem;margin-bottom:.15rem}.col-item.locked .ci-icon{filter:grayscale(1) opacity(.25)}.col-item.locked .ci-name{color:var(--text2)}.col-item .ci-name{font-weight:700;font-size:.7rem}.tab-row{display:flex;gap:.25rem;margin:.4rem 0;justify-content:center;flex-wrap:wrap}.tab-btn{padding:.3rem .6rem;border-radius:20px;border:2px solid var(--paper);background:var(--card);font-size:.78rem;cursor:pointer;font-family:var(--fb);transition:all .2s}.tab-btn.active{background:var(--zhu);color:#fff;border-color:var(--zhu2)}.save-input{width:100%;max-width:400px;padding:.4rem;border:2px solid var(--gold);border-radius:6px;font-family:monospace;font-size:.82rem;text-align:center;background:var(--gold-bg)}.draw-box{background:linear-gradient(135deg,var(--zi-bg),var(--qing-bg));border:2px solid var(--gold);border-radius:var(--radius);padding:.5rem;margin:.3rem 0;text-align:center;animation:fadeUp .2s ease}.draw-box .draw-label{font-size:.72rem;color:var(--text2);margin-bottom:.15rem}.draw-box .draw-result{font-size:.95rem;font-weight:700;color:var(--zhu);font-family:var(--ft);min-height:1.4em}.fade{animation:fadeUp .3s ease}#rcon{width:100%;max-width:640px}.pad-bot{padding-bottom:8rem}
+.alloc-section{background:var(--card);border:2px solid var(--paper);border-radius:var(--radius);padding:.6rem;margin:.3rem auto;width:100%;max-width:600px}.alloc-section h4{font-family:var(--ft);color:var(--zhu);font-size:.82rem;margin-bottom:.2rem}.alloc-row{display:flex;align-items:center;justify-content:space-between;padding:.15rem 0;font-size:.78rem;border-bottom:1px solid var(--paper)}.alloc-btn{padding:.15rem .4rem;border-radius:6px;border:1.5px solid var(--gold);background:var(--gold-bg);cursor:pointer;font-size:.72rem;font-weight:700;color:var(--gold2)}.alloc-btn:hover{background:var(--gold);color:#fff}.alloc-btn:disabled{opacity:.3;cursor:not-allowed}
+.tal-grid{display:grid;grid-template-columns:1fr 1fr;gap:.4rem}.tal-col{flex:1;min-width:140px}.tal-col h5{font-size:.72rem;text-align:center;margin-bottom:.15rem;font-family:var(--ft);padding:.1rem;border-radius:5px}.tal-col.col-pos h5{background:var(--yu-bg);color:var(--yu2)}.tal-col.col-neg h5{background:var(--zhu-bg);color:var(--zhu2)}.ts-item{padding:.2rem .3rem;margin:.1rem 0;border-radius:6px;border:1.5px solid var(--paper);font-size:.68rem;line-height:1.35;cursor:pointer;background:var(--card)}.ts-item:hover:not(.ts-locked){transform:translateY(-1px)}.ts-item.ts-locked{opacity:.3;cursor:not-allowed;filter:grayscale(.8)}.ts-item.ts-held{border-color:var(--gold);background:var(--gold-bg);font-weight:700}.ts-item .ts-n{font-weight:700;font-size:.72rem}.ts-item .ts-d{color:var(--text2);font-size:.62rem}.ts-item .ts-c{font-weight:700;color:var(--gold2);font-size:.65rem;margin-top:.05rem}.pt-display{background:linear-gradient(135deg,var(--gold),var(--tao));color:#fff;padding:.25rem .6rem;border-radius:18px;font-weight:900;font-family:var(--ft);font-size:.85rem;display:inline-block;margin:.2rem}.th-bar{display:flex;flex-wrap:wrap;gap:.15rem;margin:.15rem 0;justify-content:center}.th-chip{display:inline-flex;align-items:center;gap:.1rem;padding:.1rem .25rem;border-radius:12px;font-size:.65rem;font-weight:700;border:1px solid var(--gold);background:var(--gold-bg)}.th-chip.neg{border-color:var(--zhu);background:var(--zhu-bg);color:var(--zhu2)}
+.ld-spin{display:inline-block;width:40px;height:40px;border:4px solid var(--paper);border-top-color:var(--gold);border-radius:50%;animation:spin .8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
+@media(max-width:400px){html{font-size:13.5px}.coin{width:85px;height:85px;font-size:.78rem}.dice{width:70px;height:70px;font-size:1.6rem}.wheel-wrap{width:150px;height:150px}.tal-grid{grid-template-columns:1fr}}
+/* Task 5a: Toast */
+.toast-pop{position:fixed;top:1.5rem;left:50%;transform:translateX(-50%);background:var(--gold);color:#1a1a2e;padding:.45rem 1.1rem;border-radius:var(--radius);font-size:.82rem;font-weight:700;z-index:9999;box-shadow:0 4px 16px rgba(0,0,0,.45);animation:toastIn .3s;transition:opacity .4s}
+.toast-pop.fade-out{opacity:0}
+@keyframes toastIn{from{opacity:0;transform:translateX(-50%) translateY(10px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
+.floating-stats{position:fixed;top:10px;width:100%;pointer-events:none;z-index:55;display:none;justify-content:space-between;padding:0 15px;box-sizing:border-box}
+.stat-badge{background:rgba(255,255,255,0.92);border:2px solid var(--gold);border-radius:20px;padding:4px 12px;pointer-events:auto;box-shadow:0 2px 6px rgba(0,0,0,0.18);font-weight:700;font-size:.72rem;font-family:var(--ft)}
+@media(max-width:500px){.floating-stats.fs-show{display:flex}}
+/* Minister Cameo System */
+.minister-cameo{position:fixed;bottom:85px;left:50%;transform:translateX(-50%);z-index:90;max-width:480px;width:92%;background:linear-gradient(135deg,rgba(28,22,18,.93),rgba(42,35,24,.96));border:2px solid var(--gold);border-radius:12px;padding:.55rem .75rem;box-shadow:0 8px 32px rgba(0,0,0,.45),0 0 20px var(--gold-glow);display:none;color:#F5E6C8;backdrop-filter:blur(4px)}
+.minister-cameo.mc-show{display:flex;align-items:flex-start;gap:.55rem;animation:cameoIn .45s ease}
+.minister-cameo.mc-out{animation:cameoOut .4s ease forwards}
+.minister-cameo .mc-avatar{flex-shrink:0;width:48px;height:48px;border-radius:50%;border:2px solid var(--gold);background:linear-gradient(135deg,var(--zi-bg),var(--qing-bg));display:flex;align-items:center;justify-content:center;font-size:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.minister-cameo .mc-body{flex:1;min-width:0}
+.minister-cameo .mc-name{color:var(--gold);font-weight:900;font-family:var(--ft);font-size:.82rem;margin-bottom:.12rem;letter-spacing:.05em}
+.minister-cameo .mc-line{font-size:.75rem;line-height:1.65;color:#d4c8b0;font-style:italic}
+.minister-cameo .mc-bar{display:flex;justify-content:space-between;align-items:center;margin-top:.25rem}
+.minister-cameo .mc-tag{font-size:.55rem;color:var(--zi);background:var(--zi-bg);padding:.06rem .3rem;border-radius:8px;border:1px solid var(--zi)}
+.minister-cameo .mc-close{background:none;border:1.5px solid var(--gold);color:var(--gold);border-radius:6px;padding:.12rem .45rem;font-size:.62rem;cursor:pointer;font-family:var(--fb);transition:all .15s}
+.minister-cameo .mc-close:hover{background:var(--gold);color:#1C1612}
+.mc-timer{height:2px;background:var(--gold);border-radius:1px;margin-top:.25rem;transition:width linear}
+@keyframes cameoIn{from{opacity:0;transform:translateX(-50%) translateY(20px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
+@keyframes cameoOut{from{opacity:1;transform:translateX(-50%) translateY(0)}to{opacity:0;transform:translateX(-50%) translateY(20px)}}
+
+
+</style>
+</head>
+<body class="bg-default">
+<div id="loading-screen" style="position:fixed;top:0;left:0;width:100%;height:100%;background:var(--bg);z-index:9999;display:flex;flex-direction:column;justify-content:center;align-items:center;">
+  <div style="font-size:3rem;margin-bottom:1rem;">⏳</div>
+  <div style="font-size:1.2rem;font-weight:700;color:var(--text);font-family:var(--ft);">太學竹簡運送中...</div>
+  <div style="font-size:0.9rem;color:var(--text2);margin-top:0.5rem;">正在從雲端載入遊戲資料</div>
+</div>
+<div id="sbar"><div id="sbar-era"></div><div class="sg" id="sg"></div></div>
+<div id="tbar"></div>
+<div id="chaju-prog" style="display:none;width:100%;max-width:700px;margin:0 auto;padding:.1rem .7rem .15rem;background:#2A2318;border-bottom:1px solid #555"> <div style="display:flex;align-items:center;gap:.3rem;font-size:.62rem;color:#bbb"> <span>📜 孝廉</span> <div style="flex:1;height:4px;background:#3a3530;border-radius:2px;overflow:hidden"> <div id="chaju-fill" style="height:100%;background:var(--yu);border-radius:2px;transition:width .5s;width:0%"></div> </div> <span id="chaju-val" style="color:var(--yu);font-weight:700;font-size:.6rem">0/80</span> <span id="chaju-badge" style="display:none;color:var(--yu);font-weight:700">✅</span> </div> </div>
+<div id="screen-loading" class="screen active" style="justify-content:center;text-align:center;gap:.5rem"><div style="font-size:2.5rem">🏛️</div><div class="t-main">大漢命運輪盤</div><div class="ld-spin"></div><div class="t-sub" id="ld-msg">正在載入…</div></div>
+<div id="screen-title" class="screen"><div style="font-size:2.5rem;margin-bottom:.05rem">🏛️</div><div class="t-main">大漢命運輪盤</div><div class="t-sub">「獨尊儒術」與「士人政府」互動學習遊戲</div><div style="margin:.2rem 0"><span class="badge badge-a">漢武帝前</span><span class="badge badge-b">漢武帝後</span><span class="badge badge-n">貴族</span><span class="badge badge-c">平民</span></div><div style="font-size:.72rem;color:var(--text2);margin:.2rem 0">💡 <span class="tip" data-term="獨尊儒術">實線標註</span> = 教科書核心詞 <span class="tip-ex" data-term="董仲舒">虛線標註</span> = 課外知識</div><button class="btn btn-p" onclick="startGame()" style="margin-top:.4rem">開始命運之旅</button><div style="display:flex;gap:.3rem;margin-top:.3rem;flex-wrap:wrap;justify-content:center"><button class="btn btn-s" onclick="showCollection()">🏆 圖鑑</button><button class="btn btn-s" onclick="showSaveUI()">📤 匯出存檔</button>
+<button class="btn btn-s" onclick="showLoadUI()">📥 讀取存檔</button></div><div style="font-size:.65rem;color:var(--text2);margin-top:.2rem" id="col-points-display"></div></div>
+<div id="screen-coin" class="screen"><div style="text-align:center;margin-top:1.5rem"><div style="font-size:.9rem;color:var(--zhu);font-family:var(--ft);margin-bottom:.2rem">🪙 擲幣決定時代</div><div style="font-size:.78rem;color:var(--text2);margin-bottom:.8rem">點擊銅幣拋擲</div><div class="coin-area"><div class="coin coin-a" id="coin" onclick="tossCoin()"><span id="coin-txt">點擊<br>拋擲</span></div><div id="coin-result" style="display:none" class="fade"><div id="coin-era" style="font-size:.95rem;font-weight:700;margin:.2rem 0"></div><button class="btn btn-p" onclick="showDice()" style="margin-top:.2rem">🎲 擲骰子 →</button></div></div></div></div>
+<div id="screen-dice" class="screen"><div style="text-align:center;margin-top:1.5rem"><div style="font-size:.9rem;color:var(--zhu);font-family:var(--ft);margin-bottom:.2rem">🎲 十面骰 — 決定家世</div><div style="font-size:.78rem;color:var(--text2);margin-bottom:.8rem">點擊骰子擲出 1~10</div><div class="coin-area"><div class="dice" id="dice" onclick="rollDice()"><span id="dice-txt">?</span></div><div id="dice-result" style="display:none" class="fade"><div id="dice-fam" style="font-size:.95rem;font-weight:700;margin:.2rem 0"></div><div id="dice-class" style="font-size:.85rem;margin-bottom:.3rem"></div><button class="btn btn-p" onclick="showAllocScreen()">🎴 天賦配點 →</button></div></div></div></div>
+<div id="screen-alloc" class="screen"><div style="text-align:center;width:100%;max-width:600px" id="alloc-content"></div></div>
+<div id="screen-game" class="screen pad-bot"><div id="narea"><div id="pban" class="pban" style="display:none"></div><div class="nbox" id="nbox"><div class="nlabel" id="nlabel">旁白</div><div class="ntext" id="ntext"></div></div><div id="rcon"></div></div><div id="carea"></div></div>
+<div id="screen-ending" class="screen pad-bot"><div id="econtent" style="width:100%"></div></div>
+<div id="screen-summary" class="screen pad-bot"><div id="scontent" style="width:100%"></div></div>
+<div id="screen-collection" class="screen"><div id="col-content" style="width:100%"></div></div>
+<div class="ov ov-dark" id="ov-compare"><div class="modal"><div class="mt">📊 時代對比</div><div id="cmp-body"></div><button class="btn btn-sm" onclick="closeOv('ov-compare')" style="margin:.4rem auto 0">關閉</button></div></div>
+<div class="ov ov-friend" id="ov-friend"><div class="modal fmodal"><div class="mt">👫 老友重聚</div><div class="ntext" id="ftxt"></div><button class="btn btn-sm" id="fbtn" style="margin:.4rem auto 0;border-color:var(--yu);color:var(--yu2)">知道了</button></div></div>
+<div class="ov ov-dark" id="ov-warn"><div class="modal"><div class="mt" id="wmt"></div><div class="ntext" id="wmtxt"></div><div class="mq" id="wmq"></div><div style="display:flex;gap:.3rem;justify-content:center;margin-top:.4rem"><button class="btn btn-sm" onclick="wBack()" style="border-color:var(--yu)">🔙 回頭是岸</button><button class="btn btn-sm" onclick="wInsist()" style="border-color:var(--zhu)">執意為之</button></div></div></div>
+<div class="ov ov-dark" id="ov-neg"><div class="modal" style="border-color:var(--zhu)"><div class="mt" style="color:var(--zhu)">⚠️ 數值透支警告</div><div class="ntext" id="neg-body"></div><div style="display:flex;gap:.3rem;justify-content:center;margin-top:.4rem"><button class="btn btn-sm" id="neg-back" style="border-color:var(--yu)">🔙 回到上一步</button><button class="btn btn-sm" id="neg-go" style="border-color:var(--zhu);color:var(--zhu)">⚠️ 堅持選擇</button></div></div></div>
+<div class="ov ov-event" id="ov-fate"><div class="modal emodal" style="max-width:520px"><div class="mt" id="fate-title">🎡 命運輪盤</div><div id="fate-wheel-area" style="text-align:center"></div><div id="fate-event" style="display:none"></div></div></div>
+<div class="ov ov-dark" id="ov-save"><div class="modal"><div class="mt" id="ov-save-title">💾</div><div id="save-body"></div><button class="btn btn-sm" onclick="closeOv('ov-save')" style="margin:.4rem auto 0">關閉</button></div></div>
+<div class="ov ov-dark" id="ov-review"><div class="modal"><div class="mt" id="rev-title"></div><div id="rev-body" class="ntext"></div><button class="btn btn-sm" onclick="closeOv('ov-review')" style="margin:.4rem auto 0">關閉</button></div></div>
+<!-- ▼▼▼ Minister Cameo ▼▼▼ -->
+<div id="minister-cameo" class="minister-cameo">
+  <div class="mc-avatar" id="mc-icon">📜</div>
+  <div class="mc-body">
+    <div class="mc-name" id="mc-name"></div>
+    <div class="mc-line" id="mc-line"></div>
+    <div class="mc-bar">
+      <span class="mc-tag">名臣偶遇</span>
+      <button class="mc-close" onclick="hideMinisterCameo()">知道了 →</button>
+    </div>
+    <div class="mc-timer" id="mc-timer" style="width:100%"></div>
+  </div>
+</div>
+<!-- ▲▲▲ Minister Cameo END ▲▲▲ -->
+<div id="tip-sheet"><h4 id="tip-title"></h4><p id="tip-body"></p></div>
+<div id="prog"><div class="pb-wrap"><div class="pb-track"><div class="pb-fill" id="pb-fill"></div><div class="pb-mark">冠禮</div></div><div class="pb-labels"><span>成長階段</span><span>成年階段</span></div></div></div>
+
+
+<script>
+/* §NEW restartGame */
+function restartGame(){ if(window._twT)clearInterval(window._twT); window._twT=null;window._twCb=null;window._twEl=null;window._twH=''; reset(); window.fwCb=null;window.gR=0;window.crR=0; window.PG={p:'none',s:0,m:1}; window.tipOpen=false;window._plainMode=false; window._gameStarted=false;window._allocPhase=false;window.activeQuestionPool=[]; if(_mcTimer){clearTimeout(_mcTimer);_mcTimer=null} if(_mcAnimTimer){clearTimeout(_mcAnimTimer);_mcAnimTimer=null} var mcEl=document.getElementById('minister-cameo');if(mcEl)mcEl.className='minister-cameo'; ['sbar','prog','tbar','chaju-prog'].forEach(function(id){var e=document.getElementById(id);if(e)e.style.display='none'}); ['ov-fate','ov-friend','ov-warn','ov-compare','ov-neg','ov-save','ov-review'].forEach(function(id){var e=document.getElementById(id);if(e)e.classList.remove('active')}); var ts=document.getElementById('tip-sheet');if(ts)ts.classList.remove('show'); var fs=document.getElementById('floating-stats');if(fs)fs.classList.remove('fs-show'); setBg('bg-default'); showScr('screen-title'); if(typeof updateColDisplay==='function')updateColDisplay(); }
+
+
+/* §NEW toast */
+function showToast(msg){
+  var t=document.createElement('div');
+  t.className='toast-pop';t.textContent=msg;
+  document.body.appendChild(t);
+  setTimeout(function(){t.classList.add('fade-out')},1800);
+  setTimeout(function(){t.remove()},2400);
+}
+
+
+/* §0 CONFIG */
+var SHEET={};
+var activeQuestionPool=[]; var _gameStarted=false; var _allocPhase=false;
+/* ▼▼▼ 新增：Minister Cameo 系統 ▼▼▼ */
+var _mcTimer=null;
+var _mcAnimTimer=null;
+
+
+function getMinisterInfo(name){
+  /* 先嘗試從 Ministers CSV 讀取 */
+  if(SHEET.Ministers){
+    for(var i=0;i<SHEET.Ministers.length;i++){
+      var row=SHEET.Ministers[i];
+      if(row.Name===name)return{
+        name:row.Name,
+        icon:row.Icon||'📜',
+        desc:row.Quote||row.Cameo||row.Description||''
+      };
+    }
+  }
+  /* 後備資料 */
+  var fb={
+    '董仲舒':{icon:'📜',desc:'臣建議陛下罷黜百家，獨尊儒術，以一統天下學術。'},
+    '東方朔':{icon:'🎭',desc:'陛下，臣雖詼諧，但諫言皆出自肺腑。願陛下止此害民之舉。'},
+    '主父偃':{icon:'📋',desc:'臣出身布衣，深知民間疾苦。推恩令可削諸侯而安天下。'},
+    '徐樂':{icon:'📖',desc:'天下之患在土崩，不在瓦解。願陛下安民固本。'},
+    '嚴安':{icon:'⚖️',desc:'止戈為武，與民休息，方為長久之計。'},
+    '衛青':{icon:'⚔️',desc:'末將願為陛下掃平匈奴，馬革裹屍亦無憾。'},
+    '霍去病':{icon:'🏇',desc:'匈奴未滅，何以家為？'},
+    '司馬遷':{icon:'✍️',desc:'人固有一死，或重於泰山，或輕於鴻毛。'},
+    '張騫':{icon:'🐪',desc:'臣願鑿空西域，為大漢開萬里之途。'},
+    '桑弘羊':{icon:'💰',desc:'鹽鐵官營，均輸平準，國庫方可充盈。'}
+  };
+  var d=fb[name];
+  return d?{name:name,icon:d.icon,desc:d.desc}:null;
+}
+
+
+function showMinisterCameo(name){
+  if(!name)return;
+  var info=getMinisterInfo(name);
+  if(!info)return;
+
+
+  /* 收藏追蹤 */
+  var isNew=!COL.ministers[name];
+  COL.ministers[name]=1;
+  saveCOL();
+  if(isNew)showToast('📜 偶遇名臣：'+name);
+
+
+  /* 清除上一個 */
+  if(_mcTimer){clearTimeout(_mcTimer);_mcTimer=null}
+  if(_mcAnimTimer){clearTimeout(_mcAnimTimer);_mcAnimTimer=null}
+
+
+  var el=document.getElementById('minister-cameo');
+  var iconEl=document.getElementById('mc-icon');
+  var nameEl=document.getElementById('mc-name');
+  var lineEl=document.getElementById('mc-line');
+  var timerBar=document.getElementById('mc-timer');
+
+
+  iconEl.textContent=info.icon||'📜';
+  nameEl.textContent='💬 '+info.name;
+  lineEl.textContent='「'+info.desc+'」';
+
+
+  /* 計時條動畫 */
+  timerBar.style.transition='none';
+  timerBar.style.width='100%';
+  el.className='minister-cameo mc-show';
+
+
+  /* 延遲啟動計時條 */
+  requestAnimationFrame(function(){
+    requestAnimationFrame(function(){
+      timerBar.style.transition='width 4.5s linear';
+      timerBar.style.width='0%';
+    });
+  });
+
+
+  _mcTimer=setTimeout(function(){hideMinisterCameo()},5000);
+}
+
+
+function hideMinisterCameo(){
+  if(_mcTimer){clearTimeout(_mcTimer);_mcTimer=null}
+  var el=document.getElementById('minister-cameo');
+  if(!el||!el.classList.contains('mc-show'))return;
+  el.classList.remove('mc-show');
+  el.classList.add('mc-out');
+  _mcAnimTimer=setTimeout(function(){
+    el.className='minister-cameo';
+    _mcAnimTimer=null;
+  },450);
+}
+/* ▲▲▲ Minister Cameo 系統結束 ▲▲▲ */
+var $=function(id){return document.getElementById(id)};
+
+
+var CSV_URLS={
+  Terms:"https://docs.google.com/spreadsheets/d/e/2PACX-1vQf2f-bZOoBTFRMhl-ByYOcyIP-Uv4bNQQmhxbAX7IDcF9yjrSHFn_OQpclRt8daFuUr1KCR49EuQCp/pub?gid=1754001082&single=true&output=csv",
+  Talents:"https://docs.google.com/spreadsheets/d/e/2PACX-1vQf2f-bZOoBTFRMhl-ByYOcyIP-Uv4bNQQmhxbAX7IDcF9yjrSHFn_OQpclRt8daFuUr1KCR49EuQCp/pub?gid=1956126540&single=true&output=csv",
+  Config:"https://docs.google.com/spreadsheets/d/e/2PACX-1vQf2f-bZOoBTFRMhl-ByYOcyIP-Uv4bNQQmhxbAX7IDcF9yjrSHFn_OQpclRt8daFuUr1KCR49EuQCp/pub?gid=1925382955&single=true&output=csv",
+  Quiz:"https://docs.google.com/spreadsheets/d/e/2PACX-1vQf2f-bZOoBTFRMhl-ByYOcyIP-Uv4bNQQmhxbAX7IDcF9yjrSHFn_OQpclRt8daFuUr1KCR49EuQCp/pub?gid=1551708567&single=true&output=csv",
+  Strategy:"https://docs.google.com/spreadsheets/d/e/2PACX-1vQf2f-bZOoBTFRMhl-ByYOcyIP-Uv4bNQQmhxbAX7IDcF9yjrSHFn_OQpclRt8daFuUr1KCR49EuQCp/pub?gid=1036884167&single=true&output=csv",
+  Endings:"https://docs.google.com/spreadsheets/d/e/2PACX-1vQf2f-bZOoBTFRMhl-ByYOcyIP-Uv4bNQQmhxbAX7IDcF9yjrSHFn_OQpclRt8daFuUr1KCR49EuQCp/pub?gid=1922136796&single=true&output=csv",
+  BirthText:"https://docs.google.com/spreadsheets/d/e/2PACX-1vQf2f-bZOoBTFRMhl-ByYOcyIP-Uv4bNQQmhxbAX7IDcF9yjrSHFn_OQpclRt8daFuUr1KCR49EuQCp/pub?gid=1934035727&single=true&output=csv",
+  FriendDialog:"https://docs.google.com/spreadsheets/d/e/2PACX-1vQf2f-bZOoBTFRMhl-ByYOcyIP-Uv4bNQQmhxbAX7IDcF9yjrSHFn_OQpclRt8daFuUr1KCR49EuQCp/pub?gid=1666607305&single=true&output=csv",
+  EraBg:"https://docs.google.com/spreadsheets/d/e/2PACX-1vQf2f-bZOoBTFRMhl-ByYOcyIP-Uv4bNQQmhxbAX7IDcF9yjrSHFn_OQpclRt8daFuUr1KCR49EuQCp/pub?gid=1802977946&single=true&output=csv",
+  Warnings:"https://docs.google.com/spreadsheets/d/e/2PACX-1vQf2f-bZOoBTFRMhl-ByYOcyIP-Uv4bNQQmhxbAX7IDcF9yjrSHFn_OQpclRt8daFuUr1KCR49EuQCp/pub?gid=623462540&single=true&output=csv",
+  Ministers:"https://docs.google.com/spreadsheets/d/e/2PACX-1vQf2f-bZOoBTFRMhl-ByYOcyIP-Uv4bNQQmhxbAX7IDcF9yjrSHFn_OQpclRt8daFuUr1KCR49EuQCp/pub?gid=1603220926&single=true&output=csv",
+  Events:"https://docs.google.com/spreadsheets/d/e/2PACX-1vQf2f-bZOoBTFRMhl-ByYOcyIP-Uv4bNQQmhxbAX7IDcF9yjrSHFn_OQpclRt8daFuUr1KCR49EuQCp/pub?gid=1306157956&single=true&output=csv",
+  Growth:"https://docs.google.com/spreadsheets/d/e/2PACX-1vQf2f-bZOoBTFRMhl-ByYOcyIP-Uv4bNQQmhxbAX7IDcF9yjrSHFn_OQpclRt8daFuUr1KCR49EuQCp/pub?gid=1296606218&single=true&output=csv"
+};
+
+
+function parseCSV(str){
+  var arr=[],quote=false,row=[],col="";
+  for(var i=0;i<str.length;i++){
+    var cc=str[i],nc=str[i+1];
+    if(cc=='"'&&quote&&nc=='"'){col+=cc;++i;continue}
+    if(cc=='"'){quote=!quote;continue}
+    if(cc==','&&!quote){row.push(col);col="";continue}
+    if(cc=='\r'&&nc=='\n'&&!quote){row.push(col);arr.push(row);col="";row=[];++i;continue}
+    if(cc=='\n'&&!quote){row.push(col);arr.push(row);col="";row=[];continue}
+    col+=cc;
+  }
+  if(col||row.length){row.push(col);arr.push(row)}
+  if(arr.length===0)return[];
+  var headers=arr[0],res=[];
+  for(var r=1;r<arr.length;r++){
+    if(arr[r].length===1&&!arr[r][0])continue;
+    var obj={};
+    for(var c=0;c<headers.length;c++)obj[headers[c]]=arr[r][c]||"";
+    res.push(obj);
+  }
+  return res;
+}
+/* §0b CSV ENGINES */
+var EventDB={
+_d:{},
+load:function(){var self=this;if(!SHEET.Events)return;SHEET.Events.forEach(function(row){var key=row.Group+'_'+row.Round;var ev={title:row.Title||'',intro:row.Intro||'',epilogue:row.Epilogue||'',triggerMinister:row.TriggerMinister||'',options:[]};for(var i=1;i<=3;i++){var lb=row['Opt'+i+'_Label'];if(!lb)continue;ev.options.push({label:lb,result:row['Opt'+i+'_Result']||'',eff:self._pE(row['Opt'+i+'_Eff']),req:row['Opt'+i+'_Req']||'',tip:row['Opt'+i+'_Tip']||'',corrupt:row['Opt'+i+'_Corrupt']==='1'})}self._d[key]=ev})},
+get:function(g,r){return this._d[g+'_'+r]||null},
+_pE:function(s){if(!s)return{};s=s.trim();var rm=s.match(/^RNG\(([\d.]+)\)\s*\?\s*(.*?)\s*:\s*(.*)$/);if(rm)return{_type:'rng',prob:parseFloat(rm[1]),t:this._pS(rm[2]),f:this._pS(rm[3])};var cm=s.match(/^CHK\((\w+)(>=|<=|>|<|==|!=)(-?\d+)\)\s*\?\s*(.*?)\s*:\s*(.*)$/);if(cm)return{_type:'chk',key:cm[1],op:cm[2],val:parseInt(cm[3],10),t:this._pS(cm[4]),f:this._pS(cm[5])};return this._pS(s)},
+_pS:function(s){if(!s)return{};var e={};var km={rep:'reputation',mor:'morality',kno:'knowledge',wea:'wealth',fam:'family'};s.split(/[;,]/).forEach(function(p){p=p.trim();if(!p)return;var a=p.split(':');if(a.length>=2){var key=a[0].trim(),val=a.slice(1).join(':').trim();if(key==='tag')key='tag_add';var rk=km[key]||key;if(rk==='jump'||rk==='tag_add'||rk==='tag_del'){e[rk]=e[rk]?e[rk]+','+val:val}else{e[rk]=parseInt(val,10)}}});return e}
+
+
+};
+var GrowthDB={
+_d:[],
+load:function(){if(SHEET.Growth)this._d=SHEET.Growth},
+getOpts:function(era,isNoble,stats){var self=this,res=[];this._d.forEach(function(row){if(row.Era!==era)return;if(row.For==='noble'&&!isNoble)return;if(row.For==='commoner'&&isNoble)return;if(row.Cond&&!evalCond(row.Cond,stats))return;var locked=row.Req?!evalCond(row.Req,stats):false;res.push({id:row.ID,order:parseInt(row.Order,10)||99,label:row.Label,desc:processText(row.Desc||''),locked:locked,tip:locked?(row.Tip||reqToTip(row.Req||'')):'',action:row.Action,eff:EventDB._pE(row.Eff),triggerMinister:row.TriggerMinister||''})});res.sort(function(a,b){return a.order-b.order});return res}
+};
+function evalCond(cond,stats){
+  if(!cond||!cond.trim())return true;
+  cond=cond.trim();
+  /* OR 分支 */
+  if(cond.indexOf('||')>=0){var ps=cond.split('||');for(var i=0;i<ps.length;i++){if(evalCond(ps[i].trim(),stats))return true}return false}
+  /* AND 分支 */
+  if(cond.indexOf('&&')>=0){var ps2=cond.split('&&');for(var j=0;j<ps2.length;j++){if(!evalCond(ps2[j].trim(),stats))return false}return true}
+  /* hasTalent('xxx') */
+  var ht=cond.match(/^hasTalent\(['"](\w+)['"]\)$/);
+  if(ht)return hasTalent(ht[1]);
+  var nht=cond.match(/^!hasTalent\(['"](\w+)['"]\)$/);
+  if(nht)return!hasTalent(nht[1]);
+  /* S.tags.has('xxx') */
+  var th=cond.match(/^S\.tags\.has\(['"]([^'"]+)['"]\)$/);
+  if(th)return!!(S.tags&&S.tags.has(th[1]));
+  var nth=cond.match(/^!S\.tags\.has\(['"]([^'"]+)['"]\)$/);
+  if(nth)return!(S.tags&&S.tags.has(nth[1]));
+  /* tag('xxx') 簡寫 */
+  var tg=cond.match(/^tag\(['"]([^'"]+)['"]\)$/);
+  if(tg)return!!(S.tags&&S.tags.has(tg[1]));
+  var ntg=cond.match(/^!tag\(['"]([^'"]+)['"]\)$/);
+  if(ntg)return!(S.tags&&S.tags.has(ntg[1]));
+  /* 原始簡單比較 */
+  var m=cond.match(/^(\w+)(>=|<=|>|<|==|!=)(-?\d+)$/);
+  if(!m)return true;
+  var k=m[1],op=m[2],v=parseInt(m[3],10);
+  var sv=stats[k]!=null?stats[k]:(S[k]||0);
+  if(op==='>=')return sv>=v;if(op==='<=')return sv<=v;if(op==='>')return sv>v;if(op==='<')return sv<v;if(op==='==')return sv===v;if(op==='!=')return sv!==v;
+  return true}
+
+
+function reqToTip(reqStr){ if(!reqStr)return''; var names={knowledge:'學問',reputation:'風評',wealth:'家財',morality:'品德',family:'家世',studyCount:'進學次數'}; var m=reqStr.match(/^(\w+)(>=|<=|>|<|==|!=)(\d+)$/); if(!m)return''; var k=m[1],op=m[2],v=m[3]; var name=names[k]||k; var cur=S[k]!=null?S[k]:0; var opText=op==='>='?'≥':op==='<='?'≤':op==='>'?'>':op==='<'?'<':op==='=='?'=':'≠'; var shortfall=0; if(op==='>='||op==='>')shortfall=Math.max(0,parseInt(v,10)-cur); return'⚠️ 需'+name+opText+v+'（當前：'+cur+(shortfall>0?'，差'+shortfall:'')+'）'; }
+/* --- unlockTerm：統一解鎖詞條入口 --- */ function unlockTerm(term){ if(!term)return; var info=getTip(term);if(!info)return; var ic=info.t==='core'; var wasNew=ic?!COL.coreTerms[term]:!COL.exTerms[term]; if(ic)COL.coreTerms[term]=1;else COL.exTerms[term]=1; saveCOL(); /* 同步將綁定該 termId 的專屬題目推入 activeQuestionPool */ if(wasNew&&activeQuestionPool){ var allQ=getQuizPool(); allQ.forEach(function(q){ if(q.termId===term){ var exists=activeQuestionPool.some(function(aq){return aq.q===q.q}); if(!exists)activeQuestionPool.push(q); } }); } } /* --- initQuestionPool：初始化題庫（僅基礎題＋已解鎖詞條題） --- */ function initQuestionPool(){ var allQ=getQuizPool(); activeQuestionPool=allQ.filter(function(q){return!q.termId}); var unlocked={};for(var k in COL.coreTerms)unlocked[k]=1;for(var k2 in COL.exTerms)unlocked[k2]=1; allQ.forEach(function(q){ if(q.termId&&unlocked[q.termId]){ var exists=activeQuestionPool.some(function(aq){return aq.q===q.q}); if(!exists)activeQuestionPool.push(q); } }); } /* --- updateChajuProg：察舉進度條更新 --- */ function updateChajuProg(){ var el=$('chaju-prog');if(!el)return; if(S.era!=='B'||S.noble||S.clv){el.style.display='none';return} var val=S.morality+S.reputation; el.style.display='block'; var pct=Math.min(100,val/80*100); var fill=$('chaju-fill');if(fill)fill.style.width=pct+'%'; var valEl=$('chaju-val');if(valEl)valEl.textContent=Math.min(val,80)+'/80'; var badge=$('chaju-badge');if(badge)badge.style.display=val>=80?'inline':'none'; } /* --- showTutorialModal：教學彈窗 --- */ function showTutorialModal(cb){ showScr('screen-game'); $('nlabel').textContent='📖 遊戲教學'; $('ntext').innerHTML='<div style="font-size:.85rem;line-height:1.8">' +'<p>🎲 歡迎來到<b>大漢命運輪盤</b>！</p>' +'<p>📊 <b>上方狀態欄</b>顯示五項屬性：學問、風評、家財、品德、家世。</p>' +'<p>🔗 <span style="border-bottom:2.5px solid var(--qing);color:var(--qing);font-weight:700">實線標註</span> = 教科書知識點；' +'<span style="border-bottom:2.5px dashed var(--zi);color:var(--zi);font-weight:600">虛線標註</span> = 課外知識。點擊可查看詳情<b>並解鎖相關題庫</b>。</p>' +'<p>🎡 每回合結束後可能觸發<b>命運輪盤</b>隨機事件。</p>' +'<p>⚖️ 你的每個選擇都會影響屬性，最終決定人生結局。</p>' +'<p>💡 收集越多知識點與結局，下一局可用的配點越多！</p></div>'; $('rcon').innerHTML=''; _gN=cb; $('carea').innerHTML='<button class="btn btn-p" onclick="gN()">知道了，開始！ →</button>'; } /* --- renderTalentPool：天賦商店雙欄渲染（從 renderAlloc 抽出） --- */ function renderTalentPool(){ var allT=getAllTalents();var _costOv={'divine':50,'charismatic':40};function _isPos(t){var p=t.Positive;return p===true||p==='1'||String(p).toUpperCase()==='TRUE'}var h='<div class="tal-grid"><div class="tal-col col-pos" id="lucky-talents"><h5>🌟 吉（上限3）</h5>'; allT.filter(function(t){return _isPos(t)&&PROTECTED_TALENTS.indexOf(t.ID)<0}).forEach(function(t){ var held=S.talents.indexOf(t.ID)>=0; var ul=!!COL.talents[t.ID]; var isSess=S._sessionDrawn&&S._sessionDrawn.indexOf(t.ID)>=0; var canBuy=ul||isSess; var isDemo=!!(t.Demo&&String(t.Demo)==='1'); var realCost=_costOv[t.ID]||Number(t.Cost)||0; var sellVal=isDemo?0:Math.floor(realCost*0.7); h+='<div class="ts-item'+(held?' ts-held':(!canBuy?' ts-locked':''))+'" onclick="shopAct(\''+t.ID+'\')">'; h+='<div class="ts-n">'+(t.Icon||'')+t.Name+(isDemo?' <span style="font-size:.55rem;color:var(--text2)">(示範)</span>':'')+'</div>'; h+='<div class="ts-d">'+t.Description+'</div>'; h+='<div class="ts-c">'+(held?'賣回+'+sellVal+(isDemo?' （示範用）':''):canBuy?'購買-'+realCost:'🔒 未解鎖')+'</div></div>'; }); h+='</div><div class="tal-col col-neg" id="unlucky-talents"><h5>💀 凶</h5>'; allT.filter(function(t){return!_isPos(t)&&PROTECTED_TALENTS.indexOf(t.ID)<0}).forEach(function(t){ var held=S.talents.indexOf(t.ID)>=0; var ul=!!COL.talents[t.ID]; var isSess=S._sessionDrawn&&S._sessionDrawn.indexOf(t.ID)>=0; var canBuy=ul||isSess; var realCost=_costOv[t.ID]||Number(t.Cost)||0; h+='<div class="ts-item'+(held?' ts-held':(!canBuy?' ts-locked':''))+'" onclick="shopAct(\''+t.ID+'\')">'; h+='<div class="ts-n">'+(t.Icon||'')+t.Name+'</div>'; h+='<div class="ts-d">'+t.Description+'</div>'; h+='<div class="ts-c">'+(held?'移除-'+realCost:canBuy?'接受+'+realCost:'🔒 未解鎖')+'</div></div>'; }); h+='</div></div>'; return h; } /* --- txQuiz / postTXQuiz：太學射策考試（使用 activeQuestionPool） --- */ function txQuiz(){ addPG();showBan('📝 射策考試'); var pool=activeQuestionPool.length>=3?activeQuestionPool:getQuizPool(); var qs=shuffle(pool.slice()).slice(0,Math.min(3,pool.length)); if(!qs.length){postTXQuiz();return} S.tqCorrect=0;startQz(qs,postTXQuiz); } function postTXQuiz(){ var bonus=S.tqCorrect*10; showRes('射策考試完成！答對'+S.tqCorrect+'題。',{knowledge:bonus},{knowledge:'射策考試'},function(){ var lv=S.tqCorrect>=3?'central':S.tqCorrect>=2?'local':'low'; S.clv=lv;updateBg(); showNarH('📋',lv==='central'?'你射策甲等！天子授你中央官職！':lv==='local'?'你射策乙等，派往地方為官。':'你射策丙等，授鄉級小官。',function(){ _gN=startCareer;$('carea').innerHTML='<button class="btn btn-p" onclick="gN()">進入官場 →</button>'; }); }); } /* ▲▲▲ 新增函數群結束 ▲▲▲ */
+function actKey(id){if(id.indexOf('study')===0)return'study_a';if(id.indexOf('estate')===0)return'estate';if(id.indexOf('court')===0)return'court';if(id.indexOf('farm')===0)return'farm';if(id.indexOf('social')===0)return'social';if(id.indexOf('idle')===0)return'idle';if(id.indexOf('network')===0)return'network';if(id.indexOf('serve')===0)return'serve';return id}
+/* §13b ACTION SPECIAL EVENT INTERCEPTION */
+function getActionGroup(actId){
+  var map={
+    'study_a':'special_study','official':'special_study','private':'special_study',
+    'farm':'special_farm','estate':'special_estate',
+    'social':'special_social','network':'special_social',
+    'serve':'special_serve','court':'special_court','idle':'special_idle'
+  };
+  return map[actId]||null;
+}
+
+
+function tryActionSpecialEvent(actId,cb){
+  var prob=cfg('ACTION_SE_PROB',0.3);
+  if(Math.random()>=prob){cb(false);return}
+  var group=getActionGroup(actId);
+  if(!group){cb(false);return}
+  var valid=[];
+  if(SHEET.Events){
+    SHEET.Events.forEach(function(row){
+      if(row.Group===group&&(row.Era==='All'||row.Era===''||row.Era===S.era))valid.push(row);
+    });
+  }
+  if(!valid.length){cb(false);return}
+  var picked=valid[Math.floor(Math.random()*valid.length)];
+  showActionSpecialEvent(picked,function(){cb(true)});
+}
+
+
+function showActionSpecialEvent(row,cb){
+  var title=processText(row.Title||'🎲 特殊事件');
+  var intro=processText(row.Intro||'');
+  var epilogue=processText(row.Epilogue||'');
+  var options=[];
+  for(var i=1;i<=3;i++){
+    var lb=row['Opt'+i+'_Label'];
+    if(!lb)continue;
+    options.push({
+      label:lb,
+      result:processText(row['Opt'+i+'_Result']||''),
+      eff:EventDB._pE(row['Opt'+i+'_Eff']),
+      corrupt:row['Opt'+i+'_Corrupt']==='1',
+      req:row['Opt'+i+'_Req']||'',
+      tip:row['Opt'+i+'_Tip']||''
+    });
+  }
+  showBan(title);
+  if(row.TriggerMinister)showMinisterCameo(row.TriggerMinister);
+  showNarH('🎲 特殊事件',intro,function(){
+    if(!options.length){
+      if(epilogue){$('rcon').innerHTML='<div class="rbox">'+epilogue+'</div>'}
+      _gN=cb;
+      $('carea').innerHTML='<button class="btn btn-p" onclick="gN()">繼續 →</button>';
+      return;
+    }
+    showOpts(options.map(function(o){
+      var locked=o.req?!evalCond(o.req,S):false;
+      return{
+        l:o.label,
+        e:o.eff,
+        req:function(){return!locked},
+        tip:locked?(o.tip||reqToTip(o.req)):'',
+        corrupt:o.corrupt,
+        _result:o.result
+      };
+    }),function(o){
+      $('carea').innerHTML='';
+      if(o.corrupt){
+        S.corrupt++;
+        S.corrupt_level=(S.corrupt_level||0)+1;
+      }
+      var resultText=o._result||'';
+      if(epilogue)resultText+=(resultText?'<br>':'')+epilogue;
+      showRes(resultText,o.e,null,function(){
+        if(S.immediateEnd){
+          var eid=S.immediateEnd;
+          S.immediateEnd=null;
+          _gN=function(){setPG('end',1);showEnd(eid)};
+          $('carea').innerHTML='<button class="btn btn-p" onclick="gN()">面對命運 →</button>';
+          return;
+        }
+        cb();
+      });
+    });
+  });
+}
+
+
+/* §1 COLLECTION — with ministers */
+var COL={endings:{},coreTerms:{},exTerms:{},talents:{},ministers:{},meta_clues:0,unlocked_perks:[]};
+function saveCOL(){
+  try{localStorage.setItem('hanGameSave',JSON.stringify(COL))}catch(e){}
+  try{window.__COL=JSON.stringify(COL)}catch(e){}
+}
+function loadCOL(){
+  try{
+    var raw;
+    try{raw=localStorage.getItem('hanGameSave')}catch(e){}
+    if(!raw&&window.__COL)raw=window.__COL;
+    if(raw){var d=JSON.parse(raw);COL.endings=d.endings||{};COL.coreTerms=d.coreTerms||{};COL.exTerms=d.exTerms||{};COL.talents=d.talents||{};COL.ministers=d.ministers||{};COL.meta_clues=d.meta_clues||0;COL.unlocked_perks=d.unlocked_perks||[]}
+  }catch(e){}
+}
+loadCOL();
+function colCount(){var c=0;for(var k in COL)c+=Object.keys(COL[k]).length;return c}
+function colPoints(){return colCount()*2}
+function updateColDisplay(){var d=$('col-points-display');if(d)d.textContent='🏆 已收集 '+colCount()+' 項 = '+colPoints()+' 配點'}
+
+
+/* §2 LOADING — CSV based */
+function loadGameData(){
+  var keys=Object.keys(CSV_URLS);
+  return Promise.all(keys.map(function(k){
+    return fetch(CSV_URLS[k]).then(function(r){return r.text()}).then(function(txt){SHEET[k]=parseCSV(txt)});
+  })).then(function(){
+    if(SHEET.Config&&Array.isArray(SHEET.Config)){
+      var cfgObj={};
+      SHEET.Config.forEach(function(item){cfgObj[item.Key]=item.Value});
+      SHEET.Config=cfgObj;
+    }
+    EventDB.load();GrowthDB.load();
+  });
+}
+function cfg(k,d){return SHEET.Config&&SHEET.Config[k]!=null?Number(SHEET.Config[k]):d}
+
+
+/* §3 TEXT PROCESSING */
+function getTip(w){var a=SHEET.Terms;if(!a)return null;for(var i=0;i<a.length;i++)if(a[i].Name===w)return{t:a[i].Type||'core',d:a[i].Description||'',demo:a[i].Demo==='1'};return null}
+var _plainMode=false;
+function T(w){var t=getTip(w);if(!t)return w;if(window._plainMode)return w;if((t.t==='core'&&COL.coreTerms[w])||(t.t==='ex'&&COL.exTerms[w]))return w;return'<span class="'+(t.t==='core'?'tip':'tip-ex')+'" data-term="'+w+'">'+w+'</span>'}
+function processText(s){if(!s)return'';return String(s).replace(/\{\{([^}]+)\}\}/g,function(_,w){return T(w)}).replace(/\[anno\]([\s\S]*?)\[\/anno\]/g,'<div class="anno">$1</div>').replace(/\[anno-ex\]([\s\S]*?)\[\/anno-ex\]/g,'<div class="anno-ex">$1</div>').replace(/\{f\}/g,S.fn||'')}
+function tryJSON(v){if(!v)return null;if(typeof v==='object')return v;try{return JSON.parse(v)}catch(e){return null}}
+function s10(eff){if(!eff||typeof eff!=='object')return eff;var r={};for(var k in eff)r[k]=(k==='family')?eff[k]:eff[k]*10;return r}
+
+
+var tipOpen=false;
+/* ▼▼▼ 替換為 ▼▼▼ */ document.addEventListener('click',function(e){var t=e.target.closest('.tip,.tip-ex');if(t){var term=t.dataset.term,info=getTip(term);if(info){var ic=info.t==='core';$('tip-title').innerHTML=term+(ic?'<span class="tip-tag tip-tag-core">教科書</span>':'<span class="tip-tag tip-tag-ex">課外</span>');$('tip-body').textContent=info.d;$('tip-sheet').classList.add('show');window.tipOpen=true; /* 教學屏蔽：遊戲未開始不解鎖；配點階段示範詞不解鎖 */ if(_gameStarted&&!(_allocPhase&&info.demo)){unlockTerm(term)} setTimeout(function(){document.querySelectorAll('[data-term="'+term+'"]').forEach(function(sp){sp.replaceWith(document.createTextNode(sp.textContent))})},60)}e.stopPropagation();return}if(window.tipOpen){$('tip-sheet').classList.remove('show');window.tipOpen=false}}); /* ▲▲▲ 替換結束 ▲▲▲ */
+
+
+/* §4 SHEET ACCESSORS */
+function sheetRow(t,k,v){var a=SHEET[t];if(!a)return null;for(var i=0;i<a.length;i++)if(String(a[i][k])===String(v))return a[i];return null}
+function sheetRows(t,k,v){var a=SHEET[t];if(!a)return[];return a.filter(function(r){return String(r[k])===String(v)})}
+function getEraBg(era){return sheetRows('EraBg','Era',era).map(function(r){return[r.Icon||'📜',processText(r.Text)]})}
+function getBirth(key){var r=sheetRow('BirthText','Key',key);return r?processText(r.Text):''}
+function getFriendIntro(cls){var r=sheetRow('BirthText','Key','friend_'+cls);return r?processText(r.Text):''}
+function getFriendD(round,key){var r=SHEET.FriendDialog;if(!r)return null;for(var i=0;i<r.length;i++)if(Number(r[i].Round)===round&&r[i].Key===key)return processText(r[i].Text);return null}
+function getQuizPool(){if(!SHEET.Quiz)return[];return SHEET.Quiz.map(function(r){return{q:processText(r.Question),o:[r.OptA,r.OptB,r.OptC,r.OptD].map(function(x){return processText(x||'')}),a:Number(r.Answer)||0,fb:processText(r.Feedback||''),termId:r.TermId||''}})}  function getStratPool(){if(!SHEET.Strategy)return[];return SHEET.Strategy.map(function(r){return{q:processText(r.Question),anno:processText(r.Anno||''),opts:[1,2,3,4].map(function(n){return{l:processText(r['Opt'+n+'Label']||''),e:s10(tryJSON(r['Opt'+n+'Eff'])||{}),rank:Number(r['Opt'+n+'Rank'])||0,corrupt:Number(r['Opt'+n+'Corrupt'])||0}})}})}
+function getEnd(id){
+  if(String(id)==='2C')return{icon:'⚰️',t:'滿門抄斬',text:processText('你的貪婪觸怒了所有既得利益者。世家大族聯手構陷，一封密奏直達天聽，朝廷下令滿門抄斬。你的家族一夜之間灰飛煙滅。'),hist:processText('漢代貴族之間的利益鬥爭往往以滅族告終。{{任子制}}下官位即利益，動搖他人的蛋糕便是自掘墳墓。'),ref:processText('{f}曾警告過你：「水滿則溢，月滿則虧。」')};
+  if(String(id)==='end_huainan_kill')return{icon:'💀',t:'淮南王滅口',text:processText('你嚴詞拒絕淮南王密使。密使見你不從，臉色驟變，拔出利刃——你倒在自家門前，鮮血染紅了門檻。'),hist:processText('淮南王劉安謀反案牽連數千人。為保機密，密使奉命殺害一切拒絕合作且知情者。{{獨尊儒術}}後朝廷中央集權加強，諸侯謀反更加秘密與殘酷。'),ref:processText('{f}至死不知你的真正死因。')};
+  if(String(id)==='end_luntai_die')return{icon:'⚔️',t:'繡衣使者之怒',text:processText('你當街抗辯，言辭激烈。繡衣使者冷笑一聲，拔出天子劍——你倒在血泊之中，圍觀百姓噤若寒蟬。'),hist:processText('武帝晚年派遣繡衣使者巡視天下，手持天子劍，先斬後奏。暴政之下，百姓苦不堪言，直至{{輪台詔}}頒布才告終結。'),ref:processText('{f}聽聞你的死訊，痛哭失聲：「他只是說了真話啊！」')};
+  if(String(id)==='end_luntai_legend')return{icon:'🌟',t:'輪台詔下的傳奇',text:processText('武帝頒布{{輪台詔}}，承認連年征戰之過，天下休養生息。你作為敢言直諫的忠臣，位極人臣，成為一代名相。後人稱頌：「此乃{{士人政府}}之典範也。」'),hist:processText('征和四年（前89年），漢武帝頒布輪台詔，是中國歷史上第一份帝王「罪己詔」，標誌著窮兵黷武政策的終結。敢言忠臣在{{獨尊儒術}}體制下得以制衡皇權。'),ref:processText('{f}：「你證明了讀書人的脊樑。」')};
+  if(String(id)==='end_wugu_slave')return{icon:'⛓️',t:'巫蠱沉冤',text:processText('巫蠱之禍中，你被投入廷尉大牢，家產抄沒，族人流放。你在獄中含冤而死，直到征和年間才被追封平反。'),hist:processText('巫蠱之禍是漢武帝晚年最大的政治災難，牽連數萬人。太子劉據被迫起兵反抗江充，兵敗自殺。事後武帝追悔莫及，建「思子宮」以悼。'),ref:processText('{f}：「我一直相信你是清白的。」')};
+  if(String(id)==='end_qiguo_rebel')return{icon:'⚔️',t:'七國亂臣',text:processText('吳楚七國之亂兵敗如山倒。你作為叛軍同謀，被朝廷軍隊俘獲，押赴長安斬首示眾。'),hist:processText('景帝三年（前154年），吳王劉濞聯合六國以「清君側」為名起兵。朝廷以周亞夫為將，三月平定。此後諸侯勢力大衰，為武帝{{獨尊儒術}}奠定基礎。'),ref:processText('{f}嘆道：「他若不貪那封侯之夢，何至於此。」')};
+  if(String(id)==='end_qingliu_die')return{icon:'⚔️',t:'清流殉道',text:processText('你拒絕向奸佞屈服，壯烈棄市。天下儒生為你立碑，稱「清流烈士」。後世將你與汲黯並稱。'),hist:processText('漢代士人以死諫著稱，{{士人政府}}體制下，知識份子以性命捍衛道義，雖死猶榮。'),ref:processText('{f}：「他死得其所，青史留名。」')};
+  if(String(id)==='end_beheaded')return{icon:'💀',t:'大逆棄市',text:processText('你被判大逆不道，在長安東市斬首示眾。圍觀者有人唏噓，有人拍手。你的三族盡遭牽連。'),hist:processText('漢律中「大逆不道」為極刑，夷三族。{{廷尉}}主審此類大案，判決極少有轉圜餘地。'),ref:processText('{f}：「我早就勸過他了。」')};
+  if(String(id)==='end_deceive_emperor')return{icon:'🎭',t:'欺君大罪',text:processText('你的謊言最終被識破。天子龍顏大怒，下令滅你三族。你在獄中追悔莫及。'),hist:processText('漢代欺君之罪等同謀反。武帝性格剛猛，一旦察覺欺瞞，必嚴懲不貸。'),ref:processText('{f}至死不知你騙了所有人。')};
+  var r=sheetRow('Endings','ID',String(id));if(r)return{icon:r.Icon||'❓',t:r.Title||'',text:processText(r.Text||''),hist:processText(r.Hist||''),ref:processText(r.Ref||'')};return{icon:'❓',t:'未知',text:'…',hist:'…',ref:'…'}
+}
+
+
+function getWarns(){if(!SHEET.Warnings)return[];return SHEET.Warnings.map(function(w){return{t:w.Title,q:w.Quote,s:w.Status}})}
+function getCmpH(){var tA=S.era==='A'?T:function(){return'<span style="opacity:.35;font-style:italic">???</span>'};var tB=S.era==='B'?T:function(){return'<span style="opacity:.35;font-style:italic">???</span>'};return'<div class="cmp"><div class="cmp-a"><h4>⚔️ 武帝以前</h4>'+tA('黃老之學')+'為主流<br>官位由貴族壟斷<br>平民無入仕通道<br>'+tA('三十稅一')+'</div><div class="cmp-b"><h4>📜 漢武帝以後</h4>'+tB('獨尊儒術')+'<br>設'+tB('太學')+'＋'+tB('察舉制')+'<br>由郡守縣令舉薦人才<br>'+tB('刺史')+'監察→'+tB('廷尉')+'查辦<br>形成'+tB('士人政府')+'</div></div>'}
+function getCoreTerms(){return(SHEET.Terms||[]).filter(function(t){return t.Type==='core'}).map(function(t){return t.Name})}
+function getExTerms(){return(SHEET.Terms||[]).filter(function(t){return t.Type==='ex'}).map(function(t){return t.Name})}
+function getAllEndings(){var r={};(SHEET.Endings||[]).forEach(function(e){r[e.ID]={icon:e.Icon,t:e.Title}});if(!r['2C'])r['2C']={icon:'⚰️',t:'滿門抄斬'};return r}
+
+
+/* §5 TALENT SYSTEM */
+function getAllTalents(){return(SHEET.Talents&&SHEET.Talents.length)?SHEET.Talents:[]}
+function getTalent(id){var all=getAllTalents();for(var i=0;i<all.length;i++)if(all[i].ID===id)return all[i];return null}
+function hasTalent(id){return S.talents&&S.talents.indexOf(id)>=0}
+function talentMod(key,val){
+  if(key==='knowledge'&&val>0){if(hasTalent('genius'))val+=10;if(hasTalent('lazy'))val-=10}
+  if(key==='reputation'&&val>0&&hasTalent('shy'))val=Math.max(10,Math.round(val*0.5));
+  if(key==='reputation'&&val>0&&hasTalent('eloquent'))val+=10;
+  if(key==='morality'&&val>0&&hasTalent('righteous'))val+=10;
+  if(key==='morality'&&hasTalent('sentimental'))val=Math.round(val*1.5);
+  return val}
+function applyPerTurn(){ if(hasTalent('frugal'))applyE({wealth:10},{wealth:'勤儉'}); if(hasTalent('spender'))applyE({wealth:-10},{wealth:'揮霍'}); var upkeep=S.noble?15:5; applyE({wealth:-upkeep},{wealth:S.noble?'世家開銷（門客/排場/修繕）':'年度賦稅（口算/田租）'}); }function showExileEvent(){ showScr('screen-game'); setPG('end',1); showBan('💀 走投無路'); showNarH('🏃','你已傾家蕩產，無法維持基本生計。'+ (S.era==='A' ?'<div class="anno-ex">漢初賦稅雖輕（'+T('三十稅一')+'），但天災人禍仍令百姓難以為繼。</div>' :'<div class="anno-ex">武帝時期賦役繁重，'+T('算緡')+'等政策令百姓苦不堪言。</div>'), function(){ showOpts([ {l:'🏔️ 落草為寇',d:'聚嘯山林，靠劫掠為生',req:function(){return S.reputation>=20},tip:'⚠️ 需風評≥20（需有人願意追隨）'}, {l:'🏃 流亡他鄉',d:'背井離鄉，輾轉求存',req:function(){return true}} ],function(o){ $('carea').innerHTML=''; if(o.l.indexOf('落草')>=0){ S.wealth=10;S.morality=clamp(S.morality-20,'morality');S.reputation=clamp(S.reputation-10,'reputation'); updateStats(); showRes('你嘯聚山林，成了盜匪頭目。<div class="anno">漢代流民起義屢見不鮮，朝廷苛政往往是根源。</div>',null,null,function(){showReunionOv('rebel')}); }else{ S.wealth=5;updateStats(); showRes('你成了流民，在異鄉艱難求生。<div class="anno">漢代大量農民因破產流亡，成為社會不穩定因素。</div>',null,null,function(){showReunionOv('refugee')}); } }); }); }
+function luckyFlip(){return hasTalent('lucky')?Math.random()<0.62:Math.random()<0.5}
+
+
+/* §6 STATE — with interestNet */
+var S={};
+function reset(){S={era:'',noble:false,fam:0,family:0,knowledge:0,reputation:0,wealth:0,morality:50,school:'',fn:'',corrupt:0,path:'',clv:'',studyCount:0,pWarn:0,pCb:null,cleanAction:null,usedFate:[],arrested:false,cjScore:0,hasFarmed:false,skipNext:false,skipCount:0,immediateEnd:null,bgClass:'bg-default',rescued:{wealth:false,morality:false,reputation:false,knowledge:false},servedElders:0,tqCorrect:0,fatherRank:'',hiddenMoral:false,hiddenKnow:false,retryTX:false,retryCJ:false,talents:[],allocPts:0,divineUsed:false,interestNet:0,_pityUsed:false,_chajuForced:false,corrupt_level:0,_lowWealthRounds:0,tags:new Set(),_marquis:false}}
+reset();
+
+
+/* §6b 破產檢查：wealth<=5 持續 2 回合 → 強制流民/落草結局 */
+function checkBankruptcy(){if(S.wealth<=5){S._lowWealthRounds=(S._lowWealthRounds||0)+1}else{S._lowWealthRounds=0}if(S._lowWealthRounds>=2){if(S.morality<30){showReunionOv('rebel');return true}showReunionOv('refugee');return true}return false}
+
+
+function clamp(v,k){var mx=(k==='family')?10:(k==='wealth'&&S._marquis)?200:100;return Math.max(0,Math.min(mx,Math.round(v)))}
+/* §6c 數值下限防護 — 確保所有屬性不因任何路徑掉入負數 */
+function sanitizeStats(){
+  var wMax=S._marquis?200:100;
+  S.knowledge=Math.max(0,Math.min(100,Math.round(S.knowledge||0)));
+  S.reputation=Math.max(0,Math.min(100,Math.round(S.reputation||0)));
+  S.wealth=Math.max(0,Math.min(wMax,Math.round(S.wealth||0)));
+  S.morality=Math.max(0,Math.min(100,Math.round(S.morality||0)));
+  S.family=Math.max(0,Math.min(10,Math.round(S.family||0)));
+}
+/* resolveEff: 解析 RNG/CHK 動態效果 */
+function resolveEff(eff){if(!eff||!eff._type)return eff;if(eff._type==='rng')return Math.random()<eff.prob?eff.t:eff.f;if(eff._type==='chk'){var sv=S[eff.key]||0;var pass=false;if(eff.op==='>=')pass=sv>=eff.val;else if(eff.op==='<=')pass=sv<=eff.val;else if(eff.op==='>')pass=sv>eff.val;else if(eff.op==='<')pass=sv<eff.val;else if(eff.op==='==')pass=sv===eff.val;else if(eff.op==='!=')pass=sv!==eff.val;return pass?eff.t:eff.f}return eff}
+function applyE(eff,reasons){eff=resolveEff(eff);if(!eff)return[];if(eff.jump&&!S.immediateEnd){S.immediateEnd=eff.jump}if(eff.tag_add&&S.tags){eff.tag_add.split(',').forEach(function(t){S.tags.add(t.trim())})}if(eff.tag_del&&S.tags){eff.tag_del.split(',').forEach(function(t){S.tags.delete(t.trim())})}var keys={knowledge:'學問',reputation:'風評',wealth:'家財',morality:'品德',family:'家世'};var d=[];for(var k in eff){if(!(k in keys))continue;var o=S[k],v=eff[k];if(k!=='family')v=talentMod(k,v);var raw=o+v;if(raw<0&&!S.immediateEnd){var rk=(k==='family')?null:k;if(rk&&!S.rescued[rk]){S.rescued[rk]=true;raw=10;var rescueMsg=['獲鄉親相助，渡過難關。','獲師長相助，渡過難關。','獲故友相助，渡過難關。'];d.push('🛟'+keys[k]+'：'+rescueMsg[Math.floor(Math.random()*rescueMsg.length)])}else if(!S.noble&&gR<=5&&(k==='wealth'||k==='knowledge')&&!S._pityUsed){S._pityUsed=true;if(k==='wealth')raw=20;else raw=S[k]+10;d.push('📜 太學擴招：太學生人數從50人擴張至3000人，你獲得朝廷特別資助！');if(k==='wealth'){S.knowledge=clamp(S.knowledge+10,'knowledge');d.push('📈學問+10（朝廷資助）')}}else if(hasTalent('divine')&&!S.divineUsed&&rk){S.divineUsed=true;raw=10;d.push('🌟 天命護體！')}else{if(k==='wealth')S.immediateEnd='slave';else if(k==='morality'||k==='reputation')S.immediateEnd='assassinated';else if(k==='knowledge'){raw=1;d.push('🛟學問：獲師長相助，渡過難關。')}}}S[k]=clamp(raw,k);var a=S[k]-o;if(a!==0){var rs=reasons&&reasons[k]?'（'+reasons[k]+'）':'';d.push((a>0?'📈':'📉')+keys[k]+(a>0?'+':'')+a+rs)}showPop(k,a)}updateStats();return d}
+
+
+function wouldGoNeg(eff){if(!eff)return null;if(eff._type)return null;function ck(k,ed){if(eff[k]&&S[k]+eff[k]<0){var rk=(k==='family')?null:k;if(rk&&!S.rescued[rk])return null;if(hasTalent('divine')&&!S.divineUsed)return null;return{msg:'你的<b>'+({wealth:'家財',morality:'品德',reputation:'風評'})[k]+'</b>將掉入負值！',ending:ed}}return null}return ck('wealth','slave')||ck('morality','assassinated')||ck('reputation','assassinated')}
+function showNegWarn(neg,onBack,onProceed){$('neg-body').innerHTML='<div style="color:var(--zhu);font-weight:700;margin:.3rem 0;font-size:.9rem">'+neg.msg+'</div><div class="mq">⚠️ 一旦堅持選擇，將立即進入死亡結局！</div>';$('neg-back').onclick=function(){closeOv('ov-neg');if(onBack)onBack()};$('neg-go').onclick=function(){closeOv('ov-neg');onProceed()};$('ov-neg').classList.add('active')}
+function shuffle(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t}return a}
+function rnd(a,b){return a+Math.floor(Math.random()*(b-a+1))}
+function setBg(c){S.bgClass=c;document.body.className=c}
+function updateBg(){if(S.clv)setBg('bg-official');else if(['taixue','chaju_a','chaju_b'].indexOf(S.path)>=0)setBg('bg-student');else if(S.path==='farmer')setBg('bg-farmer');else if(S.noble)setBg('bg-noble');else setBg('bg-commoner')}
+
+
+
+
+/* §7 PROGRESS */
+var PG={p:'none',s:0,m:1};function setPG(p,m){PG={p:p,s:0,m:m};updPG()}function addPG(){PG.s=Math.min(PG.s+1,PG.m);updPG()}
+function updPG(){var f=$('pb-fill');if(!f)return;var pct=PG.p==='growth'?PG.s/3*45:PG.p==='adult'?45+PG.s/PG.m*55:PG.p==='end'?100:0;f.style.width=Math.min(pct,100)+'%';$('prog').style.display=PG.p==='none'?'none':'block'}
+
+
+/* §8 TYPEWRITER */
+var _twT=null,_twCb=null,_twEl=null,_twH='';
+function tw(el,h,cb){if(_twT)clearInterval(_twT);_twEl=el;_twH=h;_twCb=cb;var i=0,o='';el.innerHTML='';_twT=setInterval(function(){if(i>=h.length){clearInterval(_twT);_twT=null;el.innerHTML=h;if(_twCb){var f=_twCb;_twCb=null;f()}return}if(h[i]==='<'){var j=h.indexOf('>',i);if(j>=0){o+=h.substring(i,j+1);i=j+1}else{o+=h[i];i++}}else{o+=h[i];i++}el.innerHTML=o},12)}
+function twSkip(){if(_twT){clearInterval(_twT);_twT=null}if(_twEl&&_twH)_twEl.innerHTML=_twH;if(_twCb){var f=_twCb;_twCb=null;f()}}
+
+
+/* §9 UI HELPERS — with floatingStats */
+function showScr(id){document.querySelectorAll('.screen').forEach(function(s){s.classList.remove('active')});$(id).classList.add('active');if(typeof updateFloatingStats==='function')updateFloatingStats()}
+function closeOv(id){$(id).classList.remove('active')}
+function updateStats(){sanitizeStats();$('sbar').style.display='block';$('sbar-era').innerHTML='<span class="era-left">'+(S.era==='A'?'⚔️ 漢武帝前':'📜 漢武帝後')+'</span><span class="era-right">'+(S.noble?'👑 貴族':'🌾 平民')+'</span>';var ss=[{k:'knowledge',i:'📖',n:'學問',c:'#0E7490'},{k:'reputation',i:'📣',n:'風評',c:'#EA580C'},{k:'wealth',i:'💰',n:'家財',c:'#D4A017'},{k:'morality',i:'⚖️',n:'品德',c:'#15803D'},{k:'family',i:'👑',n:'家世',c:'#7C3AED'}];$('sg').innerHTML=ss.map(function(s){var mx=s.k==='family'?10:100;if(s.k==='family'){return'<div class="si" id="si-family"><div style="font-size:.42rem;color:#999;line-height:1;text-align:center">家世值</div><span style="font-size:1.5rem;line-height:1;position:relative;display:inline-block">'+s.i+'<span style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:.6rem;font-weight:900;color:#fff;opacity:.7;text-shadow:0 1px 3px rgba(0,0,0,.6)">'+S[s.k]+'</span></span><div class="sb-bg"><div class="sb" style="width:'+Math.min(100,S[s.k]/mx*100)+'%;background:'+s.c+'"></div></div></div>'}return'<div class="si" id="si-'+s.k+'"><span style="font-size:1.5rem;line-height:1">'+s.i+'</span><span style="font-size:.65rem;color:#aaa;min-width:1.8rem">'+s.n+'</span><div class="sb-bg"><div class="sb" style="width:'+Math.min(100,S[s.k]/mx*100)+'%;background:'+s.c+'"></div></div><span class="sv">'+S[s.k]+'</span></div>'}).join('');updateTBar();updateChajuProg();updateFloatingStats()}
+function showPop(k,d){if(!d)return;var el=$('si-'+k);if(!el)return;var p=document.createElement('span');p.className='sc';p.style.color=d>0?'var(--yu)':'var(--zhu)';p.textContent=(d>0?'+':'')+d;el.appendChild(p);setTimeout(function(){p.remove()},1200)}
+function updateTBar(){if(!S.talents||!S.talents.length){$('tbar').style.display='none';return}$('tbar').style.display='block';$('tbar').innerHTML=S.talents.map(function(tid){var t=getTalent(tid);return t?'<span class="tch '+(t.Positive?'pos':'neg')+'">'+(t.Icon||'')+t.Summary+'</span>':''}).join('')}
+function updateFloatingStats(){
+  var el=document.getElementById('floating-stats');
+  if(!el){el=document.createElement('div');el.id='floating-stats';el.className='floating-stats';document.body.appendChild(el)}
+  var gs=$('screen-game');
+  if(gs&&gs.classList.contains('active')&&S.era){el.classList.add('fs-show');el.innerHTML='<div class="stat-badge">'+(S.era==='A'?'⚔️ 武帝前':'📜 武帝後')+'</div><div class="stat-badge">👑 家世 '+S.family+'</div>'}
+  else{el.classList.remove('fs-show')}
+}
+var _gN=null;function gN(){if(_gN){var f=_gN;_gN=null;f()}}
+function showNarH(l,h,cb){showScr('screen-game');$('nlabel').textContent=l;$('rcon').innerHTML='';$('carea').innerHTML='<button class="btn skip-btn" onclick="twSkip()">⏩</button>';$('pban').style.display='none';tw($('ntext'),h,function(){$('carea').innerHTML='';if(cb)cb()})}
+function showBullets(t,b,cb){showScr('screen-game');$('rcon').innerHTML='';$('carea').innerHTML='';$('pban').style.display='none';$('nlabel').textContent='📋 背景';$('ntext').innerHTML='<div class="icard"><div class="icard-title">'+t+'</div>'+b.map(function(x){return'<div class="ibullet">'+x[0]+' '+x[1]+'</div>'}).join('')+'</div>';_gN=cb;$('carea').innerHTML='<button class="btn btn-p" onclick="gN()">繼續 →</button>'}
+function showBan(t){var b=$('pban');b.innerHTML=t;b.style.display='block';b.className='pban fade'}
+function showRes(t,eff,rs,cb){if(typeof rs==='function'){cb=rs;rs=null}var d=eff?applyE(eff,rs):[];var dh=d.length?'<div class="delta">'+d.join(' ')+'</div>':'';$('rcon').innerHTML='<div class="rbox">'+t+dh+'</div>';if(S.immediateEnd){var eid=S.immediateEnd;S.immediateEnd=null;_gN=function(){setPG('end',1);showEnd(eid)};$('carea').innerHTML='<button class="btn btn-p" onclick="gN()">面對命運 →</button>';return}_gN=cb;$('carea').innerHTML='<button class="btn btn-p" onclick="gN()">繼續 →</button>'}
+function showOpts(opts,onSel){ var ca=$('carea'); var hasProphEye=COL.unlocked_perks&&COL.unlocked_perks.indexOf('prophecy_eye')>=0; ca.innerHTML='<div class="clabel">🎯 請選擇'+(hasProphEye?' <span style="color:var(--gold);font-size:.6rem">🔮 讖緯之瞳</span>':'')+'</div>'; opts.forEach(function(o){ var ok=o.req?o.req(S):true; if(hasProphEye)ok=true; var tipText=o.tip||''; var b=document.createElement('button'); b.className='btn'; b.disabled=!ok; if(!ok)b.style.cssText='opacity:.35;border-left:5px solid var(--zhu);background:var(--zhu-bg);cursor:not-allowed;filter:grayscale(.3)'; var effPreview=''; if(hasProphEye){ var pe=null; if(o.previewE)pe=typeof o.previewE==='function'?o.previewE():o.previewE; if(!pe&&o.e&&typeof o.e!=='function')pe=o.e; if(pe){ var parts=[]; for(var pk in pe){ if(pk==='jump')parts.push('⚡jump:'+pe[pk]); else parts.push(pk+':'+(pe[pk]>0?'+':'')+pe[pk]); } if(parts.length)effPreview='<div style="font-size:.6rem;color:var(--gold);font-family:monospace;margin-top:.08rem;background:rgba(0,0,0,.05);padding:.05rem .2rem;border-radius:4px">🔮 '+parts.join('; ')+'</div>'; }else if(o.e&&typeof o.e==='function'){ effPreview='<div style="font-size:.6rem;color:var(--gold);font-family:monospace;margin-top:.08rem">🔮 效果：動態計算</div>'; } if(o.corrupt)effPreview+='<div style="font-size:.6rem;color:var(--zhu);font-family:monospace">⚠️ Corrupt +1</div>'; } b.innerHTML='<strong>'+o.l+'</strong>' +(o.d?'<div style="font-size:.78rem;color:var(--text2);margin-top:.05rem">'+o.d+'</div>':'') +effPreview +(!ok&&tipText?'<div class="dis-tip">🔒 '+tipText+'</div>' :!ok?'<div class="dis-tip">🔒 條件不足</div>':''); b.onclick=function(){ if(!ok)return; var pe2=typeof o.previewE==='function'?o.previewE():o.previewE; if(!pe2&&o.e)pe2=typeof o.e==='function'?o.e():o.e; if(pe2){var neg=wouldGoNeg(pe2);if(neg){showNegWarn(neg,null,function(){onSel(o)});return}} onSel(o); }; ca.appendChild(b); }); }
+function animDraw(names,container,cb){var final=Math.floor(Math.random()*names.length);var box=document.createElement('div');box.className='draw-box';box.innerHTML='<div class="draw-label">🎴 抽選中…</div><div class="draw-result"></div>';container.innerHTML='';container.appendChild(box);var r=box.querySelector('.draw-result'),cnt=0,idx=0;var tm=setInterval(function(){idx=(idx+1)%names.length;r.textContent=names[idx];r.style.opacity='0.6';cnt++;if(cnt>=14){clearInterval(tm);r.textContent='📜 '+names[final];r.style.opacity='1';setTimeout(function(){cb(final)},350)}},65)}
+
+
+/* §10 CORRUPT WARNINGS — era A reduction */
+function tryCorrupt(cOpt,clOpt,cb){var warns=getWarns();var l=S.morality>=70?3:S.morality>=50?2:S.morality>=30?1:0;if(S.era==='A')l=Math.max(0,l-1);l=Math.min(l,warns.length);if(!l){cb(cOpt);return}S.pWarn=l;S.pCb=function(){cb(cOpt)};S.cleanAction=function(){cb(clOpt)};showW(0)}
+function showW(i){var warns=getWarns();if(i>=S.pWarn||i>=warns.length){$('ov-warn').classList.remove('active');if(S.pCb)S.pCb();return}var w=warns[i];$('wmt').textContent=w.t;$('wmtxt').innerHTML=w.s;$('wmq').textContent=w.q;window._wIdx=i;$('ov-warn').classList.add('active')}
+function wBack(){$('ov-warn').classList.remove('active');var a=S.cleanAction;S.cleanAction=null;S.pCb=null;if(a)a()}
+function wInsist(){$('ov-warn').classList.remove('active');showW(window._wIdx+1)}
+
+
+/* §11 FATE HELPERS */
+function checkFateEnd(fe){if(S.immediateEnd){var eid=S.immediateEnd;S.immediateEnd=null;fe.innerHTML+='<button class="btn btn-p" style="margin-top:.3rem" onclick="trigEnd(\''+eid+'\')">面對命運 →</button>'}else{fe.innerHTML+='<button class="btn btn-p" style="margin-top:.3rem" onclick="closeFateW()">繼續 →</button>'}}
+function runKillJudgment(fe){S.morality=0;updateStats();fe.innerHTML+='<div class="rbox" style="border-color:var(--zhu)">殺人大罪！品德立即歸零！</div>';var deadFam=rnd(0,10);fe.innerHTML+='<div style="font-size:.82rem;margin:.3rem 0">死者家世值：<b>'+deadFam+'</b> 你的家世值：<b>'+S.family+'</b></div>';var diff=S.family-deadFam;if(diff>4){fe.innerHTML+='<div class="rbox">差距懸殊，官府草草了事。</div>';checkFateEnd(fe)}else if(diff>=0){if(S.wealth>=10){S.wealth=clamp(S.wealth-10,'wealth');updateStats();fe.innerHTML+='<div class="rbox">傾盡所有賠償。<div class="delta">📉家財-10</div></div>';checkFateEnd(fe)}else{S.reputation=0;updateStats();fe.innerHTML+='<div class="rbox" style="border-color:var(--zhu)">無法賠償，風評崩塌！</div>';checkFateEnd(fe)}}else{var cost=Math.abs(diff)*20;if(S.wealth>=cost){S.wealth=clamp(S.wealth-cost,'wealth');updateStats();fe.innerHTML+='<div class="rbox">你付出'+cost+'點家財了結。<div class="delta">📉家財-'+cost+'</div></div>';checkFateEnd(fe)}else{fe.innerHTML+='<div class="rbox" style="border-color:var(--zhu)">無力支付。依漢律，<b>殺人者死</b>！</div><button class="btn btn-p" style="margin-top:.3rem" onclick="trigEnd(\'kill\')">→</button>'}}}
+function nobleExempt(fe){if(!S.noble||S.family<7)return false;var txt,eff={},rs={};if(S.family>=10)txt='「我可是劉氏宗室！」你輕鬆免去了徭役。';else if(S.family>=9){txt='你擺弄爵位特權，皇上不滿。';eff={family:-1};rs={family:'擺弄特權'}}else if(S.family>=8){txt='你有權做優差！但疏懶被察覺。';eff={family:-1};rs={family:'疏懶被察覺'}}else{txt='你開罪了寵妃，被削除爵位。';eff={family:-1};rs={family:'開罪寵妃'}}var d=applyE(eff,rs);var dh=d.length?'<div class="delta">'+d.join(' ')+'</div>':'';fe.innerHTML+='<div class="rbox">'+txt+dh+'</div>';checkFateEnd(fe);return true}
+var WC=['#DC2626','#0E7490','#15803D','#7C3AED','#EA580C','#D4A017','#155E75','#6D28D9'];var fwCb=null;
+function fateCoinFlip(container,onResult){var w=document.createElement('div');w.style.cssText='text-align:center;margin:.4rem 0';var cn=document.createElement('div');cn.className='coin coin-a coin-sm';cn.style.margin='.3rem auto';cn.innerHTML='<span style="font-size:.65rem">點擊<br>擲幣</span>';w.appendChild(cn);container.appendChild(w);cn.onclick=function(){cn.onclick=null;cn.classList.add('flipping');var res=luckyFlip();setTimeout(function(){cn.classList.remove('flipping');cn.className='coin coin-sm '+(res?'coin-a':'coin-b');cn.innerHTML='<span style="font-size:.7rem">'+(res?'正':'反')+'</span>';setTimeout(function(){onResult(res)},400)},650)}}
+
+
+/* §12 START / DICE / ALLOC */
+function startGame(){reset();showScr('screen-coin');$('coin').className='coin coin-a';$('coin-txt').innerHTML='點擊<br>拋擲';$('coin-result').style.display='none';window._coinDone=false;setBg('bg-default')}
+function tossCoin(){if(window._coinDone)return;window._coinDone=true;var c=$('coin');c.classList.add('flipping');var era=Math.random()<cfg('COIN_A_PROB',0.3)?'A':'B';S.era=era;setTimeout(function(){c.classList.remove('flipping');c.className='coin '+(era==='A'?'coin-a':'coin-b');$('coin-txt').innerHTML=era==='A'?'⚔️<br>武帝前':'📜<br>武帝後';$('coin-era').innerHTML=era==='A'?'<span class="badge badge-a" style="font-size:.85rem">⚔️ 漢武帝以前</span>':'<span class="badge badge-b" style="font-size:.85rem">📜 漢武帝以後</span>';$('coin-result').style.display='block'},700)}
+function showDice(){showScr('screen-dice');$('dice').className='dice';$('dice-txt').textContent='?';$('dice-result').style.display='none';window._diceDone=false}
+function rollDice(){if(window._diceDone)return;window._diceDone=true;var d=$('dice');d.classList.add('rolling');var val=1+Math.floor(Math.random()*10);S.fam=val;S.family=val;var noble=val>=7;S.noble=noble;var cnt=0;var itv=setInterval(function(){$('dice-txt').textContent=1+Math.floor(Math.random()*10);cnt++;if(cnt>6){clearInterval(itv);d.classList.remove('rolling');$('dice-txt').textContent=val;S.wealth=val*10;S.knowledge=noble?20:0;S.reputation=noble?20:0;S.morality=50;S.fn=noble?'阿淵':'阿澈';$('dice-fam').innerHTML='🎲 家世值：<b>'+val+'</b>';$('dice-class').innerHTML=noble?'<span class="badge badge-n" style="font-size:.85rem">👑 貴族世家</span>':'<span class="badge badge-c" style="font-size:.85rem">🌾 平民之家</span>';$('dice-result').style.display='block'}},15)}
+function showAllocScreen(){showScr('screen-alloc');S.allocPts=colPoints();_allocPhase=true;drawRandomTalent();renderAlloc()}
+var PROTECTED_TALENTS=['perk_iron_ticket','perk_prophecy_eye','perk_marquis'];
+function drawRandomTalent(){var all=getAllTalents();var pool=all.filter(function(t){return S.talents.indexOf(t.ID)<0&&PROTECTED_TALENTS.indexOf(t.ID)<0});
+if(!pool.length)return;var d=pool[Math.floor(Math.random()*pool.length)];S.talents.push(d.ID);COL.talents[d.ID]=1;saveCOL();S._drawnTalent=d;S._sessionDrawn=S._sessionDrawn||[];S._sessionDrawn.push(d.ID)}
+function renderAlloc(){var pts=S.allocPts;var h='<div class="etitle">🎴 天賦配點</div><div class="pt-display">可用：'+pts+'點</div>';if(S._drawnTalent){var d=S._drawnTalent;h+='<div style="background:var(--zi-bg);border:2px solid var(--gold);border-radius:var(--radius);padding:.4rem;margin:.3rem auto;max-width:400px;text-align:center"><div style="font-size:.65rem;color:var(--text2)">🎴 隨機抽中</div><div style="font-size:1.3rem">'+(d.Icon||'')+'</div><b>'+d.Name+'</b><div style="font-size:.72rem;color:var(--text2)">'+d.Description+'</div></div>'}h+='<div class="alloc-section"><h4>📋 已持有（'+S.talents.length+'/3）</h4><div class="th-bar">';S.talents.forEach(function(tid){var t=getTalent(tid);if(!t)return;h+='<span class="th-chip'+(t.Positive?'':' neg')+'">'+(t.Icon||'')+t.Name+'</span>'});h+='</div></div>';h+='<div class="alloc-section"><h4>🛒 天賦商店</h4><div style="font-size:.65rem;color:var(--text2);margin-bottom:.2rem">💰 買入＝原價100% 賣出＝原價70%</div>'+renderTalentPool()+'</div>';var hasMarquis=COL.unlocked_perks&&COL.unlocked_perks.indexOf('marquis')>=0;if(hasMarquis){h+='<div class="alloc-section" style="border-color:var(--gold);background:linear-gradient(135deg,var(--gold-bg),var(--zi-bg))"><h4>👑 隱藏特權</h4><div class="alloc-row"><span>👑【列侯】— 家世10 + 家財200</span><button class="alloc-btn" style="background:var(--gold);color:#fff" onclick="activateMarquis()">啟用</button></div><div style="font-size:.6rem;color:var(--text2)">🔮 跨週目獎勵：累計足夠線索解鎖</div></div>'}h+='<div class="alloc-section"><h4>⚙️ 調整</h4><div class="alloc-row"><span>🔄 換時代（'+(S.era==='A'?'武帝前':'武帝後')+'）</span><button class="alloc-btn" onclick="swapEra()"'+(pts<30?' disabled':'')+'>30點</button></div><div class="alloc-row"><span>👑 家世+1（'+S.family+'）</span><button class="alloc-btn" onclick="adjFam(1)"'+(pts<5||S.family>=10?' disabled':'')+'>5點</button></div><div class="alloc-row"><span>👑 家世-1</span><button class="alloc-btn" onclick="adjFam(-1)"'+(pts<5||S.family<=1?' disabled':'')+'>5點</button></div></div><button class="btn btn-p" onclick="confirmAlloc()" style="margin:.5rem auto">確認，進入遊戲 →</button>';$('alloc-content').innerHTML=h} 
+function shopAct(id){if(PROTECTED_TALENTS.indexOf(id)>=0){showToast('🔒 此天賦只能透過特殊機制獲取');return}var t=getTalent(id);if(!t)return;var held=S.talents.indexOf(id)>=0;if(!held&&S.talents.length>=3){showToast('⚠️ 最多持有 3 個天賦');return}var isSessionDrawn=S._sessionDrawn&&S._sessionDrawn.indexOf(id)>=0;var unlocked=!!COL.talents[id]||isSessionDrawn;if(!unlocked)return;var isDemo=!!(t.Demo&&String(t.Demo)==='1');var _co={'divine':50,'charismatic':40};var cost=_co[id]||Number(t.Cost)||0;if(held){if(t.Positive){S.talents=S.talents.filter(function(x){return x!==id});var sellVal=isDemo?0:Math.floor(cost*0.7);S.allocPts+=sellVal;if(!isDemo){if(isSessionDrawn&&!S._buybackPool)S._buybackPool=[];if(isSessionDrawn&&S._buybackPool.indexOf(id)<0)S._buybackPool.push(id)}}else{if(S.allocPts<cost)return;S.talents=S.talents.filter(function(x){return x!==id});S.allocPts-=cost}}else{if(t.Positive){if(S.allocPts<cost)return;S.talents.push(id);S.allocPts-=cost;if(S._buybackPool){S._buybackPool=S._buybackPool.filter(function(x){return x!==id})}}else{S.talents.push(id);S.allocPts+=cost}}renderAlloc()}
+function swapEra(){if(S.allocPts<30)return;S.allocPts-=30;S.era=S.era==='A'?'B':'A';renderAlloc()}
+function adjFam(d){if(S.allocPts<5)return;var nf=S.family+d;if(nf<1||nf>10)return;S.allocPts-=5;S.family=nf;S.fam=nf;S.noble=nf>=7;S.wealth=nf*10;S.knowledge=S.noble?20:0;S.reputation=S.noble?20:0;S.fn=S.noble?'阿淵':'阿澈';renderAlloc()}
+function confirmAlloc(){_allocPhase=false;afterRoll()}
+function activateMarquis(){S.family=10;S.fam=10;S.noble=true;S.wealth=200;S.knowledge=30;S.reputation=30;S.fn='阿淵';S._marquis=true;showToast('👑 列侯身份啟用！家財上限提升至200');renderAlloc()}
+/* §13 GROWTH */
+function getGrowth(){var stats={wealth:S.wealth,knowledge:S.knowledge,reputation:S.reputation,morality:S.morality,family:S.family,studyCount:S.studyCount||0};var opts=GrowthDB.getOpts(S.era,S.noble,stats);var g={};opts.forEach(function(opt){var _scumBlock=S.tags&&S.tags.has('scholar_scum')&&(opt.action==='doOfficial'||opt.action==='doPrivate');var _finalLock=opt.locked||_scumBlock;var _finalTip=_scumBlock?'❌ 你已是士林敗類，鄉里清議將你除名，恩師與你割席，此生再無可能入學入仕！':opt.tip;g[opt.id]={l:opt.label,d:opt.desc,req:_finalLock?function(){return false}:function(){return true},tip:_finalTip,act:opt.action==='doOfficial'?'official':opt.action==='doPrivate'?'private':actKey(opt.id),pe:opt.action==='effect'?opt.eff:null,triggerMinister:opt.triggerMinister||''}});return g}
+function doOfficial(cb){showBan('🏫 官學');showNarH('📖','你獲準入讀官學。<div class="anno">'+T('五經博士')+'教授'+T('五經')+'。官學經費由官府承擔。</div>',function(){showRes('你系統研習了'+T('五經')+'要義。',{knowledge:30,morality:20,reputation:10},{knowledge:'系統研習五經',morality:'儒家仁義教化',reputation:'官學聲譽加持'},cb)})}
+function doPrivate(cb){showBan('📚 私學');showNarH('📖','私學先生：「你想入讀哪種學館？」',function(){showOpts([{l:'📝 蒙學書館',d:'基礎識字（束脩10）',req:function(){return true}},{l:'📖 經館',d:'研讀經典（需家財≥20）',req:function(s){return s.wealth>=20},tip:'💡 需家財≥20'}],function(o){$('carea').innerHTML='';if(o.l.indexOf('蒙學')>=0)doMengxue(cb);else doJingguan(cb)})})}
+function doMengxue(cb){var SC=[{name:'儒家・仁義禮智',e:{knowledge:20,morality:20,reputation:10,wealth:-10}},{name:'墨家・兼愛非攻',e:{knowledge:10,wealth:-10}},{name:'道家・清靜無為',e:{knowledge:10,wealth:-10}},{name:'法家・嚴明法度',e:{knowledge:10,wealth:-10}}];showBan('📝 蒙學書館');showNarH('📝','蒙學書館教無定法——',function(){animDraw(SC.map(function(s){return s.name}),$('rcon'),function(idx){showRes('你學了<b>'+SC[idx].name+'</b>。',SC[idx].e,null,cb)})})}
+function doJingguan(cb){var OC=[{name:'精彩的五經義理',e:{knowledge:20,morality:10,wealth:-20}},{name:'粗淺的儒家道理',e:{knowledge:10,morality:10,wealth:-20}},{name:'識字與基礎常識',e:{knowledge:10,wealth:-20}}];showBan('📖 經館');showNarH('📖','經館老師年事已高——',function(){animDraw(OC.map(function(s){return s.name}),$('rcon'),function(idx){showRes('你學了<b>'+OC[idx].name+'</b>。',OC[idx].e,null,cb)})})}
+
+
+/* §14 SPECIAL EVENTS */
+function checkSE(aid,cb){var se=null,trig=false;if(aid==='study'&&!S.school&&S.era==='A'){se='se1';trig=true}else if(aid==='farm'){se='se2';trig=Math.random()<.6}else if(aid==='social'){se='se3';trig=Math.random()<.3}if(trig&&se)showSE(se,cb);else cb()}
+function getSE1(){var opts=[];if(S.noble)opts.push({id:'hl',l:'🟡 '+T('黃老之學'),d:'貴族官學主流',r:'你學習黃老之術。',e:{knowledge:30,morality:10,family:1}});else opts.push({id:'lit',l:'📝 基礎識字與農桑',d:'實用知識',r:'你學會了記帳和農時知識。',e:{knowledge:10,wealth:10}});opts.push({id:'ru',l:'🔵 儒家',d:'仁義忠孝',r:'「仁者愛人」深深打動了你。',e:{knowledge:10}});opts.push({id:'fa',l:'🔴 法家',d:'嚴明法度',r:'「法不阿貴」令你肅然起敬。',e:{knowledge:20}});opts.push({id:'mi',l:'⚔️ 兵法',d:'研習兵書',r:'你習得兵法韜略。',e:{knowledge:10,reputation:10}});return{t:'📖 學派選擇',intro:'先生問你：「你想跟從什麼學派？」',opts:opts}}
+var SE2={t:'🌾 農閒時間',intro:'農活做完了，難得有半天空閒。',opts:[{id:'h',l:'👨‍👩‍👦 幫父母做家務',d:'孝順持家',r:'鄰居稱讚你孝順。',e:{wealth:10,morality:10},show:function(){return S.morality>30}},{id:'e',l:'👂 偷聽學堂授課',d:'蹲在窗下偷師',r:'你聽了一整天《詩經》。',e:{knowledge:20}},{id:'l',l:'💪 外出幫傭打工',d:'幫人搬貨',r:'辛苦一天，多了幾枚銅錢。',e:{wealth:20}},{id:'s',l:'🍎 偷鄰家果子',d:'桃子太誘人了…',r:function(){return S.era==='B'?'被里長撞見了！':'偷了幾個果子，被追了半條街。'},e:function(){return S.era==='B'?{wealth:20,reputation:-40,morality:-30}:{wealth:20,reputation:-20,morality:-20}},show:function(){return S.morality<70}}]};
+var SE3={t:'💔 好友求助',intro:'朋友慌張地跑來：「求你救救我！債主明天就要上門了！」',opts:[{id:'c',l:'🤝 安慰他',d:function(){return S.wealth>60?'你有錢但只是安慰他':'陪他想辦法'},getResult:function(){return S.wealth>60?{r:'你明明有錢卻不肯伸手。',e:{reputation:-20},rs:{reputation:'有財不助'}}:{r:'你陪朋友想了幾個出路。',e:{},rs:{}}}},{id:'p',l:'🤝 替他還部份債',d:'拿出部分積蓄',r:'朋友感激涕零。',e:{wealth:-10,reputation:10,morality:10}},{id:'f',l:'💛 傾囊替他還債',d:'全部積蓄都給他',r:'他跪在你面前泣不成聲。',e:{wealth:-20,reputation:20,morality:20}},{id:'b',l:'👊 帶人去教訓債主',d:'帶幾個兄弟去「說理」',r:'債主嚇得免了部分債務，但官府注意到了。',e:{wealth:10,reputation:-20,morality:-30}}]};
+function showSE(seK,cb){var se=seK==='se1'?getSE1():seK==='se2'?SE2:SE3;if(!se){cb();return}showBan(se.t);showNarH('🎲 特殊事件',se.intro,function(){var vis=se.opts.filter(function(o){return!o.show||o.show()});showOpts(vis.map(function(o){return{l:o.l,d:typeof o.d==='function'?o.d():o.d,req:function(){return true},id:o.id,r:o.r,e:o.e,rs:o.rs,getResult:o.getResult}}),function(o){$('carea').innerHTML='';if(seK==='se1')S.school=o.id;var r,e,rs;if(o.getResult){var res=o.getResult();r=res.r;e=res.e;rs=res.rs}else{r=typeof o.r==='function'?o.r():o.r;e=typeof o.e==='function'?o.e():o.e;rs=typeof o.rs==='function'?o.rs():o.rs}showRes(r,e,rs,cb)})})}
+
+
+/* §15 FATE EVENTS — with minister tracking */
+var FATE=[
+{name:'豐年',icon:'🌾',can:function(){return true},intro:function(){return'風調雨順，五穀豐登。'},opts:[{l:'🙏 捐糧濟貧',r:function(){return'你將糧食分給窮苦人家。'+(S.era==='B'?'善行被縣令記錄。':'')},e:function(){return{morality:20,reputation:20}}},{l:'💰 囤積居奇',r:function(){return'鄰里罵你「見錢眼開」。'},e:function(){return{wealth:30,morality:-20}}}]},
+{name:'天災',icon:'🌪️',can:function(){return true},intro:function(){return'大旱之年，田裡顆粒無收。'},opts:[{l:'📦 咬牙繳稅',r:function(){return S.era==='A'?T('三十稅一')+'稅率較低，勉強繳了。':'朝廷賦役繁重，家中見底。'},e:function(){return S.era==='A'?{wealth:-20}:{wealth:-40}}},{l:'🏃 逃稅',r:function(){return S.era==='A'?'躲進山裡避過稅吏。':T('刺史')+'巡查嚴密，逃稅被記錄在案。'},e:function(){return S.era==='A'?{reputation:-10}:{reputation:-20}}}]},
+{name:'百家講學',icon:'📚',can:function(){return true},intro:function(){return S.era==='B'?'遊方學者在村口開講。<div class="anno">'+T('罷黜百家')+'：朝廷沒有禁絕民間學習。</div>':'遊學者在村口開講。'},opts:[{l:'📖 去聽講',r:function(){return'你大開眼界。'},e:function(){return{knowledge:10}}},{l:'📕 專心本業',r:function(){return S.era==='B'?'你安心研讀'+T('五經')+'。':'你安心務農。'},e:function(){return S.era==='B'?{knowledge:10}:{wealth:10}}}]},
+{name:'盜匪',icon:'⚔️',can:function(){return true},intro:function(){return'山賊趁夜劫掠村莊！'},opts:[{l:'🛡️ 帶領鄉民抵禦',r:function(){return'盜匪被擊退，你成了鄉里英雄。'},e:function(){return{reputation:20,wealth:-10}}},{l:'🏠 躲在家中',r:function(){return'盜匪搶走了你的積蓄。'},e:function(){return{reputation:-10,wealth:-20}}}]},
+{name:'貴族壟斷',icon:'🏯',can:function(){return S.era==='A'&&!S.noble},intro:function(){return'官缺被世家以'+T('任子制')+'填補了。<div class="anno">漢初官位由貴族壟斷。</div>'},opts:[{l:'📖 堅持讀書',r:function(){return'出路渺茫，但你每天挑燈夜讀。'},e:function(){return{knowledge:20,morality:10}}},{l:'🏯 依附世家',r:function(){return'你成了門客。有溫飽，卻失尊嚴。'},e:function(){return{reputation:-20,wealth:10}}}]},
+{name:'來客',icon:'🐎',can:function(){return true},intro:function(){return'外地商人：「跟我合夥做買賣！」'},opts:[{l:'🤝 合夥經商',r:function(){return'你賺了一筆，但書本蒙了灰。'},e:function(){return{wealth:20,knowledge:-10}}},{l:'📖 婉拒',r:function(){return S.era==='B'?'你回到書桌前研讀經典。':'你安心過日子。'},e:function(){return S.era==='B'?{knowledge:10}:{morality:10}}}]},
+{name:'瘟疫',icon:'🏥',can:function(){return true},intro:function(){return'鄉里爆發疫病，哀嚎遍野。'},opts:[{l:'🏥 冒險救助',r:function(){return'你日夜照料病患。'+(S.era==='B'?'縣令親自褒獎。':'鄉親們含淚感激。')},e:function(){return S.era==='B'?{morality:20,reputation:30,wealth:-10}:{morality:20,reputation:20,wealth:-10}}},{l:'🏠 閉門避疫',r:function(){return'鄰里對你頗有微詞。'},e:function(){return{reputation:-10}}}]},
+{name:'清議',icon:'🗣️',can:function(){return S.era==='B'&&S.morality>=40},intro:function(){return'縣令到鄉里考察人才。<div class="anno">'+T('察舉制')+'由郡守、縣令考察舉薦。</div>'},opts:[{l:'🙏 積極協助鄉務',r:function(){return'縣令：「此子有公心！」'},e:function(){return{morality:30,reputation:30}}},{l:'💰 賄賂',r:function(){return'事情敗露，縣令當眾斥責。'},e:function(){return{wealth:-20,morality:-30,reputation:-30}}}]},
+{name:'免除徭役',icon:'🎉',can:function(){return S.era==='A'},intro:function(){return'朝廷宣布今年免除徭役！<div class="anno-ex">漢初'+T('黃老之學')+'，輕徭薄賦。</div>'},opts:[{l:'🙏 感恩戴德',r:function(){return'日子寬裕了許多。'},e:function(){return{wealth:20}}}]},
+{name:'加徵算緡',icon:'💸',can:function(){return S.era==='B'},intro:function(){return'朝廷頒布'+T('算緡')+'令！<div class="anno-ex">武帝為北伐匈奴籌措軍費。</div>'},opts:[{l:'📦 按時繳納',r:function(){return'荷包又瘦了。'},e:function(){return{wealth:-10}}},{l:'🙈 隱瞞財產',r:function(){return'鄰居舉報，被罰。'},e:function(){return{reputation:-10,wealth:-10}}}]},
+{name:'匈奴入侵',icon:'🏇',can:function(){return S.era==='A'},w:function(){return 2.5},intro:function(){return'匈奴騎兵呼嘯南下！<div class="anno-ex">漢初和親政策無法阻止匈奴。</div>'},run:function(fe){var b1=document.createElement('button');b1.className='btn';b1.innerHTML='<strong>💰 奉上所有家財</strong>';b1.onclick=function(){var l=S.wealth;S.wealth=0;updateStats();fe.innerHTML='<div class="rbox">你保住了命，卻失去一切。<div class="delta">📉家財-'+l+'</div></div>';checkFateEnd(fe)};fe.appendChild(b1);var b2=document.createElement('button');b2.className='btn';b2.innerHTML='<strong>⚔️ 拼死一搏</strong>';b2.onclick=function(){var roll=Math.random();if(roll<0.4){if(hasTalent('divine')&&!S.divineUsed){S.divineUsed=true;S.skipNext=true;fe.innerHTML='<div class="rbox">🌟 天命護體！<div class="delta">⏭️ 跳過</div></div>';checkFateEnd(fe)}else{fe.innerHTML='<div class="rbox" style="border-color:var(--zhu)">💀 你倒在匈奴鐵蹄之下…</div><button class="btn btn-p" style="margin-top:.3rem" onclick="trigEnd(\'xiongnu\')">→</button>'}}else if(roll<0.5){applyE({reputation:20,wealth:10});fe.innerHTML='<div class="rbox">你英勇殺敵！</div>';checkFateEnd(fe)}else{S.skipNext=true;fe.innerHTML='<div class="rbox">僥倖活下來。<div class="delta">⏭️ 跳過</div></div>';checkFateEnd(fe)}};fe.appendChild(b2)}},
+{name:'與人起爭執',icon:'💢',can:function(){return true},w:function(){return 1.2},intro:function(){return S.era==='A'?'你在街頭與流氓起了爭執！':'你在街頭與落魄貴族起了爭執。'},run:function(fe){var sum=S.morality+S.knowledge;var fp;if(S.era==='A')fp=Math.max(0,(200-sum)/260*100);else fp=sum>=80?0:Math.max(0,(80-sum)/30*25);fe.innerHTML+='<div style="font-size:.78rem;color:var(--text2)">品德+學問='+sum+' 毆鬥機率：'+Math.round(fp)+'%</div>';if(Math.random()*100<fp){fe.innerHTML+='<div style="font-weight:700;color:var(--zhu)">⚔️ 爆發毆鬥！</div>';var help=S.reputation>30;var tot=help?8:4,roll=Math.random()*tot;if(roll<(help?3:1)){applyE({reputation:20,morality:-20});fe.innerHTML+='<div class="rbox">你贏了。</div>';checkFateEnd(fe)}else if(roll<(help?4:2)){applyE({reputation:-20,morality:-20});fe.innerHTML+='<div class="rbox">你被打倒了。</div>';checkFateEnd(fe)}else if(roll<(help?7:3)){fe.innerHTML+='<div style="color:var(--zhu)">💀 對方倒下了…</div>';runKillJudgment(fe)}else{fe.innerHTML+='<div class="rbox" style="border-color:var(--zhu)">對方一拳擊中你要害…</div><button class="btn btn-p" style="margin-top:.3rem" onclick="trigEnd(\'brawl_death\')">→</button>'}}else{if(S.era==='A'){applyE({reputation:-20});fe.innerHTML+='<div class="rbox">你轉身離開，被嘲笑懦弱。</div>';checkFateEnd(fe)}else{var prob=Math.min(100,Math.max(0,50+(sum-50)/70*50));if(Math.random()*100<prob){applyE({reputation:20});fe.innerHTML+='<div class="rbox">你好言相勸，對方離開。</div>'}else{applyE({reputation:-20});fe.innerHTML+='<div class="rbox">對方不聽，譏諷你。</div>'}checkFateEnd(fe)}}}},
+{name:'西域來朝',icon:'🐪',can:function(){return S.era==='B'},intro:function(){return'西域使團萬里來朝！'},opts:[{l:'🎉 與民同樂',r:function(){return S.family>7?'你獲邀宮廷宴會。':'皇帝大喜，免除本年賦稅！'},e:function(){return S.family>7?{wealth:20}:{wealth:10}}}]}
+];
+function makeWar(n,d){return{name:n,icon:'⚔️',can:function(){return S.era==='B'},intro:function(){return d},run:function(fe){if(Math.random()<0.2){fe.innerHTML='<div class="rbox" style="border-color:var(--yu)">📜 <b>忠臣死諫！</b><br>皇上本欲發兵，然有賴忠臣冒死進諫，陳述民生疾苦，皇上收回成命。<div class="anno">此乃儒家'+T('士人政府')+'制衡皇權之體現！</div></div>';checkFateEnd(fe);return}if(nobleExempt(fe))return;fe.innerHTML+='<div style="font-size:.82rem;text-align:center">擲幣：正＝出征；反＝繳軍費</div>';fateCoinFlip(fe,function(isServe){if(isServe){warServe(fe,n)}else{if(S.wealth>=20){S.wealth=clamp(S.wealth-20,'wealth');updateStats();fe.innerHTML='<div class="rbox">加徵軍費。<div class="delta">📉家財-20</div></div>';checkFateEnd(fe)}else warServe(fe,n)}})}}}
+function warServe(fe,n){fe.innerHTML='<div style="font-size:.85rem">你隨軍參加「'+n+'」…（1/5機率戰死）</div>';if(Math.random()<0.2){if(hasTalent('divine')&&!S.divineUsed){S.divineUsed=true;S.skipNext=true;fe.innerHTML+='<div class="rbox">🌟 天命護體！<div class="delta">⏭️</div></div>';checkFateEnd(fe)}else{fe.innerHTML+='<div class="rbox" style="border-color:var(--zhu)">💀 你倒在異鄉…</div><button class="btn btn-p" style="margin-top:.3rem" onclick="trigEnd(\'war\')">→</button>'}}else{S.skipNext=true;fe.innerHTML+='<div class="rbox">你僥倖活著回來。<div class="delta">⏭️</div></div>';checkFateEnd(fe)}}
+[['北征朝鮮','朝廷發兵北征朝鮮。'],['南平閩越','朝廷平定閩越之亂。'],['平定南越','大軍南下平定南越。'],['伐西南夷','朝廷開拓西南邊疆。'],['北伐匈奴','朝廷大舉北伐匈奴！']].forEach(function(w){FATE.push(makeWar(w[0],w[1]))});
+function makeBuild(n,d){return{name:n,icon:'🏗️',can:function(){return S.era==='B'},intro:function(){return d},run:function(fe){if(Math.random()<0.2){fe.innerHTML='<div class="rbox" style="border-color:var(--yu)">📜 <b>忠臣死諫！</b><br>皇上本欲興建，然有賴忠臣冒死進諫，陳述民生疾苦，皇上收回成命。<div class="anno">此乃儒家'+T('士人政府')+'制衡皇權之體現！</div></div>';checkFateEnd(fe);return}if(nobleExempt(fe))return;fe.innerHTML+='<div style="font-size:.82rem;text-align:center">擲幣：正＝營建；反＝繳費</div>';fateCoinFlip(fe,function(isServe){if(isServe){S.skipNext=true;fe.innerHTML='<div class="rbox">你被徵調營建。<div class="delta">⏭️</div></div>';checkFateEnd(fe)}else{if(S.wealth>=20){S.wealth=clamp(S.wealth-20,'wealth');updateStats();fe.innerHTML='<div class="rbox">加徵營建費。<div class="delta">📉家財-20</div></div>';checkFateEnd(fe)}else{S.skipNext=true;fe.innerHTML='<div class="rbox">以役代稅。<div class="delta">⏭️</div></div>';checkFateEnd(fe)}}})}}}
+[['營建建章宮','武帝下令營建建章宮。'],['擴建上林苑','武帝擴建上林苑。'],['擴建未央宮','武帝擴建未央宮。']].forEach(function(b){FATE.push(makeBuild(b[0],b[1]))});
+
+
+/* Minister events — with collection tracking */
+[['董仲舒進諫','臣懇請陛下薄賦省役。'],['東方朔進諫','願陛下止此害民之舉。'],['主父偃進諫','願陛下息兵以安百姓。'],['徐樂進諫','願陛下寬民以弭禍患。'],['嚴安進諫','願陛下止戈安民固本。']].forEach(function(p){
+  var ministerName=p[0].replace('進諫','').trim();
+  FATE.push({name:p[0],icon:'📜',can:function(){return S.era==='B'},
+    intro:function(){return'出身布衣的忠臣<b>'+ministerName+'</b>上奏：<div class="mq">「'+p[1]+'」</div>'},
+    opts:[{l:'🙏 靜待聖裁',r:function(){
+      var isNew=!COL.ministers[ministerName];COL.ministers[ministerName]=1;saveCOL();
+      if(isNew)showToast('📜 解鎖名臣：'+ministerName);
+      return'聖上被<b>'+ministerName+'</b>的忠諫打動，減免本年徭役！<div class="anno">'+T('察舉制')+'使布衣亦能立於朝堂。</div>'
+    },e:function(){return{wealth:20}}}]
+  })
+});
+/* §15b 十個新命運事件 */
+
+
+/* 1. 方士煉丹 */
+FATE.push({
+  name:'方士煉丹',icon:'🧪',
+  can:function(){return true},
+  intro:function(){return'一名自稱來自東海的方士向你展示「仙丹」，希望你出資一百金共煉神藥。<div class="anno-ex">秦漢方士文化盛行，始皇遣徐福出海、武帝亦好神仙術，民間求仙煉丹風氣極濃。</div>'},
+  opts:[
+    {l:'🔍 考驗方士',
+     show:function(){return S.knowledge>=70},
+     r:function(){return'你引用《淮南子》中的丹術知識，方士支支吾吾，落荒而逃。鄉人對你刮目相看。'},
+     e:function(){return{knowledge:10,reputation:20}}},
+    {l:'💰 投資煉丹',
+     show:function(){return S.wealth>=40},
+     r:function(){
+       S._fangshiLuck=Math.random()<0.05||hasTalent('lucky');
+       return S._fangshiLuck
+         ?'丹藥煉成！服下後神清氣爽，朝廷聞訊賜你「真人」稱號！'
+         :'方士帶錢跑了，只留下一卷丹書，賣給書商賺回一些。';
+     },
+     e:function(){
+       return S._fangshiLuck
+         ?{wealth:50,knowledge:30,reputation:50,morality:10}
+         :{wealth:-30,knowledge:20,reputation:-10};
+     }},
+    {l:'🙏 敬而遠之',
+     show:function(){return true},
+     r:function(){return'你婉拒方士，他詛咒你錯失仙緣。你一笑置之。'},
+     e:function(){return{morality:5}}}
+  ]
+});
+
+
+/* 2. 鹽鐵私販 */
+FATE.push({
+  name:'鹽鐵私販',icon:'⚙️',
+  can:function(){return S.era==='B'},
+  intro:function(){return'商賈暗中邀你合夥販運私鹽，利潤三倍，但被'+T('刺史')+'抓到將處重刑。<div class="anno">漢武帝實行鹽鐵官營，為北伐匈奴籌措財政資金。</div>'},
+  opts:[
+    {l:'🤝 合夥私販',
+     show:function(){return S.reputation>=60},
+     r:function(){return'靠著你的聲望，官府睜一隻眼閉一隻眼，賺得盆滿缽滿。'},
+     e:function(){return{wealth:80,reputation:-10,morality:-20}}},
+    {l:'📜 向官府檢舉',
+     show:function(){return S.morality>=70},
+     r:function(){return'你密報'+T('刺史')+'，商賈伏法，朝廷賜你「義民」牌匾。'},
+     e:function(){return{wealth:20,morality:30,reputation:30}}},
+    {l:'😨 不敢參與',
+     show:function(){return true},
+     r:function(){return'你以家訓為由拒絕，商賈嗤笑你膽小。'},
+     e:function(){return{morality:5}}}
+  ]
+});
+
+
+
+
+/* 3. 西域奇珍 */
+FATE.push({
+  name:'西域奇珍',icon:'🐫',
+  can:function(){return S.era==='B'},
+  intro:function(){return'胡商展示一顆「夜明珠」，要價50金。你若轉手給長安貴族，可獲三倍利。<div class="anno-ex">'+T('張騫')+'鑿空西域後，絲路貿易繁盛，各種奇珍異寶流入中原。</div>'},
+  opts:[
+    {l:'🧐 鑑定寶珠',
+     show:function(){return S.knowledge>=80},
+     r:function(){return'你發現是普通琉璃，當眾拆穿，胡商羞愧賠償。'},
+     e:function(){return{knowledge:10,reputation:30,wealth:20}}},
+    {l:'💰 賭一把',
+     show:function(){return S.wealth>=50},
+     r:function(){return'寶珠是假的，你血本無歸，淪為笑柄。'},
+     e:function(){return{wealth:-50,reputation:-30}}},
+    {l:'🤔 不買',
+     show:function(){return true},
+     r:function(){return'你謹慎離開，但心裡總惦記那顆寶珠。'},
+     e:function(){return{}}}
+  ]
+});
+
+
+/* 4. 太學射策洩題 */
+FATE.push({
+  name:'太學射策洩題',icon:'📜',
+  can:function(){return S.era==='B'&&S.knowledge>=50},
+  intro:function(){return'一名'+T('太學')+'生聲稱有今年射策考題，要價30金。買下可保甲等，但若東窗事發，前途盡毀。<div class="anno">'+T('太學')+'每年以射策方式考核'+T('博士弟子員')+'，舞弊者將被逐出。</div>'},
+  opts:[
+    {l:'⚖️ 嚴詞拒絕並舉報',
+     show:function(){return S.morality>=80},
+     r:function(){return T('五經博士')+'嘉許你的正直，推薦你為'+T('孝廉')+'候選。'},
+     e:function(){return{morality:20,reputation:40,wealth:10}}},
+    {l:'🤫 買下試題',
+     show:function(){return S.wealth>=30},
+     r:function(){return'考試順利，但你內心不安。後來事情敗露，被逐出'+T('太學')+'。'},
+     e:function(){return{wealth:-30,knowledge:20,morality:-50,reputation:-60}}},
+    {l:'😶 裝作沒聽見',
+     show:function(){return true},
+     r:function(){return'你假裝沒聽見，但心裡一直打鼓。'},
+     e:function(){return{morality:-5}}}
+  ]
+});
+
+
+/* 5. 豪強借債 */
+FATE.push({
+  name:'豪強借債',icon:'💰',
+  can:function(){return true},
+  intro:function(){return'郡中豪強願借你50金，月息五分，三個月內還清。逾期則以你家田產抵債。<div class="anno-ex">漢代地方豪強常以高利貸兼併土地，是社會不穩定的重要根源。</div>'},
+  opts:[
+    {l:'🙅 婉拒',
+     show:function(){return S.wealth>=60},
+     r:function(){return'你以家資尚可為由拒絕，豪強悻悻離去。'},
+     e:function(){return{reputation:5}}},
+    {l:'🤝 接受借款',
+     show:function(){return true},
+     r:function(){return'你拿錢經商，卻遇市場波動，血本無歸。豪強上門逼債，你被迫賣地。'},
+     e:function(){return{wealth:-50,reputation:-40,morality:-20,family:-1}}},
+    {l:'📝 請鄉老作保',
+     show:function(){return S.reputation>=70},
+     r:function(){return'鄉老出面擔保，豪強改為低息借你。你順利還清，還結交了豪強。'},
+     e:function(){return{wealth:30,reputation:10}}}
+  ]
+});
+
+
+/* 6. 巫蠱謠言 */
+FATE.push({
+  name:'巫蠱謠言',icon:'🕯️',
+  can:function(){return S.era==='B'},
+  intro:function(){return'你家門前被埋下桐木人偶，謠言四起，說你家用巫蠱害人。<div class="anno">漢武帝晚年巫蠱之禍牽連數萬人，皇室宗親亦難倖免。</div>'},
+  opts:[
+    {l:'👑 動用家族關係',
+     show:function(){return S.family>=8},
+     r:function(){return'家族出面，官府迅速澄清謠言，誣告者被流放。'},
+     e:function(){return{family:-1,reputation:20,morality:10}}},
+    {l:'🙏 開倉濟民自證清白',
+     show:function(){return S.wealth>=40},
+     r:function(){return'你傾盡家財賑濟窮人，百姓為你作證，謠言平息。'},
+     e:function(){return{wealth:-40,reputation:30,morality:30}}},
+    {l:'😰 束手無策',
+     show:function(){return true},
+     r:function(){return'謠言越傳越烈，你家被官府查封，家道中落。'},
+     e:function(){return{family:-2,reputation:-50,wealth:-30}}}
+  ]
+});
+
+
+
+
+/* 7. 戍邊逃兵 */
+FATE.push({
+  name:'戍邊逃兵',icon:'🏹',
+  can:function(){return S.era==='B'},
+  intro:function(){return'你在荒野遇見一名渾身是傷的逃兵，他哀求收留，並願獻上從匈奴那繳獲的財寶。<div class="anno-ex">武帝連年北伐匈奴，兵役繁重，逃兵屢禁不止。窩藏逃兵依律同罪。</div>'},
+  opts:[
+    {l:'⚖️ 押送官府',
+     show:function(){return S.morality>=70},
+     r:function(){return'縣令嘉獎你的忠義，賞金十金。逃兵被發配邊疆。'},
+     e:function(){return{wealth:10,morality:20,reputation:20}}},
+    {l:'🏠 收留庇護',
+     show:function(){return S.wealth>=30},
+     r:function(){
+       S._deserterLuck=Math.random()<0.08||hasTalent('lucky');
+       return S._deserterLuck
+         ?'逃兵竟是名將後裔，日後立功報恩，贈你千金與爵位！'
+         :'你藏匿逃兵，不料被鄰居告發，官府以窩藏罪論處，人財兩空。';
+     },
+     e:function(){
+       return S._deserterLuck
+         ?{wealth:100,reputation:30,morality:-10,family:2}
+         :{wealth:-30,reputation:-40,morality:-30,family:-1};
+     }},
+    {l:'🙅 趕走他',
+     show:function(){return true},
+     r:function(){return'你給了他一些乾糧，讓他自生自滅。'},
+     e:function(){return{morality:-5}}}
+  ]
+});
+
+
+/* 8. 河工徵發 */
+FATE.push({
+  name:'河工徵發',icon:'🌊',
+  can:function(){return true},
+  intro:function(){return'黃河決堤，朝廷徵發河工。你家有壯丁一名必須應役，除非出錢僱人替代。<div class="anno-ex">漢代徭役制度規定成年男子每年服勞役一月，遇大型工程則另行徵發。</div>'},
+  opts:[
+    {l:'💰 出錢僱人',
+     show:function(){return S.wealth>=40},
+     r:function(){return'你花錢僱了遊俠代役，免去勞苦，但鄉親議論你怕吃苦。'},
+     e:function(){return{wealth:-40,reputation:-10}}},
+    {l:'👑 動用爵位免役',
+     show:function(){return S.family>=7},
+     r:function(){return'你以爵位特權免役，但百姓暗中唾罵。'},
+     e:function(){return{family:-1,reputation:-20}}},
+    {l:'💪 親赴河工',
+     show:function(){return S.morality>=60},
+     r:function(){return'你帶頭修堤，百姓感動，郡守上表嘉獎。'},
+     e:function(){return{morality:20,reputation:30,wealth:-10}}},
+    {l:'😫 被迫應役',
+     show:function(){return true},
+     r:function(){return'你無錢無勢，只能去河工，險些病死。勉強撿回一條命。'},
+     e:function(){return{wealth:-10,morality:5}}}
+  ]
+});
+
+
+/* 9. 馬政風波 */
+FATE.push({
+  name:'馬政風波',icon:'🐎',
+  can:function(){return S.era==='B'},
+  intro:function(){return'邊郡馬政令下，每戶需上交一匹戰馬，否則罰金十金。<div class="anno">西漢強制民間養馬，為組建騎兵對抗匈奴，充實軍備。</div>'},
+  opts:[
+    {l:'📚 獻策改良馬政',
+     show:function(){return S.knowledge>=80},
+     r:function(){return'你上書郡守，提出改良馬政之法，獲朝廷賞識。<div class="anno">西漢馬政成效顯著，後來打敗匈奴騎兵多賴此策。</div>'},
+     e:function(){return{knowledge:10,reputation:30,wealth:20}}},
+    {l:'💰 買馬交差',
+     show:function(){return S.wealth>=30},
+     r:function(){return'你高價買馬，家財耗損，但免去刑責。'},
+     e:function(){return{wealth:-30,reputation:5}}},
+    {l:'😡 抗稅不交',
+     show:function(){return true},
+     r:function(){return'官府強行拉走你家耕牛抵債，從此無法耕種。'},
+     e:function(){return{wealth:-50,reputation:-30,morality:-20}}}
+  ]
+});
+
+
+/* 10. 告密者 */
+FATE.push({
+  name:'告密者',icon:'🗣️',
+  can:function(){return true},
+  intro:function(){return'一個黑衣人遞給你一封信，說某列侯私藏兵器，謀反證據確鑿。舉報可獲賞金百金，但可能得罪整個宗室。<div class="anno-ex">漢代酷吏橫行，告密之風盛行。武帝時'+T('廷尉')+'張湯以嚴刑峻法著稱。</div>'},
+  opts:[
+    {l:'📜 向'+T('廷尉')+'舉報',
+     show:function(){return S.morality>=60},
+     r:function(){return T('廷尉')+'查實，列侯伏誅。你獲賞金，但也招來宗室敵意。'},
+     e:function(){return{wealth:100,reputation:20,morality:10,family:-2}}},
+    {l:'🤝 通風報信',
+     show:function(){return S.family>=6},
+     r:function(){return'你將消息洩露給列侯，他贈你厚禮，但日後若事發，你將受牽連。'},
+     e:function(){return{wealth:50,reputation:-30,morality:-40,family:-1}}},
+    {l:'🔥 燒掉信件',
+     show:function(){return true},
+     r:function(){return'你燒掉信件，假裝什麼都不知道，心中卻惴惴不安。'},
+     e:function(){return{morality:-5}}}
+  ]
+});
+/* §15c 歷史事件鏈 — Phase 2 FATE 事件 */
+
+
+/* 江充之犬 — 巫蠱之禍 Phase 2 */
+FATE.push({
+  name:'江充之犬',icon:'🐕',priority:true,
+  can:function(){return S.era==='B'&&S.tags&&!S.tags.has('jiangchong_done')&&(S.tags.has('wugu_suspect')||gR>=2)},
+  intro:function(){return S.tags.has('wugu_suspect')?
+    '江充帶著胡巫與獵犬在你家門口瘋狂吠叫，胡巫聲稱「偵測到強烈蠱氣」，江充下令入宅搜查！<div class="anno">漢武帝晚年巫蠱之禍牽連數萬人，太子劉據亦被迫起兵。</div>':
+    '江充的繡衣使者在長安大肆搜捕巫蠱。雖未在你家搜出實據，但差役暗示需「破財免災」。<div class="anno-ex">江充為酷吏，以搜查巫蠱為名大肆斂財、構陷忠良。</div>'},
+  opts:[
+    {l:'💸 破財免災',
+     show:function(){return!S.tags.has('wugu_suspect')},
+     r:function(){return'你咬牙交出賄金，差役這才悻悻離去。「下次可沒這麼便宜了。」'},
+     e:function(){S.tags.add('jiangchong_done');return{wealth:-30}}},
+    {l:'📜 託關係求情（需 family ≥ 7）',
+     show:function(){return S.tags.has('wugu_suspect')&&S.family>=7},
+     r:function(){return'親族四處奔走斡旋，你躲過問斬，但被削去部分族籍，流放邊郡。<div class="anno">漢代宗族連坐制度下，一人獲罪往往牽連全族。</div>'},
+     e:function(){S.tags.add('jiangchong_done');S.tags.add('exiled');return{family:-4,reputation:-25}}},
+    {l:'💰 重金買命（需 wealth ≥ 100）',
+     show:function(){return S.tags.has('wugu_suspect')&&S.wealth>=100},
+     r:function(){return'你傾家蕩產賄賂下屬，將嫌疑轉嫁他人。你活了下來，但良心備受煎熬。'},
+     e:function(){S.tags.add('jiangchong_done');S.tags.add('stain');return{wealth:-100,morality:-40}}},
+    {l:'⚔️ 據理反駁（需 knowledge ≥ 60 且曾結仇）',
+     show:function(){return S.tags.has('wugu_suspect')&&S.knowledge>=60&&S.tags.has('grudge')},
+     r:function(){return'你當眾揭穿偽證，引經據典駁斥巫蠱之說。江充雖暗中通緝你，但太子劉據的門客注意到了你的膽識！<div class="anno-ex">太子劉據後來起兵反抗江充，兵敗自殺。</div>'},
+     e:function(){S.tags.add('jiangchong_done');S.tags.add('fugitive');return{knowledge:15,reputation:-10}}},
+    {l:'💀 束手就擒',
+     show:function(){return S.tags.has('wugu_suspect')&&S.wealth<100&&S.family<7&&(!S.tags.has('grudge')||S.knowledge<60)},
+     r:function(){return'你無力反抗，被投入'+T('廷尉')+'大牢。滿門抄斬的判決很快下達……<div class="anno">巫蠱之禍中，無數無辜者含冤而死。</div>'},
+     e:function(){S.tags.add('jiangchong_done');S.tags.add('wugu_death');return{wealth:-999,family:-999,morality:-999}}}
+  ]
+});
+
+
+/* 淮南密使 — 淮南王謀反 Phase 2 */
+FATE.push({
+  name:'淮南密使',icon:'📜',priority:true,
+  can:function(){return S.era==='B'&&S.tags&&S.tags.has('huainan_disciple')&&!S.tags.has('huainan_fate_done')},
+  intro:function(){return'深夜，一名錦衣人叩門：「先生好道術，淮南王願以千金邀您共舉大事，成則封侯。」<div class="anno">淮南王劉安招攬天下賓客，暗中謀反。其門客編撰《淮南子》，融合道家與方術。</div>'},
+  opts:[
+    {l:'🛡️ 婉拒並自首',show:function(){return true},
+     r:function(){return'你向官府自首，交出密使留下的信物。雖免死罪，但從此被監視居住。<div class="anno-ex">漢代自首可減刑，但謀反案中自首者仍受嚴密監控。</div>'},
+     e:function(){S.tags.add('huainan_fate_done');S.tags.delete('huainan_disciple');return{morality:30,reputation:-20}}},
+    {l:'🔥 加入共謀',show:function(){return true},
+     r:function(){return'你接下千金，暗中為淮南王招兵買馬。權力的滋味令人陶醉。'},
+     e:function(){S.tags.add('huainan_fate_done');S.tags.add('huainan_conspirator');return{wealth:100,knowledge:20}}},
+    {l:'💀 嚴詞拒絕',show:function(){return true},
+     r:function(){return(S.morality+S.reputation>=100)?'你憑藉極高聲望，密使不敢輕舉妄動，但你已被列入嫌疑名單。':'密使見你拒絕，臉色驟變，拔出利刃……'},
+     e:function(){S.tags.add('huainan_fate_done');if(S.morality+S.reputation>=100){S.tags.add('huainan_suspect');return{reputation:-30}}else{return{jump:'end_huainan_kill'}}}}
+  ]
+});
+
+
+/* 削藩風雲 — 七國之亂 Phase 2 */
+FATE.push({
+  name:'削藩風雲',icon:'⚔️',priority:true,
+  can:function(){return S.era==='A'&&S.tags&&S.tags.has('qiguo_friend')&&!S.tags.has('qiguo_fate_done')},
+  intro:function(){return'朝廷頒布《削藩策》，吳王密使手持血書到來：「諸侯受辱，當舉義兵！兄台若助陣，事成裂土封王。」<div class="anno-ex">景帝三年（前154年），吳王劉濞聯合六國以「清君側、誅晁錯」為名起兵。</div>'},
+  opts:[
+    {l:'🚪 密報朝廷（需品德≥50）',show:function(){return S.morality>=50},
+     r:function(){return'你連夜通報郡守，與吳王決裂。朝廷嘉獎你的忠義。<div class="anno">'+T('察舉制')+'後，忠義之士更易被朝廷重用。</div>'},
+     e:function(){S.tags.add('qiguo_fate_done');S.tags.add('qiguo_informant');return{reputation:40,wealth:-20}}},
+    {l:'🤝 暗中資助（需家財≥100）',show:function(){return S.wealth>=100},
+     r:function(){return'你散盡家財資助叛軍，卻始終不敢公開表態。'},
+     e:function(){S.tags.add('qiguo_fate_done');S.tags.add('qiguo_supporter');return{wealth:-80,reputation:20}}},
+    {l:'⚔️ 結盟起兵',show:function(){return true},
+     r:function(){return'你集結鄉勇，打出「清君側」的旗號，與吳王大軍會合！'},
+     e:function(){S.tags.add('qiguo_fate_done');S.tags.add('qiguo_ally');return{wealth:50,morality:-30}}}
+  ]
+});
+
+
+/* 繡衣使者 — 輪台詔事件鏈 Phase 2 */
+FATE.push({
+  name:'繡衣使者',icon:'🦅',priority:true,
+  can:function(){return S.era==='B'&&S.tags&&(S.tags.has('luntai_taxpayer')||S.tags.has('luntai_resister'))&&!S.tags.has('luntai_fate_done')},
+  intro:function(){return'武帝派來的繡衣使者直指你家，聲稱有人告發你「藏匿資產、妄議朝政」！<div class="anno-ex">繡衣使者是武帝時期的特務機構，手持天子劍，先斬後奏。</div>'},
+  opts:[
+    {l:'💰 重金賄賂',show:function(){return S.tags.has('luntai_taxpayer')&&S.wealth>=100},
+     r:function(){return'使者收下重金，笑著離開：「識時務者為俊傑。」'},
+     e:function(){S.tags.add('luntai_fate_done');return{wealth:-100}}},
+    {l:'😢 任憑處置',show:function(){return S.tags.has('luntai_taxpayer')},
+     r:function(){return'你被下獄三月，繳納罰金後才獲釋。獄中你親眼目睹無數冤魂。'},
+     e:function(){S.tags.add('luntai_fate_done');return{wealth:-30,reputation:-20}}},
+    {l:'🔥 當街抗辯',show:function(){return S.tags.has('luntai_resister')},
+     r:function(){return(S.morality>=60&&S.reputation>=50)?'鄉民群情激憤聲援你，繡衣使者暫且撤兵！你成了民間傳說中的英雄。<div class="anno">此乃'+T('士人政府')+'精神的體現——知識份子以道義對抗強權。</div>':'繡衣使者大怒，拔出天子劍——'},
+     e:function(){S.tags.add('luntai_fate_done');if(S.morality>=60&&S.reputation>=50){S.tags.add('luntai_hero');return{reputation:30,morality:20}}else{return{jump:'end_luntai_die'}}}}
+  ]
+});
+/* §15d 太學伏闕事件鏈 — 廷尉詔獄 & 太學暗殺 */
+FATE.push({
+  name:'廷尉詔獄',icon:'⛓️',priority:true,
+  can:function(){return S.tags&&S.tags.has('emperor_thorn')&&!S.tags.has('tingwei_done')},
+  intro:function(){return'江充與李廣利誣陷你「結黨營私、誹謗聖上」，繡衣使者帶兵包圍你的府邸，你被下'+T('廷尉')+'詔獄，判處死罪！<div class="anno">'+T('廷尉')+'為漢代最高司法官員，主審重大刑獄。詔獄直接聽命於天子，死諫者往往難逃一劫。</div>'},
+  opts:[
+    {l:'🌟 天命護體',
+     show:function(){return hasTalent('divine')&&!S.divineUsed},
+     r:function(){return'你憑藉高祖御賜丹書鐵券逃過死劫！但已被罷黜為庶人，從此隱姓埋名。<div class="anno-ex">漢代丹書鐵券為免死金牌，然實際效力視皇帝意願而定。</div>'},
+     e:function(){S.tags.add('tingwei_done');S.divineUsed=true;return{family:-999}}},
+    {l:'💰 傾家蕩產贖死（需家財≥200）',
+     show:function(){return S.wealth>=200},
+     r:function(){return'你依漢律繳納五十萬錢贖死，免於一死，但被貶為城旦苦役，在邊疆修長城度過餘生。<div class="anno-ex">漢律允許以錢贖死，但金額極高，非富族不能承受。</div>'},
+     e:function(){S.tags.add('tingwei_done');return{wealth:-200,family:-999}}},
+    {l:'💀 慷慨赴死',
+     show:function(){return true},
+     r:function(){return'你拒絕向奸佞屈服，在刑場上慨然赴死。天下儒生聞訊罷課三日，為你立碑。<div class="anno">此乃'+T('士人政府')+'精神的極致體現——以死明志，捍衛道義。</div>'},
+     e:function(){S.tags.add('tingwei_done');return{jump:'end_qingliu_die'}}}
+  ]
+});
+
+
+FATE.push({
+  name:'太學暗殺',icon:'🗡️',priority:false,
+  can:function(){return S.tags&&S.tags.has('scholar_scum')&&!S.tags.has('assassinated_done')},
+  intro:function(){return'深夜，三名蒙面人翻牆潛入你家。為首者低聲道：「出賣清流的叛徒，今日就是你的死期！」<div class="anno-ex">漢代太學生政治意識強烈，曾多次發動「伏闕上書」向朝廷施壓。激進者甚至會採取私刑。</div>'},
+  opts:[
+    {l:'🏃 倉皇逃命',
+     show:function(){return true},
+     r:function(){S._assassinEscape=Math.random()>0.5||hasTalent('lucky');return S._assassinEscape?'你從後門驚險逃脫，但家財被砸毀殆盡。從此你風聲鶴唳，再不敢踏入長安半步。':'你躲避不及，一刀斃命。太學生在你門上留下血書：「叛徒之下場」。'},
+     e:function(){S.tags.add('assassinated_done');return S._assassinEscape?{wealth:-50,reputation:-20}:{jump:'end_assassinated'}}},
+    {l:'⚔️ 拔劍反擊（需家世≥5）',
+     show:function(){return S.family>=5},
+     r:function(){S._assassinFight=Math.random()>0.4;return S._assassinFight?'你的家僕聞聲趕來，合力將刺客擊退。但此事震驚朝野，你被迫辭官歸鄉。':'刺客武藝高強，你寡不敵眾，倒在血泊中。'},
+     e:function(){S.tags.add('assassinated_done');return S._assassinFight?{reputation:-30,family:-2}:{jump:'end_assassinated'}}}
+  ]
+});
+
+
+/* §16 FATE WHEEL */
+function showFateWheel(cb){/* === Priority FATE check === */var prioIdx=-1;FATE.forEach(function(f,i){if(f.priority&&S.usedFate.indexOf(i)<0&&f.can()){prioIdx=i}});if(prioIdx>=0){S.usedFate.push(prioIdx);fwCb=cb;$('fate-title').textContent='🎡 命運輪盤';$('fate-event').style.display='none';$('fate-event').innerHTML='';$('fate-wheel-area').innerHTML='<div style="text-align:center;padding:1rem"><div style="font-size:2rem;animation:spin .8s linear infinite">🎡</div><div style="font-size:.82rem;color:var(--zi);font-weight:700;margin-top:.3rem">命運的齒輪強制轉動…</div></div>';$('ov-fate').classList.add('active');setTimeout(function(){showFateEv(FATE[prioIdx])},800);return}/* === Priority END === */var avail=[];FATE.forEach(function(f,i){if(S.usedFate.indexOf(i)<0&&f.can())avail.push(i)});if(!avail.length){cb();return}var trigProb=hasTalent('unlucky')?0.85:0.65;if(Math.random()>trigProb){cb();return}shuffle(avail);var picks=avail.slice(0,Math.min(6,avail.length));var weights=picks.map(function(i){return FATE[i].w?FATE[i].w():1});var totalW=weights.reduce(function(a,b){return a+b},0);fwCb=cb;$('fate-title').textContent='🎡 命運輪盤';$('fate-event').style.display='none';$('fate-event').innerHTML='';var wa=$('fate-wheel-area');wa.innerHTML='';var wrap=document.createElement('div');wrap.className='wheel-wrap';var arrow=document.createElement('div');arrow.className='wheel-arrow';arrow.textContent='▼';wrap.appendChild(arrow);var svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.setAttribute('viewBox','0 0 200 200');svg.className.baseVal='wheel-svg';var n=picks.length,ang=360/n;picks.forEach(function(pI,i){var ev=FATE[pI],s2=i*ang-90,e2=(i+1)*ang-90,r=100,cx=100,cy=100;var x1=cx+r*Math.cos(s2*Math.PI/180),y1=cy+r*Math.sin(s2*Math.PI/180),x2=cx+r*Math.cos(e2*Math.PI/180),y2=cy+r*Math.sin(e2*Math.PI/180);var p=document.createElementNS('http://www.w3.org/2000/svg','path');p.setAttribute('d','M'+cx+','+cy+' L'+x1+','+y1+' A'+r+','+r+' 0 '+(ang>180?1:0)+',1 '+x2+','+y2+' Z');p.setAttribute('fill',WC[i%WC.length]);svg.appendChild(p);var mid=(s2+e2)/2,tx=cx+r*.6*Math.cos(mid*Math.PI/180),ty=cy+r*.6*Math.sin(mid*Math.PI/180);var txt=document.createElementNS('http://www.w3.org/2000/svg','text');txt.setAttribute('x',tx);txt.setAttribute('y',ty);txt.setAttribute('class','wheel-label');txt.setAttribute('dominant-baseline','central');txt.textContent=ev.icon;svg.appendChild(txt)});wrap.appendChild(svg);wa.appendChild(wrap);$('ov-fate').classList.add('active');setTimeout(function(){var rr=Math.random()*totalW,cum=0,ch=0;for(var j=0;j<picks.length;j++){cum+=weights[j];if(rr<cum){ch=j;break}}var ta=360-ch*ang-ang/2,ts=720+ta;svg.style.transform='rotate('+ts+'deg)';svg.classList.add('spinning');setTimeout(function(){S.usedFate.push(picks[ch]);showFateEv(FATE[picks[ch]])},900)},100)}
+function showFateEv(ev){$('fate-title').textContent=ev.icon+' '+ev.name;var fe=$('fate-event');fe.style.display='block';fe.innerHTML='<div style="font-size:.85rem;margin:.3rem 0">'+ev.intro()+'</div>';if(ev.run){ev.run(fe);return}ev.opts.forEach(function(o){if(o.show&&!o.show())return;var b=document.createElement('button');b.className='btn';b.innerHTML='<strong>'+o.l+'</strong>';b.onclick=function(){var r=typeof o.r==='function'?o.r():o.r;var e=typeof o.e==='function'?o.e():o.e;var rs=typeof o.rs==='function'?o.rs():o.rs;var neg=wouldGoNeg(e);var doIt=function(){var d=applyE(e,rs);var dh=d.length?'<div class="delta">'+d.join(' ')+'</div>':'';if(S.immediateEnd){var eid=S.immediateEnd;S.immediateEnd=null;fe.innerHTML='<div class="rbox">'+r+dh+'</div><button class="btn btn-p" style="margin-top:.3rem" onclick="trigEnd(\''+eid+'\')">→</button>'}else{fe.innerHTML='<div class="rbox">'+r+dh+'</div><button class="btn btn-p" style="margin-top:.3rem" onclick="closeFateW()">繼續 →</button>'}};if(neg)showNegWarn(neg,null,doIt);else doIt()};fe.appendChild(b)})}
+function closeFateW(){$('ov-fate').classList.remove('active');if(S.immediateEnd){var eid=S.immediateEnd;S.immediateEnd=null;fwCb=null;setTimeout(function(){setPG('end',1);showEnd(eid)},150);return}if(fwCb){var f=fwCb;fwCb=null;f()}}
+function trigEnd(eid){S.immediateEnd=eid;closeFateW()}
+
+
+/* §17 QUIZ & STRATEGY */
+var tqQs=[],tqI=0,tqCb=null;function startQz(qs,cb){tqQs=qs;tqI=0;tqCb=cb;showTxQ()}
+function showTxQ(){if(tqI>=tqQs.length){tqCb();return}var q=tqQs[tqI];showBan('📝 '+(tqI+1)+'/'+tqQs.length);$('nlabel').textContent='📝';$('ntext').innerHTML=q.q;$('rcon').innerHTML='';var ca=$('carea');ca.innerHTML='';['甲','乙','丙','丁'].forEach(function(lb,i){if(i>=q.o.length)return;var b=document.createElement('button');b.className='btn';b.innerHTML='<strong>'+lb+'.</strong> '+q.o[i];b.onclick=function(){var ok=i===q.a;if(ok)S.tqCorrect++;$('rcon').innerHTML='<div class="quiz-fb '+(ok?'quiz-ok':'quiz-ng')+'">'+(ok?'✅ 答對！':'❌ 正確：'+['甲','乙','丙','丁'][q.a]+'. '+q.o[q.a]+'<br><span style="font-size:.78rem">'+q.fb+'</span>')+'</div>';tqI++;_gN=showTxQ;$('carea').innerHTML='<button class="btn btn-p" onclick="gN()">→</button>'};ca.appendChild(b)})}
+
+
+/* §18 CAREER */
+function getCareerA(){return[1,2,3].map(function(r){var ev=EventDB.get('career_a',r);if(!ev)return null;return{t:processText(ev.title),intro:processText(ev.intro),triggerMinister:ev.triggerMinister||'',opts:ev.options.map(function(o){var opt={l:o.label,r:processText(o.result),e:o.eff};if(o.corrupt)opt.corrupt=1;if(o.req){var rq=o.req;opt.req=function(s){return evalCond(rq,s)};opt.tip=o.tip||reqToTip(rq)}return opt})}}).filter(Boolean)}
+function getCareerB(){return[1,2,3].map(function(r){var ev=EventDB.get('career_b',r);if(!ev)return null;return{t:processText(ev.title),intro:processText(ev.intro),triggerMinister:ev.triggerMinister||'',opts:ev.options.map(function(o){var opt={l:o.label,r:processText(o.result),e:o.eff};if(o.corrupt)opt.corrupt=1;if(o.req){var rq=o.req;opt.req=function(s){return evalCond(rq,s)};opt.tip=o.tip||reqToTip(rq)}return opt})}}).filter(Boolean)}
+
+
+/* §19 GAME FLOW */
+var gR=0;
+function afterRoll(){_gameStarted=true;_allocPhase=false;initQuestionPool();showScr('screen-game');updateStats();updateBg();setPG('growth',3);showTutorialModal(function(){showBullets(S.era==='A'?'⚔️ 漢武帝以前':'📜 漢武帝以後',getEraBg(S.era),showBirth)})}
+function showBirth(){var k=S.era+'_'+(S.noble?'noble':'commoner');var birthText=getBirth(k);if(COL.meta_clues>=2){birthText='<div style="color:var(--zhu);font-weight:700;border:2px solid var(--zhu);border-radius:var(--radius);padding:.4rem;margin-bottom:.3rem;animation:fadeUp .5s ease;background:var(--zhu-bg)"><span style="font-size:1rem">⚠️</span> 你做了一個奇怪的夢……<br>夢中有人在你耳邊低語：「<i>這一世，小心巫蠱……小心江充……前世的血債尚未償清。</i>」<br>你驚醒，冷汗涔涔。窗外月色如霜。'+(COL.meta_clues>=4?'<br><span style="color:var(--zi);font-size:.72rem">（你隱約記得前世的一切……讖緯之力覺醒中）</span>':'')+'</div>'+birthText}showNarH('💒 你的出身',birthText,function(){$('rcon').innerHTML='<div class="icard">'+getFriendIntro(S.noble?'noble':'commoner')+'</div><div style="text-align:center;margin-top:.3rem"><button class="btn btn-s" onclick="showCmpOv()">📊 時代對比</button></div>';_gN=startGrowth;$('carea').innerHTML='<button class="btn btn-p" onclick="gN()">進入成長 →</button>'})}
+function showCmpOv(){$('cmp-body').innerHTML=getCmpH();$('ov-compare').classList.add('active')}
+function showFD(text,cb){$('ftxt').innerHTML='<span class="fname">'+S.fn+'</span>：'+text;$('ov-friend').classList.add('active');$('fbtn').textContent='知道了';$('fbtn').onclick=function(){$('ov-friend').classList.remove('active');cb()}}
+function startGrowth(){gR=1;growthAct()}
+function growthAct(){ if(hasTalent('frail')&&Math.random()<cfg('FRAIL_SKIP_PROB',0.15)&&!S.skipNext)S.skipNext=true; if(S.skipNext){S.skipNext=false;S.skipCount++;showBan('⏭️ 成長'+gR+'（休養）');addPG();if(hasTalent('resilient'))applyE({knowledge:10},{knowledge:'百折不撓'});showNarH('⏭️','你這一年只能臥病靜養。',function(){var nx=function(){showFateWheel(function(){gR++;gR<=3?growthAct():transition()})};var fd=getFriendD(gR,S.era+'_'+(S.noble?'noble':'commoner'));fd?showFD(fd,nx):nx()});return} /* === 察舉進度條強制徵召 === */ if(S.era==='B'&&!S.noble&&!S._chajuForced&&!S.clv&&(S.morality+S.reputation)>=80){ S._chajuForced=true;showBan('📜 郡守察舉徵召');addPG();applyPerTurn(); if(S.immediateEnd){S.immediateEnd=null;showExileEvent();return} if(checkBankruptcy())return; showNarH('📜','你的德行與聲望傳遍鄉里，郡守親自派人前來徵召！<div class="anno">'+T('察舉制')+'由郡守、縣令考察舉薦品行優良者為'+T('孝廉')+'。品德＋風評達標即可獲薦。</div>',function(){ showRes('郡守推薦你為'+T('孝廉')+'候選人！',{reputation:20},{reputation:'郡守推薦'},function(){ S.hiddenMoral=true; var nx=function(){showFateWheel(function(){gR++;gR<=3?growthAct():transition()})}; var fd=getFriendD(gR,S.era+'_'+(S.noble?'noble':'commoner'));fd?showFD(fd,nx):nx()})});return} /* === 察舉 END === */ showBan('🌱 成長'+gR);addPG();applyPerTurn(); if(S.immediateEnd){S.immediateEnd=null;showExileEvent();return} if(checkBankruptcy())return; showNarH('📋 選擇行動','新的一年到了。',function(){var ga=getGrowth();showOpts(Object.keys(ga).map(function(k){var a=ga[k];return{id:k,l:a.l,d:a.d,req:a.req,tip:a.tip,act:a.act,previewE:a.pe,triggerMinister:a.triggerMinister}}),function(o){$('carea').innerHTML='';if(o.triggerMinister)showMinisterCameo(o.triggerMinister);tryActionSpecialEvent(o.act,function(wasIntercepted){if(wasIntercepted){var gaKey=o.act;if(gaKey==='study_a')gaKey='study';afterGA(gaKey);return}if(o.act==='official')doOfficial(function(){afterGA('official')});else if(o.act==='private')doPrivate(function(){afterGA('private')});else if(o.act==='study_a'){showRes(S.noble?'你研習詩書。':'你拜師學習。平民無法入仕。',{knowledge:20,wealth:-10},{knowledge:'拜師研習',wealth:'束脩'},function(){afterGA('study')})}else if(o.act==='estate'){showRes('你打理田莊，收取田租。',{wealth:20},{wealth:'收取田租'},function(){afterGA('estate')})}else if(o.act==='court'){showRes('你隨父參與朝議。',{knowledge:10,family:1},{knowledge:'旁聽政務',family:'宗族人脈'},function(){afterGA('court')})}else if(o.act==='network'){showRes('你結交王公貴族。',{reputation:10,family:1},{reputation:'結交貴族',family:'家族人脈'},function(){afterGA('network')})}else if(o.act==='serve'){S.servedElders++;var _svE={morality:10,reputation:20};var _svR={morality:'侍奉鄉老',reputation:'縣令注意'};if(S.tags&&S.tags.has('gaomin_informer')){_svE.morality=Math.floor(_svE.morality/2);_svE.reputation=Math.floor(_svE.reputation/2);showToast('⚠️ 鄉民對告密者充滿防備，成效大減')}showRes('你侍奉鄉老、參與鄉務。',_svE,_svR,function(){afterGA('serve')})}else{var r2,e2,rs2;if(o.act==='farm'){S.hasFarmed=true;var wG,farmNote='',farmText='';if(S.tags&&S.tags.has('dependent_farmer')){wG=15;S.family=0;S.noble=false;farmNote='（依附豪強）';farmText='你為豪強耕作，所得大半上繳，形同佃農。<div class="anno-ex">依附豪強的佃農喪失獨立地位，世代為人耕種，再無出仕之望。</div>'}else if(S.tags&&S.tags.has('poor_farmer')){wG=10;farmNote='（家產已盡）';farmText='你在貧瘠的薄田上苦苦掙扎，收成僅能餬口。<div class="anno-ex">漢代小農一旦失去積蓄，往往陷入世代貧困的循環。</div>'}else{wG=S.era==='A'?30:20;farmText=S.era==='A'?'你辛勤耕作。'+T('三十稅一')+'稅率低。':'你辛勤耕作，但朝廷加徵稅賦。'}r2=farmText;e2={wealth:wG,reputation:10};rs2={wealth:'耕作所得'+farmNote,reputation:'勤勞本分'}}else if(o.act==='social'){r2='你四處拜訪名士。';e2=S.noble?{reputation:20,knowledge:10,wealth:-10}:{reputation:20,knowledge:10};if(S.tags&&S.tags.has('gaomin_informer')){e2.reputation=Math.floor(e2.reputation/2);showToast('⚠️ 鄉民對告密者充滿防備，成效大減')}rs2={reputation:'結交名士',knowledge:'見聞廣博'}}else{r2=S.noble?'你整日鬥雞走狗。':'你虛度了一年光陰。';e2=S.noble?{knowledge:-10,reputation:-10,morality:-10,family:-1}:{knowledge:-10,reputation:-10,morality:-10};rs2=S.noble?{knowledge:'荒廢',reputation:'紈褲',morality:'不務正業',family:'敗壞門風'}:{knowledge:'荒廢',reputation:'遊手好閒',morality:'不思進取'}}showRes(r2,e2,rs2,function(){afterGA(o.act)})}})})}))
+function afterGA(aid){if(aid==='study'||aid==='official'||aid==='private')S.studyCount++;checkSE(aid,function(){checkHidden(function(){var fd=getFriendD(gR,S.era+'_'+(S.noble?'noble':'commoner'));var nx=function(){showFateWheel(function(){gR++;gR<=3?growthAct():transition()})};fd?showFD(fd,nx):nx()})})}
+function checkHidden(cb){if(S.era==='B'&&S.morality>=80&&!S.hiddenMoral){S.hiddenMoral=true;showBan('🎊 郡守賞識');showNarH('🎊','郡守親自召見你：「此子堪為'+T('孝廉')+'候選！」',function(){showRes('你獲得郡守賞識！',{reputation:20},{reputation:'郡守賞識'},cb)});return}if(S.era==='B'&&S.knowledge>=90&&!S.hiddenKnow){S.hiddenKnow=true;showBan('🎊 博士推薦');showNarH('🎊',T('五經博士')+'特地推薦你入'+T('太學')+'！',function(){showRes('太學之路暢通！',{reputation:20},{reputation:'博士推薦'},cb)});return}cb()}
+function checkRefugeeRebel(){if(!S.clv&&S.skipCount>=3&&S.wealth<20&&S.reputation>=30){showReunionOv('rebel');return true}if(!S.clv&&S.skipCount>=2&&S.wealth<20){showReunionOv('refugee');return true}return false}
+function transition(){if(checkRefugeeRebel())return;if(S.era==='A'){if(S.noble&&S.family>=5)enterCareerA();else startDoom()}else postGrowthJudgment()}
+function enterCareerA(){showBan('🏛️ '+T('任子制'));setPG('adult',4);var isHigh=S.family>=9?true:S.family>=7?Math.random()<0.5:false;S.fatherRank=isHigh?'high':'low';showNarH('🏛️',isHigh?'依'+T('任子制')+'你成為'+T('郎官')+'。':'你先任太子舍人，再升'+T('郎官')+'。',function(){if(!isHigh)applyE({knowledge:10},{knowledge:'太子舍人磨練'});S.path='noble';S.clv='central';updateBg();_gN=startCareer;$('carea').innerHTML='<button class="btn btn-p" onclick="gN()">進入官場 →</button>'})}
+function startDoom(){if(S.era==='A'&&!S.noble){showBan('😢 平民的命運');setPG('adult',3);showNarH('😢','官職全由貴族壟斷。<div class="anno">漢初平民無穩定入仕通道。</div>',function(){_gN=function(){doomEv(1)};$('carea').innerHTML='<button class="btn btn-p" onclick="gN()">繼續 →</button>'})}else{showBan('📉 家道中落');setPG('adult',2);showNarH('📉','家世衰落，無法使用'+T('任子制')+'。',function(){_gN=function(){showReunionOv('9')};$('carea').innerHTML='<button class="btn btn-p" onclick="gN()">→</button>'})}}
+function doomEv(n){addPG();if(n>2){S.knowledge>=50&&S.morality>=50?showNarH('🏠','你終生布衣，卻被尊為「鄉賢」。',function(){_gN=function(){showReunionOv('10')};$('carea').innerHTML='<button class="btn btn-p" onclick="gN()">→</button>'}):showNarH('😞','你終生布衣，在貧病中終老。',function(){_gN=function(){showReunionOv('4')};$('carea').innerHTML='<button class="btn btn-p" onclick="gN()">→</button>'});return}var evs=[{t:'💸 豪強盤剝',intro:'「保護費。」',opts:[{l:'💰 忍氣繳納',e:{wealth:-30}},{l:'😡 去縣衙告狀',e:{wealth:-20,reputation:-20}}]},{t:'🏚️ 土地兼併',intro:'豪強低價強買你家良田。',opts:[{l:'😔 忍耐',e:{wealth:-30}},{l:'🏃 外出',e:{reputation:-20}}]}][n-1];showBan(evs.t);showNarH('💀',evs.intro,function(){showOpts(evs.opts.map(function(o){return{l:o.l,e:o.e,req:function(){return true}}}),function(o){$('carea').innerHTML='';showRes('',o.e,null,function(){doomEv(n+1)})})})}
+function postGrowthJudgment(){showBan('📜 徵召'+T('博士弟子員'));updateBg();var txReq=S.hiddenKnow?0:(S.studyCount>=2?cfg('TX_REQ_STUDIED',3)*10:cfg('TX_REQ_BASE',5)*10);if(hasTalent('charismatic'))txReq=Math.max(0,txReq-10);var cruelPen=(S.tags&&S.tags.has('cruel_official'))?20:0;txReq+=cruelPen;var moralReqTX=50+cruelPen;var canTX=S.knowledge>=txReq&&S.morality>=moralReqTX;var cjMorReq=50+cruelPen;var cjRepReq=40+cruelPen;var canCJ=(S.morality>=cjMorReq&&S.reputation>=cjRepReq)||S.hiddenMoral;if(S.tags&&S.tags.has('dependent_farmer')){canTX=false;canCJ=false}if(S.tags&&S.tags.has('scholar_scum')){canTX=false;canCJ=false}showNarH('📜',T('太學')+'向各地徵召'+T('博士弟子員')+'！<div class="anno">朝廷選拔優秀青年到太學研習儒家經典。</div><br>學問：<b>'+S.knowledge+'</b>/'+(S.hiddenKnow?'0(博士推薦)':txReq)+' 品德：<b>'+S.morality+'</b>/'+moralReqTX+(cruelPen?'<br><span style="color:var(--zhu);font-size:.72rem">⚠️ 酷吏之名在外，門檻+'+cruelPen+'</span>':'')+(S.tags&&S.tags.has('dependent_farmer')?'<br><span style="color:var(--zhu);font-size:.72rem">⚠️ 你已依附豪強，失去入仕資格</span>':''),function(){if(canTX){$('rcon').innerHTML='<div class="rbox">✅ 你獲選為'+T('博士弟子員')+'！</div>';_gN=function(){S.path='taixue';updateBg();setPG('adult',7);startTX()};$('carea').innerHTML='<button class="btn btn-p" onclick="gN()">前往太學 →</button>'}else if(canCJ){$('rcon').innerHTML='<div class="rbox">❌ 學問未達標，但品德出眾，可循'+T('察舉制')+'入仕。</div>';_gN=function(){setPG('adult',7);S.knowledge>=40?(S.path='chaju_a',updateBg(),startCJA()):(S.path='chaju_b',updateBg(),startCJB())};$('carea').innerHTML='<button class="btn btn-p" onclick="gN()">走察舉之路 →</button>'}else{$('rcon').innerHTML='<div class="rbox" style="border-color:var(--zhu)">❌ 未能入選。</div>';_gN=function(){if(!S.retryTX&&!S.retryCJ)showRetryChoice();else{if(checkRefugeeRebel())return;S.noble?showReunionOv('6'):(S.path='farmer',updateBg(),setPG('adult',3),startFarmer())}};$('carea').innerHTML='<button class="btn btn-p" onclick="gN()">→</button>'}})}
+function showRetryChoice(){showNarH('📖','你可以用一年積累實力再做嘗試。',function(){showOpts([{l:'📚 歸鄉耕讀',d:'學問+20',req:function(){return true},act:'retryTX'},{l:'🏘️ 留鄉積累聲望',d:'風評+20 品德+10',req:function(){return true},act:'retryCJ'},{l:'😔 接受現實',req:function(){return true},act:'accept'}],function(o){$('carea').innerHTML='';if(o.act==='retryTX'){S.retryTX=true;showRes('閉門苦讀一年。',{knowledge:20},{knowledge:'耕讀積累'},postGrowthJudgment)}else if(o.act==='retryCJ'){S.retryCJ=true;showRes('積極參與鄉務。',{reputation:20,morality:10},{reputation:'積累聲望',morality:'侍奉鄉老'},postGrowthJudgment)}else{if(checkRefugeeRebel())return;S.noble?showReunionOv('6'):(S.path='farmer',updateBg(),setPG('adult',3),startFarmer())}})})}
+
+
+/* §20 TAIXUE */
+function startTX(){showBan('🏫 '+T('太學'));addPG();setBg('bg-student');showNarH('🏫','你走進'+T('太學')+'。<div class="anno">每年以射策方式考試一次。</div>',function(){_gN=function(){txEv(1)};$('carea').innerHTML='<button class="btn btn-p" onclick="gN()">開始求學 →</button>'})}
+function txEv(n){if(n===3){txQuiz();return}addPG();var ev=EventDB.get('taixue',n);if(!ev){txQuiz();return}var mappedOpts=ev.options.map(function(o){return{l:o.label,r:processText(o.result),e:o.eff,req:function(){return true},corrupt:o.corrupt}});showBan(processText(ev.title));if(ev.triggerMinister)showMinisterCameo(ev.triggerMinister);showNarH(processText(ev.title),processText(ev.intro),function(){showOpts(mappedOpts,function(o){$('carea').innerHTML='';var go=function(opt){if(opt.corrupt){S.corrupt++;S.corrupt_level++}showRes(opt.r,opt.e,null,function(){txEv(n+1)})};if(o.corrupt){var cl=mappedOpts.find(function(x){return!x.corrupt});tryCorrupt(o,cl,go)}else go(o)})})}
+
+
+/* §21 CHAJU */
+function startCJA(){showBan('🏛️ '+T('察舉制')+'線A');addPG();showNarH('🏛️','縣令聘你為縣衙小吏。',function(){_gN=cjaEv1;$('carea').innerHTML='<button class="btn btn-p" onclick="gN()">上任 →</button>'})}
+function cjaEv1(){addPG();var ev=EventDB.get('chaju_a',1);if(!ev){startCJCommon();return}showBan(processText(ev.title));if(ev.triggerMinister)showMinisterCameo(ev.triggerMinister);showNarH('📋',processText(ev.intro),function(){showOpts(ev.options.map(function(o){return{l:o.label,e:o.eff,req:function(){return true}}}),function(o){$('carea').innerHTML='';showRes('',o.e,null,cjaEv2)})})}
+function cjaEv2(){addPG();var ev=EventDB.get('chaju_a',2);if(!ev){startCJCommon();return}showBan(processText(ev.title));if(ev.triggerMinister)showMinisterCameo(ev.triggerMinister);showNarH('⚖️',processText(ev.intro),function(){showOpts(ev.options.map(function(o){return{l:o.label,e:o.eff,req:function(){return true},corrupt:o.corrupt}}),function(o){$('carea').innerHTML='';if(o.corrupt){S.corrupt++;S.corrupt_level++}showRes('',o.e,null,startCJCommon)})})}
+function cjbEv1(){addPG();var ev=EventDB.get('chaju_b',1);if(!ev){startCJCommon();return}showBan(processText(ev.title));showNarH('🏥',processText(ev.intro),function(){showOpts(ev.options.map(function(o){return{l:o.label,e:o.eff,req:function(){return true}}}),function(o){$('carea').innerHTML='';showRes('',o.e,null,cjbEv2)})})}
+function cjbEv2(){addPG();var ev=EventDB.get('chaju_b',2);if(!ev){startCJCommon();return}showBan(processText(ev.title));showNarH('👴',processText(ev.intro),function(){showOpts(ev.options.map(function(o){return{l:o.label,e:o.eff,req:function(){return true}}}),function(o){$('carea').innerHTML='';showRes('',o.e,null,startCJCommon)})})}
+function startCJB(){showBan('🌾 '+T('察舉制')+'線B');addPG();showNarH('🌾','你學問不高，但品行端正。',function(){_gN=cjbEv1;$('carea').innerHTML='<button class="btn btn-p" onclick="gN()">→</button>'})}
+function cjbEv1(){addPG();showBan('🏥 父母染病');showNarH('🏥','父母雙雙染病。',function(){showOpts([{l:'💊 傾家蕩產買藥',e:{wealth:-30,morality:30,reputation:30},req:function(){return true}},{l:'🏠 日夜守護',e:{morality:20,reputation:20},req:function(){return true}},{l:'😢 盡力而為',e:{morality:10},req:function(){return true}}],function(o){$('carea').innerHTML='';showRes('',o.e,null,cjbEv2)})})}
+function cjbEv2(){addPG();showBan('👴 鄰里孤老');showNarH('👴','隔壁孤苦老人冬天無棉衣。',function(){showOpts([{l:'🤝 主動照料',e:{morality:20,reputation:30,wealth:-10},req:function(){return true}},{l:'📢 呼籲鄰里',e:{morality:10,reputation:20},req:function(){return true}},{l:'🚶 不聞不問',e:{morality:-20,reputation:-20},req:function(){return true}}],function(o){$('carea').innerHTML='';showRes('',o.e,null,startCJCommon)})})}
+function startCJCommon(){addPG();var cruelP2=(S.tags&&S.tags.has('cruel_official'))?20:0;var cjPassMor=50+cruelP2;var cjPassRep=40+cruelP2;var pass=S.servedElders>=1||(S.morality>=cjPassMor&&S.reputation>=cjPassRep)||S.hiddenMoral;showBan('🗣️ 縣令考察');showNarH('🗣️','品德：<b>'+S.morality+'</b>/'+cjPassMor+' 風評：<b>'+S.reputation+'</b>/'+cjPassRep+(cruelP2?'<br><span style="color:var(--zhu);font-size:.72rem">⚠️ 酷吏之名：士林唾棄，需付出極大努力方可晉升（門檻+'+cruelP2+'）</span>':'')+'<br>'+(pass?'✅ 考察合格！':'❌ 未達標準。'),function(){if(pass){_gN=cjStrat;$('carea').innerHTML='<button class="btn btn-p" onclick="gN()">前往長安 →</button>'}else{_gN=function(){S.noble?showReunionOv('6'):(S.path='farmer',updateBg(),startFarmer())};$('carea').innerHTML='<button class="btn btn-p" onclick="gN()">→</button>'}})}
+function cjStrat(){showBan('🏛️ 長安策問');S.cjScore=0;showNarH('🏛️','你作為'+T('孝廉')+'赴長安策問。',function(){_gN=function(){cjQ(0)};$('carea').innerHTML='<button class="btn btn-p" onclick="gN()">→</button>'})}
+function cjQ(n){var pool=getStratPool();if(n>=pool.length){cjResult();return}addPG();var q=pool[n];showBan('📝 策問'+(n+1));$('nlabel').textContent='📝';$('ntext').innerHTML=q.q+'<div class="anno">'+q.anno+'</div>';$('rcon').innerHTML='';var ca=$('carea');ca.innerHTML='';q.opts.forEach(function(o){var b=document.createElement('button');b.className='btn';b.innerHTML='<strong>'+o.l+'</strong>';b.onclick=function(){$('carea').innerHTML='';if(o.corrupt){S.corrupt++;S.corrupt_level++}S.cjScore+=o.rank;applyE(o.e);$('rcon').innerHTML='<div class="rbox">'+(o.rank>=2?'✅ 考官讚許。':o.rank<0?'❌ 考官怒斥。':'⚠️ 考官搖頭。')+'</div>';_gN=function(){cjQ(n+1)};$('carea').innerHTML='<button class="btn btn-p" onclick="gN()">→</button>'};ca.appendChild(b)})}
+function cjResult(){var sc=S.cjScore,lv=sc>=7?'central':sc>=4?'local':'low';showRes(lv==='central'?'📝 出類拔萃！天子授你中央官職！':lv==='local'?'📝 尚可，派往地方為官。':'📝 平平，授鄉級小官。',null,function(){S.clv=lv;updateBg();_gN=startCareer;$('carea').innerHTML='<button class="btn btn-p" onclick="gN()">進入官場 →</button>'})}
+
+
+/* §22 FARMER */
+function startFarmer(){var groups=['farmer_a','farmer_b','farmer_c'];var group=groups[Math.floor(Math.random()*3)];var ev=EventDB.get(group,1);if(!ev){showReunionOv('5');return}showBan(processText(ev.title));addPG();if(ev.triggerMinister)showMinisterCameo(ev.triggerMinister);showNarH('😤',processText(ev.intro),function(){showOpts(ev.options.map(function(o){return{l:o.label,e:o.eff,req:function(){return true}}}),function(o){$('carea').innerHTML='';showRes('',o.e,null,function(){addPG();showNarH('⚖️',processText(ev.epilogue),function(){addPG();_gN=function(){showReunionOv('5')};$('carea').innerHTML='<button class="btn btn-p" onclick="gN()">→</button>'})})})})}
+
+
+/* §23 CAREER — with interest net */
+var crR=0;function startCareer(){crR=1;crEv()}
+function crEv(){ if(crR>3||S.arrested){detEnd();return} /* === Task 1: 官場回合賦稅 === */ applyPerTurn(); if(S.immediateEnd){S.immediateEnd=null;showExileEvent();return} if(checkBankruptcy())return; /* === Task 1 END === */ addPG();var evs=S.era==='A'?getCareerA():getCareerB();var ev=evs[crR-1];showBan('⚔️ 官場'+crR);if(ev.triggerMinister)showMinisterCameo(ev.triggerMinister);showNarH(ev.t,ev.intro,function(){showOpts(ev.opts.map(function(o){return{l:o.l,r:o.r,e:o.e,rs:o.rs,req:o.req||function(){return true},tip:o.tip||'',corrupt:o.corrupt}}),function(o){$('carea').innerHTML='';var go=function(opt){if(opt.corrupt){S.corrupt++;S.corrupt_level=(S.corrupt_level||0)+1; if(S.era==='B'&&S.corrupt>=3){S.arrested=true;showRes(T('刺史')+'察覺，'+T('廷尉')+'拘捕！',opt.e,opt.rs,detEnd);return} if(S.era==='B'&&S.corrupt===2){showRes((opt.r||'')+'<div style="color:var(--zhu);font-weight:700">⚠️ '+T('刺史')+'嚴厲警告！</div>',opt.e,opt.rs,function(){crR++;crEv()});return} if(S.era==='A'){ var mText=''; if(S.morality<50)mText='<div style="color:var(--text2);font-size:.82rem;margin-top:.2rem">你毫無道德底線，內心毫無阻力。</div>'; else mText='<div style="color:var(--text2);font-size:.82rem;margin-top:.2rem">漢初風氣尚可，你的道德感帶來些許阻力，但不及武帝時期強烈。</div>'; if(S.corrupt>=2){S.interestNet=(S.interestNet||0)+1;mText+='<div style="color:var(--zhu);font-weight:700;margin-top:.15rem">【警告】利益網阻力 +1（當前：'+S.interestNet+'/3）。你的貪婪損害了既得利益者的蛋糕。</div>'} if(S.interestNet>=3){showRes((opt.r||'')+mText,opt.e,opt.rs,function(){setPG('end',1);showEnd('2C')});return} showRes((opt.r||'')+mText,opt.e,opt.rs,function(){crR++;crEv()});return }}showRes(opt.r||'',opt.e,opt.rs,function(){crR++;crEv()})};if(o.corrupt){var cl=ev.opts.find(function(x){return!x.corrupt});tryCorrupt(o,cl,go)}else go(o)})}) }
+function detEnd(){var sum=S.knowledge+S.morality+S.reputation;var isTxCj=['taixue','chaju_a','chaju_b'].indexOf(S.path)>=0;var eid;if(isTxCj&&(S.corrupt>=3||sum<60))eid='executed';else if(isTxCj&&(S.corrupt>=2||sum<90))eid='demoted';else if(S.era==='A'){if(S.noble){if(S.family>8&&S.knowledge>70&&S.reputation>90)eid='11';else if(S.corrupt>=2||S.morality<=30)eid='2a';else if(S.morality>=80&&S.knowledge>=60&&S.corrupt===0)eid='8';else if(S.knowledge<40)eid='9';else eid='3'}else eid='4'}else{if(S.arrested||S.corrupt>=3)eid='2b';else if(S.family<7&&S.knowledge>80&&S.morality>80&&S.reputation>80&&S.corrupt===0&&S.cjScore>=5)eid='12';else if(isTxCj&&sum>180&&S.corrupt===0)eid='13';else if(S.corrupt>=2||S.morality<=30)eid='2b';else if(S.clv==='central'&&S.morality>=70&&S.knowledge>=60&&S.corrupt===0)eid='1';else if((S.clv==='local'||S.clv==='low')&&S.morality>=60&&S.reputation>=50&&S.corrupt===0)eid='7';else eid='3'}showReunionOv(eid)}
+
+
+/* §24 REUNION & ENDING */
+function getFR(){var e=S.era,n=S.noble;if(e==='A'&&n){if(S.corrupt>0)return'你做了官老爺，可我們的日子更難了。';if(S.morality>=80)return'你是好人，但一個好人改不了整個官場。';return'你當了官，我還在種地。我不恨你，但恨這世道。'}if(e==='A'&&!n){if(S.knowledge>=50)return'你比我聰明百倍，卻只能在地裡刨食。';return'咱們從小一起玩大的。我有時也替你不值。'}if(e==='B'&&n){if(S.morality>=70)return'小時候你嘲笑我是泥腿子。現在我也當官了！'+T('察舉制')+'給了我機會。';if(S.corrupt>0)return'我平民之子都能憑才學入仕，你卻貪贓枉法？';return'世道變了。新政給了天下人機會。'}if(e==='B'&&!n){if(S.morality>=80&&S.knowledge>=70)return'看到你憑才學登上朝堂，我替天下人高興。';if(S.corrupt>0)return'你好不容易爬上來，居然學世家那套貪腐？';return T('獨尊儒術')+'改變了你我的命運。也許這就是公平吧。'}return''}
+function showReunionOv(eid){setPG('end',1);var txt=getFR();if(txt){$('ftxt').innerHTML='<span class="fname">'+S.fn+'</span>：'+txt;$('ov-friend').classList.add('active');$('fbtn').textContent='迎接結局 →';$('fbtn').onclick=function(){$('ov-friend').classList.remove('active');showEnd(eid)}}else showEnd(eid)}
+function showEnd(id){ /* === Meta-Progression: meta_clues & talent unlock === */ var wuguBadEnds=['end_wugu_slave','end_huainan_kill','end_luntai_die']; if(wuguBadEnds.indexOf(id)>=0||(S.tags&&S.tags.has('wugu_death'))){ COL.meta_clues=(COL.meta_clues||0)+1;saveCOL();showToast('🕯️ 巫蠱線索 +1（累計：'+COL.meta_clues+'）'); } if(id==='end_luntai_legend'){ if(!COL.unlocked_perks)COL.unlocked_perks=[]; if(COL.unlocked_perks.indexOf('talent_straight_minister')<0){COL.unlocked_perks.push('talent_straight_minister');saveCOL();showToast('🌟 解鎖隱藏天賦：直臣之魂！')} } if(id==='end_qiguo_rebel'||id==='end_huainan_kill'){ if(!COL.unlocked_perks)COL.unlocked_perks=[]; if(COL.unlocked_perks.indexOf('marquis')<0&&COL.meta_clues>=3){COL.unlocked_perks.push('marquis');saveCOL();showToast('👑 解鎖隱藏特權：萬戶侯！')} } if(COL.meta_clues>=5){ if(!COL.unlocked_perks)COL.unlocked_perks=[]; if(COL.unlocked_perks.indexOf('prophecy_eye')<0){COL.unlocked_perks.push('prophecy_eye');saveCOL();showToast('🔮 解鎖隱藏特權：讖緯之瞳！')} } /* === Task 3: 家世免死判定 === */ var deathEndings=['slave','assassinated','executed','kill','war','xiongnu','brawl_death','2C']; if(deathEndings.indexOf(id)>=0&&S.family>0){ var oldFam=S.family; S.family=clamp(S.family-1,'family'); updateStats(); showScr('screen-game'); showBan('👑 家世庇護'); var saveText='危急關頭，你的家族動用一切人脈和資源，將你從絕境中救回！'; if(S.noble&&oldFam>=8)saveText+='<br>族中長輩親赴官府斡旋，以爵位特權為你周旋。'; else if(S.noble)saveText+='<br>家族傾盡最後的人脈，勉強保住你一命。'; else saveText+='<br>鄰里鄉親聯名作保，家中老父跪求官府開恩。'; saveText+='<div class="anno">漢代社會，家族背景往往能在關鍵時刻左右生死。家世越高，容錯空間越大。但每次動用人脈，家族影響力也隨之消耗。</div>'; saveText+='<div class="delta">📉 家世 '+oldFam+' → '+S.family+'</div>'; showNarH('👑',saveText,function(){ var mildEnd; if(id==='slave')mildEnd=S.noble?'9':'5'; else if(id==='executed'||id==='2C')mildEnd=S.era==='A'?'9':'3'; else if(id==='assassinated')mildEnd=S.era==='A'?(S.noble?'9':'4'):'3'; else mildEnd=S.era==='A'?(S.noble?'3':'4'):'3'; _gN=function(){showEnd(mildEnd)}; $('carea').innerHTML='<button class="btn btn-p" onclick="gN()">命運轉折 →</button>'; }); return; } /* === Task 3 END — 以下為原始結局邏輯 === */ var isNew=!COL.endings[id];COL.endings[id]={s:1};saveCOL();if(isNew)showToast('🏆 解鎖新結局！');showScr('screen-ending');$('sbar').style.display='none';$('prog').style.display='none';setBg('bg-default');window._plainMode=true;var e=getEnd(id);window._plainMode=false;var ref=(e.ref||'').replace(/\{f\}/g,S.fn);$('econtent').innerHTML='<div class="fade" style="padding:.8rem;max-width:600px;margin:0 auto"><div style="font-size:2.2rem;text-align:center;margin:.8rem 0 .2rem">'+e.icon+'</div><div class="etitle">'+e.t+'</div><div class="etext">'+e.text+'</div><div class="ebox">'+e.hist+'</div><div class="eref"><b>💭</b><br>'+ref+'</div><div style="text-align:center;margin:.6rem 0;font-size:.75rem;color:var(--text2)">📊 學問'+S.knowledge+' ｜ 風評'+S.reputation+' ｜ 家財'+S.wealth+' ｜ 品德'+S.morality+'</div><div style="text-align:center;display:flex;flex-direction:column;align-items:center;gap:.25rem"><button class="btn btn-p" onclick="showSum()">📖 知識總結 →</button><button class="btn btn-s" onclick="showCollection()">🏆 圖鑑</button><button class="btn btn-sm" onclick="restartGame()" style="border-color:var(--text2)">🔄 重新開始</button></div></div>'; }
+function showSum(){showScr('screen-summary');$('scontent').innerHTML='<div style="padding:.8rem;max-width:600px;margin:0 auto"><div class="etitle">📖 歷史知識總結</div>'+getCmpH()+'<div class="ss fade"><h3>一、'+T('獨尊儒術')+'</h3><p>武帝接納'+T('董仲舒')+'建議，「'+T('罷黜百家')+'」獨留儒家博士官。未禁民間學習。</p></div><div class="ss fade"><h3>二、'+T('士人政府')+'</h3><p>設'+T('五經博士')+'和'+T('博士弟子員')+'；在'+T('太學')+'研習；每年射策考試。由郡守縣令舉薦'+T('孝廉')+'。</p></div><div class="ss fade"><h3>三、監察</h3><p>'+T('刺史')+'監督→'+T('廷尉')+'查辦。</p></div><div class="ss fade"><h3>四、改革影響</h3><p>設置'+T('博士弟子員')+'、確立'+T('察舉制')+'，打破貴族壟斷。</p></div><div style="text-align:center;margin:.8rem 0"><button class="btn btn-p" onclick="restartGame()">🔄 重新開始</button></div></div>'}
+
+
+/* §24b reviewMinister */
+function reviewMinister(m){
+  var descs={'董仲舒':'西漢大儒，向漢武帝提出「罷黜百家，獨尊儒術」，奠定儒學正統地位。著有《春秋繁露》，主張天人感應。','東方朔':'漢武帝時辭賦家，性詼諧，常以諫言藏於笑談之中，敢言直諫。','主父偃':'出身布衣，上書武帝獻推恩令之策，削弱諸侯勢力，後因得罪權貴被族誅。','徐樂':'布衣上書武帝，論「天下之患在土崩不在瓦解」，力主安民固本。','嚴安':'布衣上書武帝，勸止征伐、與民休息，武帝納其言拜為郎中。'};
+  $('rev-title').innerHTML='📜 '+m;
+  $('rev-body').innerHTML='<p style="font-size:.88rem;line-height:1.8">'+(descs[m]||'布衣出身的忠臣，以才學入仕。')+'</p><div class="anno">'+T('察舉制')+'使布衣亦能立於朝堂，向天子直言進諫。</div>';
+  $('ov-review').classList.add('active');
+}
+
+
+/* §25 COLLECTION — with ministers tab + save/load */
+function reviewEnding(id){var e=getEnd(id);$('rev-title').innerHTML=e.icon+' '+e.t;$('rev-body').innerHTML='<div class="etext" style="margin:.3rem 0">'+e.text+'</div><div class="ebox">'+e.hist+'</div>';$('ov-review').classList.add('active')}
+function reviewTerm(t){var info=getTip(t);if(!info)return;$('rev-title').innerHTML=t;$('rev-body').innerHTML='<p style="font-size:.88rem;line-height:1.8">'+info.d+'</p>';$('ov-review').classList.add('active')}
+function showCollection(){showScr('screen-collection');$('sbar').style.display='none';$('prog').style.display='none';
+function render(tab){var ct=getCoreTerms(),xt=getExTerms(),ae=getAllEndings();
+var h='<div class="etitle">🏆 圖鑑</div><div style="text-align:center;font-size:.72rem;color:var(--text2)">已收集 '+colCount()+' 項 = '+colPoints()+' 配點</div><div class="tab-row">';
+h+='<button class="tab-btn '+(tab==='e'?'active':'')+'" onclick="_ct(\'e\')">📜 結局</button>';
+h+='<button class="tab-btn '+(tab==='c'?'active':'')+'" onclick="_ct(\'c\')">📖 課內</button>';
+h+='<button class="tab-btn '+(tab==='x'?'active':'')+'" onclick="_ct(\'x\')">🔖 課外</button>';
+h+='<button class="tab-btn '+(tab==='t'?'active':'')+'" onclick="_ct(\'t\')">🎴 天賦</button>';
+h+='<button class="tab-btn '+(tab==='m'?'active':'')+'" onclick="_ct(\'m\')">📜 名臣</button>';
+h+='</div>';
+if(tab==='e'){h+='<div class="col-grid">';for(var id in ae){var ul=!!COL.endings[id];h+='<div class="col-item '+(ul?'unlocked':'locked')+'"'+(ul?' onclick="reviewEnding(\''+id+'\')"':'')+'><div class="ci-icon">'+ae[id].icon+'</div><div class="ci-name">'+(ul?ae[id].t:'???')+'</div></div>'}h+='</div>'}
+else if(tab==='c'){h+='<div class="col-grid">';ct.forEach(function(t){var ul=!!COL.coreTerms[t];h+='<div class="col-item '+(ul?'unlocked':'locked')+'"'+(ul?' onclick="reviewTerm(\''+t+'\')"':'')+'><div class="ci-icon">'+(ul?'📖':'❓')+'</div><div class="ci-name">'+(ul?t:'???')+'</div></div>'});h+='</div>'}
+else if(tab==='x'){h+='<div class="col-grid">';xt.forEach(function(t){var ul=!!COL.exTerms[t];h+='<div class="col-item '+(ul?'unlocked':'locked')+'"'+(ul?' onclick="reviewTerm(\''+t+'\')"':'')+'><div class="ci-icon">'+(ul?'🔖':'❓')+'</div><div class="ci-name">'+(ul?t:'???')+'</div></div>'});h+='</div>'}
+else if(tab==='m'){var ministers=['董仲舒','東方朔','主父偃','徐樂','嚴安'];h+='<div class="col-grid">';ministers.forEach(function(m){var ul=!!COL.ministers[m];h+='<div class="col-item '+(ul?'unlocked':'locked')+'"'+(ul?' onclick="reviewMinister(\''+m+'\')"':'')+'><div class="ci-icon">'+(ul?'📜':'❓')+'</div><div class="ci-name">'+(ul?m:'???')+'</div></div>'});h+='</div>'}
+else{h+='<div class="col-grid">';getAllTalents().forEach(function(t){var ul=!!COL.talents[t.ID];h+='<div class="col-item '+(ul?'unlocked':'locked')+'"><div class="ci-icon">'+(ul?t.Icon:'❓')+'</div><div class="ci-name">'+(ul?t.Name:'???')+'</div></div>'});h+='</div>'}
+h+='<div style="text-align:center;margin:.8rem 0"><button class="btn btn-sm" onclick="showScr(\'screen-title\');setBg(\'bg-default\')" style="border-color:var(--text2)">← 返回</button></div>';$('col-content').innerHTML=h}window._ct=render;render('e')}
+
+
+function generateSaveCode(){var o={e:Object.keys(COL.endings),c:Object.keys(COL.coreTerms),x:Object.keys(COL.exTerms),t:Object.keys(COL.talents),m:Object.keys(COL.ministers),mc:COL.meta_clues||0,up:COL.unlocked_perks||[]};return btoa(unescape(encodeURIComponent(JSON.stringify(o))))}
+function showSaveUI(){$('ov-save-title').textContent='💾 匯出存檔';var code=generateSaveCode();$('save-body').innerHTML='<div style="text-align:center"><p style="font-size:.82rem;margin-bottom:.3rem">複製以下存檔碼：</p><input class="save-input" id="save-output" value="'+code+'" readonly onclick="this.select()"><div style="margin-top:.3rem"><button class="btn btn-p btn-sm" onclick="copySave()">📋 複製</button></div><p id="save-msg" style="font-size:.8rem;margin-top:.2rem"></p></div>';$('ov-save').classList.add('active')}
+function copySave(){var el=$('save-output');if(!el)return;el.select();el.setSelectionRange(0,99999);try{document.execCommand('copy');$('save-msg').innerHTML='<span style="color:var(--yu)">✅ 已複製！</span>'}catch(e){$('save-msg').innerHTML='<span style="color:var(--text2)">請手動複製上方文字</span>'}}
+function showLoadUI(){$('ov-save-title').textContent='📥 讀取存檔';$('save-body').innerHTML='<div style="text-align:center"><p style="font-size:.82rem;margin-bottom:.3rem">貼上存檔碼：</p><input class="save-input" id="load-input" placeholder="在此貼上存檔碼"><div style="margin-top:.3rem"><button class="btn btn-p btn-sm" onclick="doLoad()">讀取</button></div><p id="load-msg" style="font-size:.8rem;margin-top:.2rem"></p></div>';$('ov-save').classList.add('active')}
+function doLoad(){var c=$('load-input').value.trim();if(!c)return;try{var o=JSON.parse(decodeURIComponent(escape(atob(c))));if(o.e)o.e.forEach(function(k){COL.endings[k]=1});if(o.c)o.c.forEach(function(k){COL.coreTerms[k]=1});if(o.x)o.x.forEach(function(k){COL.exTerms[k]=1});if(o.t)o.t.forEach(function(k){COL.talents[k]=1});if(o.m)o.m.forEach(function(k){COL.ministers[k]=1});if(o.mc!=null)COL.meta_clues=Number(o.mc)||0;if(o.up&&Array.isArray(o.up))COL.unlocked_perks=o.up;saveCOL();$('load-msg').innerHTML='<span style="color:var(--yu)">✅ 成功！</span>'}catch(e){$('load-msg').innerHTML='<span style="color:var(--zhu)">❌ 無效</span>'}}
+
+
+/* §26 INIT */
+loadGameData().then(function(){
+  var ls=document.getElementById('loading-screen');if(ls)ls.style.display='none';
+  setTimeout(function(){showScr('screen-title');updateColDisplay()},300);
+}).catch(function(e){
+  console.error('載入失敗:',e);
+  var ls=document.getElementById('loading-screen');if(ls)ls.style.display='none';
+  showScr('screen-title');updateColDisplay();
+});
+</script>
+</body>
+</html>
